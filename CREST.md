@@ -5,7 +5,7 @@ author:  Arthur Francisco
 email:   arthur.francisco@univ-poitiers.fr
 website: https://tribo-pprime.github.io/CREST
 github: https://github.com/Arthur-Francisco
-project_github: https://github.com/TRIBO-Pprime/CREST
+project_github: https://github.com/TRIBO-Pprime
 include:    ./inc
 src_dir:    ./src
 exclude_dir: ./src/arch
@@ -22,6 +22,7 @@ display: public
 source: true
 graph:  true
 search: true
+css: ./css/CREST.css
 sort: src
 coloured_edges: true
 print_creation_date: true
