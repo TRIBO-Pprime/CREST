@@ -1,0 +1,270 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="CREST – Computational Resource for Eroded Surface Topology">
+    <meta name="author" content="Arthur Francisco" >
+    <link rel="icon" href="./favicon.png">
+
+    <title> CREST </title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="./css/pygments.css" rel="stylesheet">
+    <link href="./css/font-awesome.min.css" rel="stylesheet">
+    <link href="./css/local.css" rel="stylesheet">
+      <link  href="./tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="./js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="./index.html">CREST </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="./lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./program/main.html">Program</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="./search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <!-- Main component for a primary marketing message or call to action -->
+    <div class="p-5 mb-4 bg-light border rounded-3" id="jumbotron">
+      <p><strong>CREST</strong> &ndash; Computational Resource for Eroded Surface Topology <br/> <img alt="CREST_img" src="media/CREST_small.png"></p>
+      </p>
+    </div>
+
+      <div class="row" id='text'>
+        <div class=col-md-8>
+          <h1>CREST</h1>
+          <hr>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#brief-description">Brief description</a></li>
+<li><a href="#building-crest">Building CREST</a></li>
+<li><a href="#dependencies">Dependencies</a></li>
+<li><a href="#third-party-components">Third party components</a></li>
+<li><a href="#typical-use">Typical use</a></li>
+<li><a href="#full-description">Full description</a></li>
+<li><a href="#license">License</a></li>
+</ul>
+<h2 id="brief-description">Brief description</h2>
+<p><strong>CREST</strong> - <strong>C</strong>omputational <strong>R</strong>esource for <strong>E</strong>roded <strong>S</strong>urface <strong>T</strong>opology - is designed to generate numerical rough surfaces that respect:</p>
+<ul>
+<li>size: $n \times m$ regular grid</li>
+<li>statistical moments: Skewness $Ssk$ and Kurtosis $Sku$</li>
+<li>principal correlation lengths: $\tau_1$ and $\tau_2$</li>
+<li>asperity orientation: $\alpha$ angle</li>
+<li>periodicity: with/without</li>
+</ul>
+<p>The programs are written in recent Fortran (2003+)</p>
+<p><a href="#table-of-contents">top</a></p>
+<h2 id="building-crest">Building CREST</h2>
+<p>Make sure that the dependencies described below are built.</p>
+<p>Debug mode:</p>
+<div class="codehilite"><pre><span></span><code>make<span class="w"> </span>debug
+</code></pre></div>
+
+<p>Normal mode:</p>
+<div class="codehilite"><pre><span></span><code>make
+</code></pre></div>
+
+<h2 id="dependencies">Dependencies</h2>
+<p>CREST needs some components that are available through the following packages:</p>
+<ul>
+<li><em>TOOLIB</em></li>
+</ul>
+<p>Some general tools like FFT, file handling, minimization, sorting, etc.</p>
+<ul>
+<li><em>TPGLIB</em></li>
+</ul>
+<p>Some more specific programs like filtering, anisotropy analysis, derivation, etc.</p>
+<p>As a consequence the three packages have to be downloaded.</p>
+<p><a href="#table-of-contents">top</a></p>
+<h2 id="third-party-components">Third party components</h2>
+<p>TOOLIB also uses external codes such as:</p>
+<ul>
+<li><em>FFTW3.3</em>, <a href="https://www.fftw.org/">Fastest Fourier Transform in the West</a></li>
+</ul>
+<p>GNU General Public License</p>
+<ul>
+<li><em>Pikaia_oop</em>, <a href="http://github.com/jacobwilliams/pikaia">Modern Fortran Edition of the Pikaia Genetic Algorithm</a></li>
+</ul>
+<p>BSD like</p>
+<ul>
+<li><em>GNUFOR</em>, <a href="https://people.math.sc.edu/Burkardt/f_src/gnufor/gnufor.html">Gnuplot Fortran</a></li>
+</ul>
+<p>GNU General Public License</p>
+<ul>
+<li><em>Bspline-fortran</em>, <a href="https://github.com/jacobwilliams/bspline-fortran">Multidimensional B-Spline Interpolation of Data on a Regular Grid</a></li>
+</ul>
+<p>BSD like</p>
+<h2 id="typical-use">Typical use</h2>
+<p><a href="#table-of-contents">top</a></p>
+<h2 id="full-description">Full description</h2>
+<h2 id="license">License</h2>
+<div class="footnote">
+<hr>
+<ol>
+<li id="fn:1">
+<p>CeCILL-C license&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>GNU GPL&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>New BSD-3&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p>HSL software is strictly intended for Personal academic use on the download page&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+        </div>
+          <div class="col-md-4">
+            <div class="card card-body bg-light">
+              <h2 class="card-title">Developer Info</h2>
+              <h4 class="card-text">Arthur Francisco</h4>
+              <p class="card-text"></p>
+                <div class="text-center"><div class="btn-group" role="group">
+                      <a class="btn btn-lg btn-primary" href="mailto:arthur.francisco@univ-poitiers.fr"><i class="fa fa-envelope fa-lg"></i></a>
+                    <a class="btn btn-lg btn-primary" href="https://pprime.fr/francisco-arthur/"><i class="fa fa-globe fa-lg"></i></a>
+                    <a class="btn btn-lg btn-primary" href="https://src.koda.cnrs.fr/arthur.francisco/CREST"><i class="fa fa-github fa-lg"></i></a>
+                    
+                    
+                    
+                    
+                    
+                    
+                </div></div>
+            </div>
+          </div>
+      </div>
+        <div class="row">
+          <hr>
+          <div class="col-xs-6 col-sm-3">
+            <div>
+              <h3>Source Files</h3>
+              <ul><li><a href='sourcefile/main.f90.html'>main.f90</a></li><li><a href='sourcefile/mod_crest_param.f90.html'>mod_crest_param.f90</a></li><li><a href='sourcefile/mod_func_acf.f90.html'>mod_func_acf.f90</a></li><li><a href='sourcefile/mod_script.f90.html'>mod_script.f90</a></li><li><a href='sourcefile/mod_skku_profiles.f90.html'>mod_skku_profiles.f90</a></li></ul>
+            </div>
+            <div>
+              <ul>
+                <li><a href="./lists/files.html"><em>All source files&hellip;</em></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3">
+            <div>
+              <h3>Modules</h3>
+              <ul><li><a href='module/crest_param.html'>crest_param</a></li><li><a href='module/func_acf.html'>func_acf</a></li><li><a href='module/script.html'>script</a></li><li><a href='module/skku_profiles.html'>skku_profiles</a></li></ul>
+            </div>
+            <div>
+              <ul>
+                <li><a href="./lists/modules.html"><em>All modules&hellip;</em></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3">
+            <div>
+              <h3>Procedures</h3>
+              <ul><li><a href='proc/acf_theo.html'>acf_theo</a></li><li><a href='proc/acf_wiener.html'>acf_wiener</a></li><li><a href='proc/add_expo.html'>add_expo</a></li><li><a href='proc/add_tang.html'>add_tang</a></li><li><a href='proc/apod2.html'>apod2</a></li><li><a href='proc/autocov_impo.html'>autocov_impo</a></li><li><a href='proc/build_heights.html'>build_heights</a></li><li><a href='proc/calc_acf.html'>calc_acf</a></li><li><a href='proc/calc_ffh.html'>calc_ffh</a></li><li><a href='proc/calc_imp_acf.html'>calc_imp_acf</a></li></ul>
+            </div>
+            <div>
+              <ul>
+                <li><a href="./lists/procedures.html"><em>All procedures&hellip;</em></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3">
+            <div>
+              <h3>Derived Types</h3>
+              <ul><li><a href='type/param_crest.html'>param_crest</a></li></ul>
+            </div>
+            <div>
+              <ul>
+                <li><a href="./lists/types.html"><em>All derived types&hellip;</em></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              CREST
+ was developed by Arthur Francisco<br>              &copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+ on 2024-11-12 12:09              </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="./tipuesearch/tipuesearch_content.js"></script>
+          <script src="./tipuesearch/tipuesearch_set.js"></script>
+          <script src="./tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

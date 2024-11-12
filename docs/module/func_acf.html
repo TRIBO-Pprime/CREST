@@ -1,0 +1,1076 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="CREST – Computational Resource for Eroded Surface Topology">
+    <meta name="author" content="Arthur Francisco" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>func_acf &ndash; CREST</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">CREST </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../program/main.html">Program</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>func_acf
+      <small>Module</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+            <li class="list-inline-item" id="meta-author"><i class="fa fa-pencil"></i> Arthur Francisco</li>
+            <li class="list-inline-item" id="meta-date"><i class="fa fa-calendar-o"></i> october, 23 2024</li>
+            <li class="list-inline-item" id="meta-version"><i class="fa fa-barcode"></i> 1.0.0</li>
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title="16.5% of total for modules and submodules.">207 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/mod_func_acf.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mod_func_acf.f90.html'>mod_func_acf.f90</a></li>
+            <li class="breadcrumb-item active" aria-current="page">func_acf</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+        <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#funcs-0"
+         aria-expanded="false" aria-controls="funcs-0">
+         <h4 class="card-header bg-primary text-white">Functions</h4>
+      </a>
+      <div id="funcs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/func_acf.html#proc-autocov_impo">autocov_impo</a>
+        </div>
+      </div>
+    </div>
+
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#subs-0"
+         aria-expanded="false" aria-controls="subs-0">
+         <h4 class="card-header bg-primary text-white">Subroutines</h4>
+      </a>
+      <div id="subs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/func_acf.html#proc-acf_wiener">acf_wiener</a>
+            <a class="list-group-item" href="../module/func_acf.html#proc-calc_imp_acf">calc_imp_acf</a>
+            <a class="list-group-item" href="../module/func_acf.html#proc-apod2">apod2</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+
+
+  </div>
+
+    </div>
+
+    <div class="col-md-9" id='text'>
+      <p><span style="color: #337ab7; font-family: cabin; font-size: 1.2em;">
+      <strong>Routines for acf calculations</strong>
+</span></p>
+<br>          <div class="card mb-4">
+      <h3 class="card-header card-title bg-light">Uses</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <ul class="list-inline">
+                  <li class="list-inline-item">miscellaneous</li>
+                  <li class="list-inline-item">stat_mom</li>
+                  <li class="list-inline-item">fftw3</li>
+                  <li class="list-inline-item">data_arch</li>
+                  <li class="list-inline-item"><a href='crest_param.html'>crest_param</a></li>
+              </ul>
+            </li>
+            <li class="list-group-item">
+              <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: module~~func_acf~~UsesGraph Pages: 1 -->
+<svg id="modulefunc_acfUsesGraph" width="278pt" height="173pt"
+ viewBox="0.00 0.00 278.00 172.96" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~func_acf~~UsesGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 168.96)">
+<title>module~~func_acf~~UsesGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-168.96 274,-168.96 274,4 -4,4"/>
+<!-- module~func_acf -->
+<g id="module~~func_acf~~UsesGraph_node1" class="node">
+<title>module~func_acf</title>
+<polygon fill="none" stroke="black" points="270,-106 216,-106 216,-82 270,-82 270,-106"/>
+<text text-anchor="middle" x="243" y="-91.6" font-family="Helvetica,sans-Serif" font-size="10.50">func_acf</text>
+</g>
+<!-- data_arch -->
+<g id="module~~func_acf~~UsesGraph_node2" class="node">
+<title>data_arch</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="62.5,-148 1.5,-148 1.5,-124 62.5,-124 62.5,-148"/>
+<text text-anchor="middle" x="32" y="-133.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">data_arch</text>
+</g>
+<!-- module~func_acf&#45;&gt;data_arch -->
+<g id="module~~func_acf~~UsesGraph_edge1" class="edge">
+<title>module~func_acf&#45;&gt;data_arch</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M234.57,-106.08C224.42,-121.29 204.63,-146.68 180,-157 144.38,-171.92 100.12,-162.19 69.52,-151.55"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="70.69,-148.25 60.1,-148.09 68.28,-154.82 70.69,-148.25"/>
+</g>
+<!-- fftw3 -->
+<g id="module~~func_acf~~UsesGraph_node3" class="node">
+<title>fftw3</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="167,-148 113,-148 113,-124 167,-124 167,-148"/>
+<text text-anchor="middle" x="140" y="-133.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">fftw3</text>
+</g>
+<!-- module~func_acf&#45;&gt;fftw3 -->
+<g id="module~~func_acf~~UsesGraph_edge2" class="edge">
+<title>module~func_acf&#45;&gt;fftw3</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M215.99,-104.82C204.07,-109.77 189.74,-115.73 176.82,-121.11"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="175.16,-118 167.27,-125.07 177.85,-124.47 175.16,-118"/>
+</g>
+<!-- miscellaneous -->
+<g id="module~~func_acf~~UsesGraph_node4" class="node">
+<title>miscellaneous</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="180,-106 100,-106 100,-82 180,-82 180,-106"/>
+<text text-anchor="middle" x="140" y="-91.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">miscellaneous</text>
+</g>
+<!-- module~func_acf&#45;&gt;miscellaneous -->
+<g id="module~~func_acf~~UsesGraph_edge3" class="edge">
+<title>module~func_acf&#45;&gt;miscellaneous</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M215.99,-94C208.18,-94 199.33,-94 190.52,-94"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="190.27,-90.5 180.27,-94 190.27,-97.5 190.27,-90.5"/>
+</g>
+<!-- module~crest_param -->
+<g id="module~~func_acf~~UsesGraph_node5" class="node">
+<title>module~crest_param</title>
+<g id="a_module~~func_acf~~UsesGraph_node5"><a xlink:href="../module/crest_param.html" xlink:title="crest_param">
+<polygon fill="#337ab7" stroke="#337ab7" points="176.5,-64 103.5,-64 103.5,-40 176.5,-40 176.5,-64"/>
+<text text-anchor="middle" x="140" y="-49.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">crest_param</text>
+</a>
+</g>
+</g>
+<!-- module~func_acf&#45;&gt;module~crest_param -->
+<g id="module~~func_acf~~UsesGraph_edge4" class="edge">
+<title>module~func_acf&#45;&gt;module~crest_param</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M215.99,-83.18C204.92,-78.58 191.78,-73.12 179.62,-68.06"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="180.71,-64.72 170.13,-64.11 178.02,-71.18 180.71,-64.72"/>
+</g>
+<!-- stat_mom -->
+<g id="module~~func_acf~~UsesGraph_node6" class="node">
+<title>stat_mom</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="62,-24 2,-24 2,0 62,0 62,-24"/>
+<text text-anchor="middle" x="32" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">stat_mom</text>
+</g>
+<!-- module~func_acf&#45;&gt;stat_mom -->
+<g id="module~~func_acf~~UsesGraph_edge5" class="edge">
+<title>module~func_acf&#45;&gt;stat_mom</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M233.99,-81.89C223.5,-67.14 203.64,-42.74 180,-31 146.4,-14.31 103.38,-10.47 72.58,-10.25"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="72.21,-6.76 62.23,-10.31 72.25,-13.76 72.21,-6.76"/>
+</g>
+<!-- module~crest_param&#45;&gt;data_arch -->
+<g id="module~~func_acf~~UsesGraph_edge6" class="edge">
+<title>module~crest_param&#45;&gt;data_arch</title>
+<path fill="none" stroke="#0066ff" stroke-dasharray="5,2" d="M114.07,-64.17C109.26,-66.86 104.37,-69.85 100,-73 82.02,-85.95 63.85,-103.37 50.97,-116.61"/>
+<polygon fill="#0066ff" stroke="#0066ff" points="48.43,-114.21 44.05,-123.86 53.49,-119.05 48.43,-114.21"/>
+</g>
+<!-- module~crest_param&#45;&gt;stat_mom -->
+<g id="module~~func_acf~~UsesGraph_edge8" class="edge">
+<title>module~crest_param&#45;&gt;stat_mom</title>
+<path fill="none" stroke="#0066ff" stroke-dasharray="5,2" d="M107.2,-40C96.05,-35.79 83.4,-31.02 71.75,-26.62"/>
+<polygon fill="#0066ff" stroke="#0066ff" points="72.84,-23.29 62.25,-23.04 70.37,-29.84 72.84,-23.29"/>
+</g>
+<!-- pikaia_oop -->
+<g id="module~~func_acf~~UsesGraph_node7" class="node">
+<title>pikaia_oop</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="64,-66 0,-66 0,-42 64,-42 64,-66"/>
+<text text-anchor="middle" x="32" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">pikaia_oop</text>
+</g>
+<!-- module~crest_param&#45;&gt;pikaia_oop -->
+<g id="module~~func_acf~~UsesGraph_edge7" class="edge">
+<title>module~crest_param&#45;&gt;pikaia_oop</title>
+<path fill="none" stroke="#0066ff" stroke-dasharray="5,2" d="M103.41,-52.67C94.04,-52.85 83.87,-53.04 74.23,-53.22"/>
+<polygon fill="#0066ff" stroke="#0066ff" points="73.99,-49.73 64.06,-53.41 74.12,-56.72 73.99,-49.73"/>
+</g>
+</g>
+</svg>
+</div>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#UsesGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="UsesGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="490pt" height="32pt"
+ viewBox="0.00 0.00 489.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 485.5,-28 485.5,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="139.5,-24 72.5,-24 72.5,0 139.5,0 139.5,-24"/>
+<text text-anchor="middle" x="106" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="222,-24 158,-24 158,0 222,0 222,-24"/>
+<text text-anchor="middle" x="190" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="294,-24 240,-24 240,0 294,0 294,-24"/>
+<text text-anchor="middle" x="267" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="366,-24 312,-24 312,0 366,0 366,-24"/>
+<text text-anchor="middle" x="339" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="481.5,-24 384.5,-24 384.5,0 481.5,0 481.5,-24"/>
+<text text-anchor="middle" x="433" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a submodule to the (sub)module which it is
+descended from. Dashed arrows point from a module or program unit to 
+modules which it uses.
+</p>
+ Where possible, edges connecting nodes are
+given different colours to make them easier to distinguish in
+large graphs.</div>
+            </div>
+          </div>
+        </div>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+          <div class="card">
+      <h3 class="card-header card-title bg-light">Used by</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: module~~func_acf~~UsedByGraph Pages: 1 -->
+<svg id="modulefunc_acfUsedByGraph" width="242pt" height="32pt"
+ viewBox="0.00 0.00 242.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~func_acf~~UsedByGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>module~~func_acf~~UsedByGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 238,-28 238,4 -4,4"/>
+<!-- module~func_acf -->
+<g id="module~~func_acf~~UsedByGraph_node1" class="node">
+<title>module~func_acf</title>
+<polygon fill="none" stroke="black" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">func_acf</text>
+</g>
+<!-- module~script -->
+<g id="module~~func_acf~~UsedByGraph_node2" class="node">
+<title>module~script</title>
+<g id="a_module~~func_acf~~UsedByGraph_node2"><a xlink:href="../module/script.html" xlink:title="script">
+<polygon fill="#337ab7" stroke="#337ab7" points="144,-24 90,-24 90,0 144,0 144,-24"/>
+<text text-anchor="middle" x="117" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">script</text>
+</a>
+</g>
+</g>
+<!-- module~script&#45;&gt;module~func_acf -->
+<g id="module~~func_acf~~UsedByGraph_edge1" class="edge">
+<title>module~script&#45;&gt;module~func_acf</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M89.6,-12C81.61,-12 72.69,-12 64.18,-12"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="64.08,-8.5 54.08,-12 64.08,-15.5 64.08,-8.5"/>
+</g>
+<!-- program~main -->
+<g id="module~~func_acf~~UsedByGraph_node3" class="node">
+<title>program~main</title>
+<g id="a_module~~func_acf~~UsedByGraph_node3"><a xlink:href="../program/main.html" xlink:title="main">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="234,-24 180,-24 180,0 234,0 234,-24"/>
+<text text-anchor="middle" x="207" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">main</text>
+</a>
+</g>
+</g>
+<!-- program~main&#45;&gt;module~script -->
+<g id="module~~func_acf~~UsedByGraph_edge2" class="edge">
+<title>program~main&#45;&gt;module~script</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M179.6,-12C171.61,-12 162.69,-12 154.18,-12"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="154.08,-8.5 144.08,-12 154.08,-15.5 154.08,-8.5"/>
+</g>
+</g>
+</svg>
+</div>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#UsedByGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="UsedByGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="490pt" height="32pt"
+ viewBox="0.00 0.00 489.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 485.5,-28 485.5,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="139.5,-24 72.5,-24 72.5,0 139.5,0 139.5,-24"/>
+<text text-anchor="middle" x="106" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="222,-24 158,-24 158,0 222,0 222,-24"/>
+<text text-anchor="middle" x="190" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="294,-24 240,-24 240,0 294,0 294,-24"/>
+<text text-anchor="middle" x="267" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="366,-24 312,-24 312,0 366,0 366,-24"/>
+<text text-anchor="middle" x="339" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="481.5,-24 384.5,-24 384.5,0 481.5,0 481.5,-24"/>
+<text text-anchor="middle" x="433" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a submodule to the (sub)module which it is
+descended from. Dashed arrows point from a module or program unit to 
+modules which it uses.
+</p>
+ Where possible, edges connecting nodes are
+given different colours to make them easier to distinguish in
+large graphs.</div>
+            </div>
+          </div>
+        </div>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+      <br>
+
+
+
+
+
+
+
+        <section>
+          <h2>Functions</h2>
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-autocov_impo"></span> <h3>private  function <a href='../proc/autocov_impo.html'>autocov_impo</a>(xi, xj, tau1, tau2, alpha, ang)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Function that returns <script type="math/tex"> \exp \left(\alpha \sqrt{\left(\frac{x}{\tau_1}\right)^2+
+                                                        \left(\frac{y}{\tau_2}\right)^2}
+                                      \right) </script>
+</p><a href="../proc/autocov_impo.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-xi~3"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>xi</strong></td>
+            <td>
+<p><em><script type="math/tex">x</script> coordinate</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-xj"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>xj</strong></td>
+            <td>
+<p><em><script type="math/tex">y</script> coordinate</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tau1"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tau1</strong></td>
+            <td>
+<p><em>correlation length along <script type="math/tex">x</script></em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tau2"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tau2</strong></td>
+            <td>
+<p><em>correlation length along <script type="math/tex">y</script></em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-alpha"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>alpha</strong></td>
+            <td>
+<p><em>log(z)</em> where <em>z</em> is often 0.2</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ang"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ang</strong></td>
+            <td>
+<p><em>angle</em> (rad)</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>real(kind=r8)</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+        </section>
+        <br>
+
+        <section>
+          <h2>Subroutines</h2>
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-acf_wiener"></span> <h3>public  subroutine <a href='../proc/acf_wiener.html'>acf_wiener</a>(tab_in, tab_out, w, h, multi_fft)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Function that returns the <em>acf</em> of an array.
+ <script type="math/tex; mode=display">
+ \begin{align*}
+    acf(i,j) &= (z \ast z)(i,j) = \sum_{k,l}^{n,n} z(k+1-i,l+1-j)z(k,l)  \\
+    TF(acf)  &= ACF = Z \cdot Z                                          \\
+    acf      &= TF^{-1}(ACF) = TF^{-1}(Z^2)
+ \end{align*}
+ </script>
+</p><a href="../proc/acf_wiener.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tab_in"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              dimension(1:w, 1:h)
+            </td>
+            <td>::</td>
+            <td><strong>tab_in</strong></td>
+            <td>
+<p><em>input array</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tab_out"></span>
+              real(kind=R8),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              dimension(1:w, 1:h)
+            </td>
+            <td>::</td>
+            <td><strong>tab_out</strong></td>
+            <td>
+<p><em>acf of the input array</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-w~14"></span>
+              integer(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>w</strong></td>
+            <td>
+<p><em>2D array length</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-h~16"></span>
+              integer(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>h</strong></td>
+            <td>
+<p><em>2D array width</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-multi_fft"></span>
+              logical(kind=I4),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>multi_fft</strong></td>
+            <td>
+<p><em>run parallel acfs?</em></p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-calc_imp_acf"></span> <h3>public  subroutine <a href='../proc/calc_imp_acf.html'>calc_imp_acf</a>(long, larg, tau1, tau2, alpha, ang, tab_acf, apod)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Function that returns the theoretical autocorrelation function in an array.<br/>
+ The autocorrelation function is supposed to be obtained from a real surface which must be periodic
+ or nearly periodic (because of the use of FFTs).
+ In addition, the surface is supposed to be 0 mean and normalized (<script type="math/tex">\sigma = 1 </script>),
+ therefore <em>acf</em> is zero-mean and normalized so that its max value is 1.<br/></p><a href="../proc/calc_imp_acf.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-long"></span>
+              integer(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>long</strong></td>
+            <td>
+<p><em>surface acf width</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-larg"></span>
+              integer(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>larg</strong></td>
+            <td>
+<p><em>surface acf height</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tau1~2"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tau1</strong></td>
+            <td>
+<p><em>first correlation length</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tau2~2"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tau2</strong></td>
+            <td>
+<p><em>surface second correlation length</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-alpha~2"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>alpha</strong></td>
+            <td>
+<p><em>parameter that controls the expondential decrease</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ang~2"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ang</strong></td>
+            <td>
+<p><em>acf ellipsis angle</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tab_acf"></span>
+              real(kind=R8),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              dimension(1:long, 1:larg)
+            </td>
+            <td>::</td>
+            <td><strong>tab_acf</strong></td>
+            <td>
+<p><em>resulting acf</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-apod"></span>
+              logical(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>apod</strong></td>
+            <td>
+<p><em>apodization?</em></p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-apod2"></span> <h3>private  subroutine <a href='../proc/apod2.html'>apod2</a>(tab_in, tab_out, long, larg, tau1, tau2, ang)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Function that returns an apodized array.<br/>
+ To prevent gaps from appearing after FFT (because of non periodic waves), the surface must
+ be transformed, but not too much. Here a modified Tukey window is determined. The starting
+ surface is not modified below the &ldquo;correlation lengths&rdquo;. Above the correlation lengths, a
+ smooth decrease is forced with a cosine squared.</p><a href="../proc/apod2.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tab_in~2"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              dimension(1:long, 1:larg)
+            </td>
+            <td>::</td>
+            <td><strong>tab_in</strong></td>
+            <td>
+<p><em>input acf</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tab_out~2"></span>
+              real(kind=R8),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              dimension(1:long, 1:larg)
+            </td>
+            <td>::</td>
+            <td><strong>tab_out</strong></td>
+            <td>
+<p><em>apodized acf</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-long~2"></span>
+              integer(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>long</strong></td>
+            <td>
+<p><em>surface acf length</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-larg~2"></span>
+              integer(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>larg</strong></td>
+            <td>
+<p><em>surface acf width</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tau1~3"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tau1</strong></td>
+            <td>
+<p><em>surface first correlation length</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tau2~3"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tau2</strong></td>
+            <td>
+<p><em>surface second correlation length</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ang~3"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ang</strong></td>
+            <td>
+<p><em>ellipsis angle</em></p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+        </section>
+        <br>
+
+
+
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              CREST
+ was developed by Arthur Francisco<br>              &copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+ on 2024-11-12 12:09              </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

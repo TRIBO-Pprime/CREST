@@ -8,7 +8,7 @@ github: https://src.koda.cnrs.fr/arthur.francisco/CREST
 include:    ./inc
 src_dir:    ./src
 exclude_dir: ./src/arch
-output_dir: ./doc
+output_dir: ./docs
 media_dir:  ./img
 favicon:    ./img/CREST_logo.png
 docmark:        !

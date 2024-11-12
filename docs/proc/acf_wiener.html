@@ -1,0 +1,779 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="CREST – Computational Resource for Eroded Surface Topology">
+    <meta name="author" content="Arthur Francisco" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>acf_wiener &ndash; CREST</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">CREST </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../program/main.html">Program</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>acf_wiener
+      <small>Subroutine</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title=" 3.2% of total for procedures.">38 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/mod_func_acf.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mod_func_acf.f90.html'>mod_func_acf.f90</a></li>
+                <li class="breadcrumb-item"><a href='../module/func_acf.html'>func_acf</a></li>
+            <li class="breadcrumb-item active" aria-current="page">acf_wiener</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="card card-primary">
+      <div class="card-header text-left"><h3 class="card-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../proc/acf_wiener.html#src">acf_wiener</a>
+      </div>
+    </div>
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    <h2>public  subroutine acf_wiener(tab_in, tab_out, w, h, multi_fft)  
+</h2>
+    
+
+    <div class="alert alert-info">
+<p class="alert-title h4">Note</p>
+<p>Function that returns the <em>acf</em> of an array.
+ <script type="math/tex; mode=display">
+ \begin{align*}
+    acf(i,j) &= (z \ast z)(i,j) = \sum_{k,l}^{n,n} z(k+1-i,l+1-j)z(k,l)  \\
+    TF(acf)  &= ACF = Z \cdot Z                                          \\
+    acf      &= TF^{-1}(ACF) = TF^{-1}(Z^2)
+ \end{align*}
+ </script>
+</p>
+<hr>
+</div>
+
+
+    <h3>Arguments</h3>
+        <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tab_in"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              dimension(1:w, 1:h)
+            </td>
+            <td>::</td>
+            <td><strong>tab_in</strong></td>
+            <td>
+                <p><em>input array</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tab_out"></span>
+              real(kind=R8),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              dimension(1:w, 1:h)
+            </td>
+            <td>::</td>
+            <td><strong>tab_out</strong></td>
+            <td>
+                <p><em>acf of the input array</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-w~14"></span>
+              integer(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>w</strong></td>
+            <td>
+                <p><em>2D array length</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-h~16"></span>
+              integer(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>h</strong></td>
+            <td>
+                <p><em>2D array width</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-multi_fft"></span>
+              logical(kind=I4),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>multi_fft</strong></td>
+            <td>
+                <p><em>run parallel acfs?</em></p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <br>
+    <div class="card">
+      <div class="card-header">
+  <h3 class="card-title">Calls</h3>
+      </div>
+      <div class="card-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: proc~~acf_wiener~~CallsGraph Pages: 1 -->
+<svg id="procacf_wienerCallsGraph" width="238pt" height="200pt"
+ viewBox="0.00 0.00 238.00 200.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~acf_wiener~~CallsGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 196)">
+<title>proc~~acf_wiener~~CallsGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-196 234,-196 234,4 -4,4"/>
+<!-- proc~acf_wiener -->
+<g id="proc~~acf_wiener~~CallsGraph_node1" class="node">
+<title>proc~acf_wiener</title>
+<polygon fill="none" stroke="black" points="64,-108 0,-108 0,-84 64,-84 64,-108"/>
+<text text-anchor="middle" x="32" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50">acf_wiener</text>
+</g>
+<!-- calc_fftw3_real_bwd -->
+<g id="proc~~acf_wiener~~CallsGraph_node2" class="node">
+<title>calc_fftw3_real_bwd</title>
+<polygon fill="#777777" stroke="#777777" points="219.5,-192 110.5,-192 110.5,-168 219.5,-168 219.5,-192"/>
+<text text-anchor="middle" x="165" y="-177.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">calc_fftw3_real_bwd</text>
+</g>
+<!-- proc~acf_wiener&#45;&gt;calc_fftw3_real_bwd -->
+<g id="proc~~acf_wiener~~CallsGraph_edge1" class="edge">
+<title>proc~acf_wiener&#45;&gt;calc_fftw3_real_bwd</title>
+<path fill="none" stroke="#ff0000" d="M43.13,-108.36C55.29,-122.45 76.94,-145.3 100,-159 103.01,-160.79 106.18,-162.44 109.45,-163.97"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="108.26,-167.27 118.83,-167.96 111,-160.83 108.26,-167.27"/>
+</g>
+<!-- calc_fftw3_real_fwd -->
+<g id="proc~~acf_wiener~~CallsGraph_node3" class="node">
+<title>calc_fftw3_real_fwd</title>
+<polygon fill="#777777" stroke="#777777" points="218,-150 112,-150 112,-126 218,-126 218,-150"/>
+<text text-anchor="middle" x="165" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">calc_fftw3_real_fwd</text>
+</g>
+<!-- proc~acf_wiener&#45;&gt;calc_fftw3_real_fwd -->
+<g id="proc~~acf_wiener~~CallsGraph_edge2" class="edge">
+<title>proc~acf_wiener&#45;&gt;calc_fftw3_real_fwd</title>
+<path fill="none" stroke="#ff0000" d="M64.05,-105.95C79.6,-110.94 98.79,-117.09 116.18,-122.67"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="115.58,-126.15 126.17,-125.87 117.71,-119.48 115.58,-126.15"/>
+</g>
+<!-- tab_calc_fftw3_real_bwd -->
+<g id="proc~~acf_wiener~~CallsGraph_node4" class="node">
+<title>tab_calc_fftw3_real_bwd</title>
+<polygon fill="#777777" stroke="#777777" points="230,-108 100,-108 100,-84 230,-84 230,-108"/>
+<text text-anchor="middle" x="165" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">tab_calc_fftw3_real_bwd</text>
+</g>
+<!-- proc~acf_wiener&#45;&gt;tab_calc_fftw3_real_bwd -->
+<g id="proc~~acf_wiener~~CallsGraph_edge3" class="edge">
+<title>proc~acf_wiener&#45;&gt;tab_calc_fftw3_real_bwd</title>
+<path fill="none" stroke="#ff0000" d="M64.05,-96C71.91,-96 80.69,-96 89.71,-96"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="89.94,-99.5 99.94,-96 89.94,-92.5 89.94,-99.5"/>
+</g>
+<!-- tab_calc_fftw3_real_fwd -->
+<g id="proc~~acf_wiener~~CallsGraph_node5" class="node">
+<title>tab_calc_fftw3_real_fwd</title>
+<polygon fill="#777777" stroke="#777777" points="228.5,-66 101.5,-66 101.5,-42 228.5,-42 228.5,-66"/>
+<text text-anchor="middle" x="165" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">tab_calc_fftw3_real_fwd</text>
+</g>
+<!-- proc~acf_wiener&#45;&gt;tab_calc_fftw3_real_fwd -->
+<g id="proc~~acf_wiener~~CallsGraph_edge4" class="edge">
+<title>proc~acf_wiener&#45;&gt;tab_calc_fftw3_real_fwd</title>
+<path fill="none" stroke="#ff0000" d="M64.05,-86.05C79.6,-81.06 98.79,-74.91 116.18,-69.33"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="117.71,-72.52 126.17,-66.13 115.58,-65.85 117.71,-72.52"/>
+</g>
+<!-- trans_corner2center -->
+<g id="proc~~acf_wiener~~CallsGraph_node6" class="node">
+<title>trans_corner2center</title>
+<polygon fill="#777777" stroke="#777777" points="219.5,-24 110.5,-24 110.5,0 219.5,0 219.5,-24"/>
+<text text-anchor="middle" x="165" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">trans_corner2center</text>
+</g>
+<!-- proc~acf_wiener&#45;&gt;trans_corner2center -->
+<g id="proc~~acf_wiener~~CallsGraph_edge5" class="edge">
+<title>proc~acf_wiener&#45;&gt;trans_corner2center</title>
+<path fill="none" stroke="#ff0000" d="M43.13,-83.64C55.29,-69.55 76.94,-46.7 100,-33 103.01,-31.21 106.18,-29.56 109.45,-28.03"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="111,-31.17 118.83,-24.04 108.26,-24.73 111,-31.17"/>
+</g>
+</g>
+</svg>
+</div>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#CallsGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="CallsGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="641pt" height="29pt"
+ viewBox="0.00 0.00 641.00 29.32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(0.92 0.92) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 695.5,-28 695.5,4 -4,4"/>
+<!-- Subroutine -->
+<g id="node1" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="64,-24 0,-24 0,0 64,0 64,-24"/>
+<text text-anchor="middle" x="32" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node2" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="136,-24 82,-24 82,0 136,0 136,-24"/>
+<text text-anchor="middle" x="109" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Interface -->
+<g id="node3" class="node">
+<title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="209.5,-24 154.5,-24 154.5,0 209.5,0 209.5,-24"/>
+<text text-anchor="middle" x="182" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+</g>
+<!-- Type Bound Procedure -->
+<g id="node4" class="node">
+<title>Type Bound Procedure</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="350,-24 228,-24 228,0 350,0 350,-24"/>
+<text text-anchor="middle" x="289" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type Bound Procedure</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node5" class="node">
+<title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="504,-24 368,-24 368,0 504,0 504,-24"/>
+<text text-anchor="middle" x="436" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node6" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="576,-24 522,-24 522,0 576,0 576,-24"/>
+<text text-anchor="middle" x="549" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node7" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="691.5,-24 594.5,-24 594.5,0 691.5,0 691.5,-24"/>
+<text text-anchor="middle" x="643" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a procedure to one which it calls. Dashed 
+arrows point from an interface to procedures which implement that interface.
+This could include the module procedures in a generic interface or the
+implementation in a submodule of an interface in a parent module.
+</p>
+ Where possible, edges connecting nodes are
+given different colours to make them easier to distinguish in
+large graphs.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+  <h3 class="card-title">Called by</h3>
+      </div>
+      <div class="card-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: proc~~acf_wiener~~CalledByGraph Pages: 1 -->
+<svg id="procacf_wienerCalledByGraph" width="433pt" height="74pt"
+ viewBox="0.00 0.00 433.00 74.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~acf_wiener~~CalledByGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 70)">
+<title>proc~~acf_wiener~~CalledByGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-70 429,-70 429,4 -4,4"/>
+<!-- proc~acf_wiener -->
+<g id="proc~~acf_wiener~~CalledByGraph_node1" class="node">
+<title>proc~acf_wiener</title>
+<polygon fill="none" stroke="black" points="425,-45 361,-45 361,-21 425,-21 425,-45"/>
+<text text-anchor="middle" x="393" y="-30.6" font-family="Helvetica,sans-Serif" font-size="10.50">acf_wiener</text>
+</g>
+<!-- proc~calc_acf -->
+<g id="proc~~acf_wiener~~CalledByGraph_node2" class="node">
+<title>proc~calc_acf</title>
+<g id="a_proc~~acf_wiener~~CalledByGraph_node2"><a xlink:href="../proc/calc_acf.html" xlink:title="calc_acf">
+<polygon fill="#d9534f" stroke="#d9534f" points="325,-66 271,-66 271,-42 325,-42 325,-66"/>
+<text text-anchor="middle" x="298" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">calc_acf</text>
+</a>
+</g>
+</g>
+<!-- proc~calc_acf&#45;&gt;proc~acf_wiener -->
+<g id="proc~~acf_wiener~~CalledByGraph_edge1" class="edge">
+<title>proc~calc_acf&#45;&gt;proc~acf_wiener</title>
+<path fill="none" stroke="#ff0000" d="M325.4,-48.04C333.35,-46.24 342.27,-44.23 350.94,-42.27"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="351.94,-45.63 360.92,-40.02 350.4,-38.81 351.94,-45.63"/>
+</g>
+<!-- proc~sub_surf -->
+<g id="proc~~acf_wiener~~CalledByGraph_node3" class="node">
+<title>proc~sub_surf</title>
+<g id="a_proc~~acf_wiener~~CalledByGraph_node3"><a xlink:href="../proc/sub_surf.html" xlink:title="sub_surf">
+<polygon fill="#d9534f" stroke="#d9534f" points="325,-24 271,-24 271,0 325,0 325,-24"/>
+<text text-anchor="middle" x="298" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">sub_surf</text>
+</a>
+</g>
+</g>
+<!-- proc~sub_surf&#45;&gt;proc~acf_wiener -->
+<g id="proc~~acf_wiener~~CalledByGraph_edge2" class="edge">
+<title>proc~sub_surf&#45;&gt;proc~acf_wiener</title>
+<path fill="none" stroke="#ff0000" d="M325.4,-17.96C333.35,-19.76 342.27,-21.77 350.94,-23.73"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="350.4,-27.19 360.92,-25.98 351.94,-20.37 350.4,-27.19"/>
+</g>
+<!-- proc~read_job -->
+<g id="proc~~acf_wiener~~CalledByGraph_node4" class="node">
+<title>proc~read_job</title>
+<g id="a_proc~~acf_wiener~~CalledByGraph_node4"><a xlink:href="../proc/read_job.html" xlink:title="read_job">
+<polygon fill="#d9534f" stroke="#d9534f" points="235,-45 180,-45 180,-21 235,-21 235,-45"/>
+<text text-anchor="middle" x="207.5" y="-30.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">read_job</text>
+</a>
+</g>
+</g>
+<!-- proc~read_job&#45;&gt;proc~calc_acf -->
+<g id="proc~~acf_wiener~~CalledByGraph_edge3" class="edge">
+<title>proc~read_job&#45;&gt;proc~calc_acf</title>
+<path fill="none" stroke="#ff0000" d="M235.05,-39.3C243.18,-41.23 252.25,-43.38 260.9,-45.43"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="260.23,-48.87 270.77,-47.78 261.85,-42.06 260.23,-48.87"/>
+</g>
+<!-- proc~read_job&#45;&gt;proc~sub_surf -->
+<g id="proc~~acf_wiener~~CalledByGraph_edge4" class="edge">
+<title>proc~read_job&#45;&gt;proc~sub_surf</title>
+<path fill="none" stroke="#00ffff" d="M235.05,-26.7C243.18,-24.77 252.25,-22.62 260.9,-20.57"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="261.85,-23.94 270.77,-18.22 260.23,-17.13 261.85,-23.94"/>
+</g>
+<!-- proc~prg_surf -->
+<g id="proc~~acf_wiener~~CalledByGraph_node5" class="node">
+<title>proc~prg_surf</title>
+<g id="a_proc~~acf_wiener~~CalledByGraph_node5"><a xlink:href="../proc/prg_surf.html" xlink:title="prg_surf">
+<polygon fill="#d9534f" stroke="#d9534f" points="144,-45 90,-45 90,-21 144,-21 144,-45"/>
+<text text-anchor="middle" x="117" y="-30.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">prg_surf</text>
+</a>
+</g>
+</g>
+<!-- proc~prg_surf&#45;&gt;proc~read_job -->
+<g id="proc~~acf_wiener~~CalledByGraph_edge5" class="edge">
+<title>proc~prg_surf&#45;&gt;proc~read_job</title>
+<path fill="none" stroke="#ff0000" d="M144.07,-33C152.12,-33 161.14,-33 169.76,-33"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="170,-36.5 180,-33 170,-29.5 170,-36.5"/>
+</g>
+<!-- program~main -->
+<g id="proc~~acf_wiener~~CalledByGraph_node6" class="node">
+<title>program~main</title>
+<g id="a_proc~~acf_wiener~~CalledByGraph_node6"><a xlink:href="../program/main.html" xlink:title="main">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="54,-45 0,-45 0,-21 54,-21 54,-45"/>
+<text text-anchor="middle" x="27" y="-30.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">main</text>
+</a>
+</g>
+</g>
+<!-- program~main&#45;&gt;proc~prg_surf -->
+<g id="proc~~acf_wiener~~CalledByGraph_edge6" class="edge">
+<title>program~main&#45;&gt;proc~prg_surf</title>
+<path fill="none" stroke="#ff0000" d="M54.4,-33C62.39,-33 71.31,-33 79.82,-33"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="79.92,-36.5 89.92,-33 79.92,-29.5 79.92,-36.5"/>
+</g>
+</g>
+</svg>
+</div>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#CalledByGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="CalledByGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="641pt" height="29pt"
+ viewBox="0.00 0.00 641.00 29.32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(0.92 0.92) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 695.5,-28 695.5,4 -4,4"/>
+<!-- Subroutine -->
+<g id="node1" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="64,-24 0,-24 0,0 64,0 64,-24"/>
+<text text-anchor="middle" x="32" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node2" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="136,-24 82,-24 82,0 136,0 136,-24"/>
+<text text-anchor="middle" x="109" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Interface -->
+<g id="node3" class="node">
+<title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="209.5,-24 154.5,-24 154.5,0 209.5,0 209.5,-24"/>
+<text text-anchor="middle" x="182" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+</g>
+<!-- Type Bound Procedure -->
+<g id="node4" class="node">
+<title>Type Bound Procedure</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="350,-24 228,-24 228,0 350,0 350,-24"/>
+<text text-anchor="middle" x="289" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type Bound Procedure</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node5" class="node">
+<title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="504,-24 368,-24 368,0 504,0 504,-24"/>
+<text text-anchor="middle" x="436" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node6" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="576,-24 522,-24 522,0 576,0 576,-24"/>
+<text text-anchor="middle" x="549" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node7" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="691.5,-24 594.5,-24 594.5,0 691.5,0 691.5,-24"/>
+<text text-anchor="middle" x="643" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a procedure to one which it calls. Dashed 
+arrows point from an interface to procedures which implement that interface.
+This could include the module procedures in a generic interface or the
+implementation in a submodule of an interface in a parent module.
+</p>
+ Where possible, edges connecting nodes are
+given different colours to make them easier to distinguish in
+large graphs.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    <section>
+    <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <div class="hl codehilite"><pre><span></span><span class="w">   </span><span class="k">subroutine </span><span class="n">acf_wiener</span><span class="p">(</span><span class="n">tab_in</span><span class="p">,</span><span class="w"> </span><span class="n">tab_out</span><span class="p">,</span><span class="w"> </span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="n">h</span><span class="p">,</span><span class="w"> </span><span class="n">multi_fft</span><span class="p">)</span>
+<span class="w">   </span><span class="c">!================================================================================================</span>
+<span class="w">   </span><span class="c">!&lt;@note Function that returns the *acf* of an array.</span>
+<span class="w">   </span><span class="c">! \[</span>
+<span class="w">   </span><span class="c">! \begin{align*}</span>
+<span class="w">   </span><span class="c">!    acf(i,j) &amp;= (z \ast z)(i,j) = \sum_{k,l}^{n,n} z(k+1-i,l+1-j)z(k,l)  \\</span>
+<span class="w">   </span><span class="c">!    TF(acf)  &amp;= ACF = Z \cdot Z                                          \\</span>
+<span class="w">   </span><span class="c">!    acf      &amp;= TF^{-1}(ACF) = TF^{-1}(Z^2)</span>
+<span class="w">   </span><span class="c">! \end{align*}</span>
+<span class="w">   </span><span class="c">! \]</span>
+<span class="w">   </span><span class="c">!</span>
+<span class="w">   </span><span class="c">!&lt;@endnote</span>
+<span class="w">   </span><span class="c">!------------------------------------------------------------------------------------------------</span>
+<span class="w">   </span><span class="k">implicit none</span>
+<span class="k">   </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">I4</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="w"> </span><span class="p">)</span><span class="w">                      </span><span class="kd">::</span><span class="w"> </span><span class="n">w</span><span class="w">           </span><span class="c">!! *2D array length*</span>
+<span class="w">   </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">I4</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="w"> </span><span class="p">)</span><span class="w">                      </span><span class="kd">::</span><span class="w"> </span><span class="n">h</span><span class="w">           </span><span class="c">!! *2D array width*</span>
+<span class="w">   </span><span class="kt">real</span><span class="w">   </span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="w"> </span><span class="p">),</span><span class="w"> </span><span class="k">dimension</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">h</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">tab_in</span><span class="w">      </span><span class="c">!! *input array*</span>
+<span class="w">   </span><span class="kt">real</span><span class="w">   </span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">),</span><span class="w"> </span><span class="k">dimension</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">h</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">tab_out</span><span class="w">     </span><span class="c">!! *acf of the input array*</span>
+<span class="w">   </span><span class="kt">logical</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">I4</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="w"> </span><span class="p">),</span><span class="w"> </span><span class="k">optional</span><span class="w">            </span><span class="kd">::</span><span class="w"> </span><span class="n">multi_fft</span><span class="w">   </span><span class="c">!! *run parallel acfs?*</span>
+
+<span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">I4</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">lo2</span><span class="p">,</span><span class="w"> </span><span class="n">la2</span>
+
+<span class="w">      </span><span class="kt">real</span><span class="w">   </span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">tmp</span>
+
+<span class="w">      </span><span class="kt">logical</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">I4</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">parallel_fft</span>
+
+<span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">I4</span><span class="p">),</span><span class="w"> </span><span class="k">dimension</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">loc_max</span>
+
+<span class="w">      </span><span class="kt">complex</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">),</span><span class="w"> </span><span class="k">dimension</span><span class="p">(:,:),</span><span class="w"> </span><span class="k">allocatable</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">tab_cmpl</span>
+<span class="w">      </span><span class="kt">real</span><span class="w">   </span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">),</span><span class="w"> </span><span class="k">dimension</span><span class="p">(:,:),</span><span class="w"> </span><span class="k">allocatable</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">tab_real</span>
+
+<span class="w">      </span><span class="k">allocate</span><span class="p">(</span><span class="w"> </span><span class="n">tab_cmpl</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">h</span><span class="p">)</span><span class="w"> </span><span class="p">)</span>
+
+<span class="w">      </span><span class="k">allocate</span><span class="p">(</span><span class="w"> </span><span class="n">tab_real</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">h</span><span class="p">)</span><span class="w"> </span><span class="p">)</span>
+
+<span class="w">      </span><span class="c">! check for simultaneous fftw calculations</span>
+<span class="w">      </span><span class="c">!.........................................</span>
+<span class="w">      </span><span class="n">parallel_fft</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">.</span><span class="n">false</span><span class="p">.</span>
+
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">present</span><span class="p">(</span><span class="n">multi_fft</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">parallel_fft</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">multi_fft</span>
+<span class="w">      </span><span class="c">!.........................................</span>
+
+<span class="w">      </span><span class="c">! DFFT real -&gt; complex</span>
+<span class="w">      </span><span class="c">!.........................................</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">parallel_fft</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+
+<span class="k">         call </span><span class="n">tab_calc_fftw3_real_fwd</span><span class="p">(</span><span class="w"> </span><span class="n">tab_in</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tab_in</span><span class="w">  </span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">h</span><span class="p">),</span><span class="w">     </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                                       </span><span class="n">tab_ou</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tab_cmpl</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">h</span><span class="p">),</span><span class="w">     </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! OUT</span>
+<span class="w">                                         </span><span class="nb">long</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">w</span><span class="p">,</span><span class="w">                      </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                                         </span><span class="n">larg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">h</span><span class="w"> </span><span class="p">)</span><span class="w">                        </span><span class="c">! IN</span>
+
+<span class="w">      </span><span class="k">else</span>
+
+<span class="k">         call </span><span class="n">calc_fftw3_real_fwd</span><span class="p">(</span><span class="w">      </span><span class="n">tab_in</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tab_in</span><span class="w">  </span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">h</span><span class="p">),</span><span class="w">    </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                                        </span><span class="n">tab_ou</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tab_cmpl</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">h</span><span class="p">),</span><span class="w">    </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! OUT</span>
+<span class="w">                                          </span><span class="nb">long</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">w</span><span class="p">,</span><span class="w">                     </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                                          </span><span class="n">larg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">h</span><span class="p">,</span><span class="w">                     </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                                  </span><span class="n">planner_flag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FFTW_MEASURE</span><span class="w"> </span><span class="p">)</span><span class="w">            </span><span class="c">! IN</span>
+
+<span class="w">      </span><span class="k">endif</span>
+<span class="w">      </span><span class="c">!.........................................</span>
+
+<span class="w">      </span><span class="n">tab_cmpl</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">h</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">cmplx</span><span class="p">(</span><span class="w"> </span><span class="nb">abs</span><span class="p">(</span><span class="w"> </span><span class="n">tab_cmpl</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">h</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">R8</span><span class="w"> </span><span class="p">)</span>
+
+
+<span class="w">      </span><span class="c">! IFFT complex -&gt; real</span>
+<span class="w">      </span><span class="c">!.........................................</span>
+<span class="w">     </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">parallel_fft</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+
+<span class="k">         call </span><span class="n">tab_calc_fftw3_real_bwd</span><span class="p">(</span><span class="w"> </span><span class="n">tab_in</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tab_cmpl</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">h</span><span class="p">),</span><span class="w">     </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                                       </span><span class="n">tab_ou</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tab_real</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">h</span><span class="p">),</span><span class="w">     </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! OUT</span>
+<span class="w">                                         </span><span class="nb">long</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">w</span><span class="p">,</span><span class="w">                      </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                                         </span><span class="n">larg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">h</span><span class="w"> </span><span class="p">)</span><span class="w">                        </span><span class="c">! IN</span>
+<span class="w">      </span><span class="k">else</span>
+
+<span class="k">         call </span><span class="n">calc_fftw3_real_bwd</span><span class="p">(</span><span class="w">      </span><span class="n">tab_in</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tab_cmpl</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">h</span><span class="p">),</span><span class="w">    </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                                        </span><span class="n">tab_ou</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tab_real</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">h</span><span class="p">),</span><span class="w">    </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! OUT</span>
+<span class="w">                                          </span><span class="nb">long</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">w</span><span class="p">,</span><span class="w">                     </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                                          </span><span class="n">larg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">h</span><span class="p">,</span><span class="w">                     </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                                  </span><span class="n">planner_flag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FFTW_MEASURE</span><span class="w"> </span><span class="p">)</span><span class="w">            </span><span class="c">! IN</span>
+
+<span class="w">      </span><span class="k">endif</span>
+<span class="w">      </span><span class="c">!.........................................</span>
+
+<span class="w">      </span><span class="c">! the maximum is placed in the array center</span>
+<span class="w">      </span><span class="c">!.........................................</span>
+<span class="w">      </span><span class="k">call </span><span class="n">trans_corner2center</span><span class="p">(</span><span class="w">  </span><span class="n">tab_in</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">tab_real</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">h</span><span class="p">),</span><span class="w">  </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                                 </span><span class="n">tab_out</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tab_out</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">h</span><span class="p">),</span><span class="w">  </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! OUT</span>
+<span class="w">                                 </span><span class="nb">long</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">w</span><span class="p">,</span><span class="w">                   </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                                 </span><span class="n">larg</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">h</span><span class="w">  </span><span class="p">)</span><span class="w">                    </span><span class="c">! IN</span>
+<span class="w">      </span><span class="c">!.........................................</span>
+
+
+<span class="w">      </span><span class="c">! the maximum is 1</span>
+<span class="w">      </span><span class="c">!.........................................</span>
+<span class="w">      </span><span class="n">loc_max</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">maxloc</span><span class="p">(</span><span class="w"> </span><span class="n">tab_out</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">h</span><span class="p">)</span><span class="w"> </span><span class="p">)</span>
+<span class="w">      </span><span class="n">lo2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">loc_max</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="w">      </span><span class="n">la2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">loc_max</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="w">      </span><span class="n">tmp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tab_out</span><span class="p">(</span><span class="n">lo2</span><span class="p">,</span><span class="w"> </span><span class="n">la2</span><span class="p">)</span>
+
+<span class="w">      </span><span class="n">tab_out</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">h</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tab_out</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">h</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">tmp</span>
+<span class="w">      </span><span class="c">!.........................................</span>
+
+<span class="w">      </span><span class="k">deallocate</span><span class="p">(</span><span class="n">tab_cmpl</span><span class="p">)</span>
+<span class="w">      </span><span class="k">deallocate</span><span class="p">(</span><span class="n">tab_real</span><span class="p">)</span>
+
+<span class="w">   </span><span class="k">return</span>
+<span class="k">   endsubroutine </span><span class="n">acf_wiener</span>
+</pre></div>
+
+    </section>
+    <br>
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              CREST
+ was developed by Arthur Francisco<br>              &copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+ on 2024-11-12 12:09              </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>
