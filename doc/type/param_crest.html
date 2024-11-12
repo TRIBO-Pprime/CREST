@@ -1,0 +1,1022 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="CREST – Computational Resource for Eroded Surface Topology">
+    <meta name="author" content="Arthur Francisco" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>param_crest &ndash; CREST </title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">CREST </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../program/main.html">Program</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>param_crest
+      <small>Derived Type</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title="<p>100.0% of total for derived types.</p>Including implementation: 37 statements, 100.0% of total for derived types.">37 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/mod_crest_param.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mod_crest_param.f90.html'>mod_crest_param.f90</a></li>
+                <li class="breadcrumb-item"><a href='../module/crest_param.html'>crest_param</a></li>
+            <li class="breadcrumb-item active" aria-current="page">param_crest</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#vars-0"
+         aria-expanded="false" aria-controls="vars-0">
+         <h4 class="card-header bg-primary text-white">Variables</h4>
+      </a>
+      <div id="vars-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../type/param_crest.html#variable-vect_h">vect_h</a>
+            <a class="list-group-item" href="../type/param_crest.html#variable-surf">surf</a>
+            <a class="list-group-item" href="../type/param_crest.html#variable-imp_acf~2">imp_acf</a>
+            <a class="list-group-item" href="../type/param_crest.html#variable-fhi">fhi</a>
+            <a class="list-group-item" href="../type/param_crest.html#variable-acf_surf~2">acf_surf</a>
+            <a class="list-group-item" href="../type/param_crest.html#variable-order">order</a>
+            <a class="list-group-item" href="../type/param_crest.html#variable-m_end">m_end</a>
+            <a class="list-group-item" href="../type/param_crest.html#variable-m_inp">m_inp</a>
+            <a class="list-group-item" href="../type/param_crest.html#variable-m_stt">m_stt</a>
+            <a class="list-group-item" href="../type/param_crest.html#variable-pik_class~2">pik_class</a>
+            <a class="list-group-item" href="../type/param_crest.html#variable-func_gen">func_gen</a>
+            <a class="list-group-item" href="../type/param_crest.html#variable-nparam~2">nparam</a>
+            <a class="list-group-item" href="../type/param_crest.html#variable-nb_threads">nb_threads</a>
+            <a class="list-group-item" href="../type/param_crest.html#variable-width">width</a>
+            <a class="list-group-item" href="../type/param_crest.html#variable-height">height</a>
+            <a class="list-group-item" href="../type/param_crest.html#variable-npts">npts</a>
+            <a class="list-group-item" href="../type/param_crest.html#variable-sub_width">sub_width</a>
+            <a class="list-group-item" href="../type/param_crest.html#variable-sub_height">sub_height</a>
+            <a class="list-group-item" href="../type/param_crest.html#variable-sub_npts">sub_npts</a>
+            <a class="list-group-item" href="../type/param_crest.html#variable-reajust_skku">reajust_skku</a>
+            <a class="list-group-item" href="../type/param_crest.html#variable-periodic">periodic</a>
+            <a class="list-group-item" href="../type/param_crest.html#variable-apod">apod</a>
+            <a class="list-group-item" href="../type/param_crest.html#variable-l_acf1">l_acf1</a>
+            <a class="list-group-item" href="../type/param_crest.html#variable-l_acf2">l_acf2</a>
+            <a class="list-group-item" href="../type/param_crest.html#variable-acf__z~2">acf__z</a>
+            <a class="list-group-item" href="../type/param_crest.html#variable-a_acf">a_acf</a>
+            <a class="list-group-item" href="../type/param_crest.html#variable-cutoff~2">cutoff</a>
+            <a class="list-group-item" href="../type/param_crest.html#variable-surf_width">surf_width</a>
+            <a class="list-group-item" href="../type/param_crest.html#variable-surf_height">surf_height</a>
+            <a class="list-group-item" href="../type/param_crest.html#variable-sub_surf_width">sub_surf_width</a>
+            <a class="list-group-item" href="../type/param_crest.html#variable-sub_surf_height">sub_surf_height</a>
+            <a class="list-group-item" href="../type/param_crest.html#variable-surf_dx">surf_dx</a>
+            <a class="list-group-item" href="../type/param_crest.html#variable-surf_dy">surf_dy</a>
+            <a class="list-group-item" href="../type/param_crest.html#variable-crt_acf">crt_acf</a>
+            <a class="list-group-item" href="../type/param_crest.html#variable-res_acf~2">res_acf</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="card card-primary">
+      <div class="card-header text-left"><h3 class="card-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../type/param_crest.html#src">param_crest</a>
+      </div>
+    </div>
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+      <h2 id="type-def-statement">
+        type, public :: param_crest</h2>
+    
+<br>      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">Inherits</h3>
+        </div>
+        <div class="card-body">
+          <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: type~~param_crest~~InheritsGraph Pages: 1 -->
+<svg id="typeparam_crestInheritsGraph" width="300pt" height="74pt"
+ viewBox="0.00 0.00 300.00 74.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="type~~param_crest~~InheritsGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 70)">
+<title>type~~param_crest~~InheritsGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-70 296,-70 296,4 -4,4"/>
+<!-- type~param_crest -->
+<g id="type~~param_crest~~InheritsGraph_node1" class="node">
+<title>type~param_crest</title>
+<polygon fill="none" stroke="black" points="292,-45 219,-45 219,-21 292,-21 292,-45"/>
+<text text-anchor="middle" x="255.5" y="-30.6" font-family="Helvetica,sans-Serif" font-size="10.50">param_crest</text>
+</g>
+<!-- MOMENT_STAT -->
+<g id="type~~param_crest~~InheritsGraph_node2" class="node">
+<title>MOMENT_STAT</title>
+<polygon fill="#5cb85c" stroke="#5cb85c" points="91,-66 0,-66 0,-42 91,-42 91,-66"/>
+<text text-anchor="middle" x="45.5" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">MOMENT_STAT</text>
+</g>
+<!-- type~param_crest&#45;&gt;MOMENT_STAT -->
+<g id="type~~param_crest~~InheritsGraph_edge1" class="edge">
+<title>type~param_crest&#45;&gt;MOMENT_STAT</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M218.74,-36.61C186.47,-39.87 138.49,-44.71 101.36,-48.46"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="100.8,-45 91.2,-49.49 101.5,-51.96 100.8,-45"/>
+<text text-anchor="middle" x="155" y="-49.4" font-family="Helvetica,sans-Serif" font-size="9.50">m_end, m_inp, m_stt</text>
+</g>
+<!-- pikaia_class -->
+<g id="type~~param_crest~~InheritsGraph_node3" class="node">
+<title>pikaia_class</title>
+<polygon fill="#5cb85c" stroke="#5cb85c" points="80.5,-24 10.5,-24 10.5,0 80.5,0 80.5,-24"/>
+<text text-anchor="middle" x="45.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">pikaia_class</text>
+</g>
+<!-- type~param_crest&#45;&gt;pikaia_class -->
+<g id="type~~param_crest~~InheritsGraph_edge2" class="edge">
+<title>type~param_crest&#45;&gt;pikaia_class</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M218.88,-26.55C212.92,-25.61 206.8,-24.71 201,-24 163.93,-19.45 121.64,-16.31 90.69,-14.38"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="90.84,-10.89 80.65,-13.78 90.42,-17.87 90.84,-10.89"/>
+<text text-anchor="middle" x="155" y="-26.4" font-family="Helvetica,sans-Serif" font-size="9.50">pik_class</text>
+</g>
+</g>
+</svg>
+</div>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#InheritsGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="InheritsGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="178pt" height="32pt"
+ viewBox="0.00 0.00 177.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 173.5,-28 173.5,4 -4,4"/>
+<!-- Type -->
+<g id="node1" class="node">
+<title>Type</title>
+<polygon fill="#5cb85c" stroke="#5cb85c" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node2" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="169.5,-24 72.5,-24 72.5,0 169.5,0 169.5,-24"/>
+<text text-anchor="middle" x="121" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a derived type to the parent type which it
+extends. Dashed arrows point from a derived type to the other
+types it contains as a components, with a label listing the name(s) of
+said component(s).
+</p>
+ Where possible, edges connecting nodes are
+given different colours to make them easier to distinguish in
+large graphs.</div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    <br>
+
+    <section>
+    <h2>Components</h2>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Visibility</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+<th></th><th scope="col">Initial</th>        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-vect_h"></span>
+              real(kind=R8),
+            </td>
+              <td>public,</td>
+            <td>
+              allocatable, dimension(:)
+            </td>
+            <td>::</td>
+            <td><strong>vect_h</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p><em>vector used to store the heights that meet the stat moments</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-surf"></span>
+              real(kind=R8),
+            </td>
+              <td>public,</td>
+            <td>
+              allocatable, dimension(:,:)
+            </td>
+            <td>::</td>
+            <td><strong>surf</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p><em>surface array</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-imp_acf~2"></span>
+              real(kind=R8),
+            </td>
+              <td>public,</td>
+            <td>
+              allocatable, dimension(:,:)
+            </td>
+            <td>::</td>
+            <td><strong>imp_acf</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p><em>imposed autocorrelation</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-fhi"></span>
+              real(kind=R8),
+            </td>
+              <td>public,</td>
+            <td>
+              allocatable, dimension(:,:)
+            </td>
+            <td>::</td>
+            <td><strong>fhi</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p><em>digital filter</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-acf_surf~2"></span>
+              real(kind=R8),
+            </td>
+              <td>public,</td>
+            <td>
+              allocatable, dimension(:,:)
+            </td>
+            <td>::</td>
+            <td><strong>acf_surf</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p><em>calculated autocorrelation</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-order"></span>
+              integer(kind=I4),
+            </td>
+              <td>public,</td>
+            <td>
+              allocatable, dimension(:)
+            </td>
+            <td>::</td>
+            <td><strong>order</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p><em>vector that stores heights order</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-m_end"></span>
+              type(MOMENT_STAT),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>m_end</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p><em>final stat moments</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-m_inp"></span>
+              type(MOMENT_STAT),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>m_inp</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p><em>input stat moments for genetic algo optimizer</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-m_stt"></span>
+              type(MOMENT_STAT),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>m_stt</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p><em>starting stat moments</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-pik_class~2"></span>
+              type(pikaia_class),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>pik_class</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p><strong>PIKAIA</strong> <em>class instanciation</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-func_gen"></span>
+              integer(kind=I4),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>func_gen</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p><em>mathematical function used to generate the heights</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nparam~2"></span>
+              integer(kind=I4),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nparam</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p><em>number of parameters for the mathematical function</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nb_threads"></span>
+              integer(kind=I4),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nb_threads</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p><em>number of concurrent threads</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-width"></span>
+              integer(kind=I4),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>width</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p><em>surface nb points along x</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-height"></span>
+              integer(kind=I4),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>height</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p><em>surface nb points along y</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-npts"></span>
+              integer(kind=I4),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>npts</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p><em>surface nb points</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-sub_width"></span>
+              integer(kind=I4),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>sub_width</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p><em>subsurface nb points along x</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-sub_height"></span>
+              integer(kind=I4),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>sub_height</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p><em>subsurface nb points along y</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-sub_npts"></span>
+              integer(kind=I4),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>sub_npts</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p><em>subsurface nb points</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-reajust_skku"></span>
+              logical(kind=I4),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>reajust_skku</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p><em>if Ssk</em><em>2 +1 &gt; Sku, modify Sku</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-periodic"></span>
+              logical(kind=I4),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>periodic</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p><em>is the surface periodic?</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-apod"></span>
+              logical(kind=I4),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>apod</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p><em>apodize imposed acf?</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l_acf1"></span>
+              real(kind=R8),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>l_acf1</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p><em>correlation principal length at z=acf__z</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l_acf2"></span>
+              real(kind=R8),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>l_acf2</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p><em>correlation secondary length at z=acf__z</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-acf__z~2"></span>
+              real(kind=R8),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>acf__z</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p><em>acf cutting plane z, for correlation lengths determination</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-a_acf"></span>
+              real(kind=R8),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>a_acf</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p><em>roughness orientation</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-cutoff~2"></span>
+              real(kind=R8),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>cutoff</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p><em>Gaussian filter cutoff</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-surf_width"></span>
+              real(kind=R8),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>surf_width</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p><em>surface width (m)</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-surf_height"></span>
+              real(kind=R8),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>surf_height</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p><em>surface height (m)</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-sub_surf_width"></span>
+              real(kind=R8),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>sub_surf_width</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p><em>subsurface width (m)</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-sub_surf_height"></span>
+              real(kind=R8),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>sub_surf_height</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p><em>subsurface height (m)</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-surf_dx"></span>
+              real(kind=R8),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>surf_dx</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p><em>surface increment along x (m)</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-surf_dy"></span>
+              real(kind=R8),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>surf_dy</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p><em>surface increment along y (m)</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-crt_acf"></span>
+              real(kind=R8),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>crt_acf</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p><em>acf criterion: mean absolute difference between imposed and calculated acf allowed</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-res_acf~2"></span>
+              real(kind=R8),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>res_acf</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p><em>store mean absolute difference between imposed and calculated acf</em></p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    </section>
+    <br>
+    
+
+
+
+    <section>
+    <h3><span class="anchor" id="src"></span>Source Code</h3>
+    <div class="hl codehilite"><pre><span></span><span class="w">   </span><span class="k">type </span><span class="n">param_crest</span>
+
+<span class="w">      </span><span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">),</span><span class="w"> </span><span class="k">allocatable</span><span class="p">,</span><span class="w"> </span><span class="k">dimension</span><span class="p">(:)</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">vect_h</span><span class="w">     </span><span class="c">!! *vector used to store the heights that meet the stat moments*</span>
+
+<span class="w">      </span><span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">),</span><span class="w"> </span><span class="k">allocatable</span><span class="p">,</span><span class="w"> </span><span class="k">dimension</span><span class="p">(:,:)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">surf</span><span class="w">       </span><span class="c">!! *surface array*</span>
+
+<span class="w">      </span><span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">),</span><span class="w"> </span><span class="k">allocatable</span><span class="p">,</span><span class="w"> </span><span class="k">dimension</span><span class="p">(:,:)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">imp_acf</span><span class="w">    </span><span class="c">!! *imposed autocorrelation*</span>
+<span class="w">      </span><span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">),</span><span class="w"> </span><span class="k">allocatable</span><span class="p">,</span><span class="w"> </span><span class="k">dimension</span><span class="p">(:,:)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">fhi</span><span class="w">        </span><span class="c">!! *digital filter*</span>
+
+<span class="w">      </span><span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">),</span><span class="w"> </span><span class="k">allocatable</span><span class="p">,</span><span class="w"> </span><span class="k">dimension</span><span class="p">(:,:)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">acf_surf</span><span class="w">   </span><span class="c">!! *calculated autocorrelation*</span>
+
+<span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">I4</span><span class="p">),</span><span class="w"> </span><span class="k">allocatable</span><span class="p">,</span><span class="w"> </span><span class="k">dimension</span><span class="p">(:)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">order</span><span class="w">     </span><span class="c">!! *vector that stores heights order*</span>
+
+<span class="w">      </span><span class="k">type</span><span class="p">(</span><span class="n">MOMENT_STAT</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">m_end</span><span class="w">                               </span><span class="c">!! *final stat moments*</span>
+<span class="w">      </span><span class="k">type</span><span class="p">(</span><span class="n">MOMENT_STAT</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">m_inp</span><span class="w">                               </span><span class="c">!! *input stat moments for genetic algo optimizer*</span>
+<span class="w">      </span><span class="k">type</span><span class="p">(</span><span class="n">MOMENT_STAT</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">m_stt</span><span class="w">                               </span><span class="c">!! *starting stat moments*</span>
+
+<span class="w">      </span><span class="k">type</span><span class="p">(</span><span class="n">pikaia_class</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">pik_class</span><span class="w">                          </span><span class="c">!! **PIKAIA** *class instanciation*</span>
+
+<span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">I4</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">func_gen</span><span class="w">                             </span><span class="c">!! *mathematical function used to generate the heights*</span>
+<span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">I4</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">nparam</span><span class="w">                               </span><span class="c">!! *number of parameters for the mathematical function*</span>
+
+<span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">I4</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">nb_threads</span><span class="w">                           </span><span class="c">!! *number of concurrent threads*</span>
+
+<span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">I4</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">width</span><span class="w">                                </span><span class="c">!! *surface nb points along x*</span>
+<span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">I4</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">height</span><span class="w">                               </span><span class="c">!! *surface nb points along y*</span>
+<span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">I4</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">npts</span><span class="w">                                 </span><span class="c">!! *surface nb points*</span>
+<span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">I4</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">sub_width</span><span class="w">                            </span><span class="c">!! *subsurface nb points along x*</span>
+<span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">I4</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">sub_height</span><span class="w">                           </span><span class="c">!! *subsurface nb points along y*</span>
+<span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">I4</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">sub_npts</span><span class="w">                             </span><span class="c">!! *subsurface nb points*</span>
+
+<span class="w">      </span><span class="kt">logical</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">I4</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">reajust_skku</span><span class="w">                         </span><span class="c">!! *if Ssk**2 +1 &gt; Sku, modify Sku*</span>
+
+<span class="w">      </span><span class="kt">logical</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">I4</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">periodic</span><span class="w">                             </span><span class="c">!! *is the surface periodic?*</span>
+
+<span class="w">      </span><span class="kt">logical</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">I4</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">apod</span><span class="w">                                 </span><span class="c">!! *apodize imposed acf?*</span>
+
+<span class="w">      </span><span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">l_acf1</span><span class="w">                                  </span><span class="c">!! *correlation principal length at z=acf__z*</span>
+<span class="w">      </span><span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">l_acf2</span><span class="w">                                  </span><span class="c">!! *correlation secondary length at z=acf__z*</span>
+<span class="w">      </span><span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">acf__z</span><span class="w">                                  </span><span class="c">!! *acf cutting plane z, for correlation lengths determination*</span>
+<span class="w">      </span><span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">a_acf</span><span class="w">                                   </span><span class="c">!! *roughness orientation*</span>
+
+<span class="w">      </span><span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">cutoff</span><span class="w">                                  </span><span class="c">!! *Gaussian filter cutoff*</span>
+
+<span class="w">      </span><span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">surf_width</span><span class="w">                              </span><span class="c">!! *surface width (m)*</span>
+<span class="w">      </span><span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">surf_height</span><span class="w">                             </span><span class="c">!! *surface height (m)*</span>
+
+<span class="w">      </span><span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">sub_surf_width</span><span class="w">                          </span><span class="c">!! *subsurface width (m)*</span>
+<span class="w">      </span><span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">sub_surf_height</span><span class="w">                         </span><span class="c">!! *subsurface height (m)*</span>
+
+<span class="w">      </span><span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">surf_dx</span><span class="w">                                 </span><span class="c">!! *surface increment along x (m)*</span>
+<span class="w">      </span><span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">surf_dy</span><span class="w">                                 </span><span class="c">!! *surface increment along y (m)*</span>
+
+<span class="w">      </span><span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">crt_acf</span><span class="w">                                 </span><span class="c">!! *acf criterion: mean absolute difference between imposed and calculated acf allowed*</span>
+
+<span class="w">      </span><span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">res_acf</span><span class="w">                                 </span><span class="c">!! *store mean absolute difference between imposed and calculated acf*</span>
+
+<span class="w">   </span><span class="k">endtype </span><span class="n">param_crest</span>
+</pre></div>
+
+    </section>
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              CREST
+ was developed by Arthur Francisco<br>              &copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+ on 2024-11-12 09:51              </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

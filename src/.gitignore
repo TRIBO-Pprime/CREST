@@ -1,0 +1,4 @@
+*
+!/inc_doc
+!*.f90
+!.gitignore
