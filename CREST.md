@@ -4,7 +4,8 @@ summary: **CREST** -- Computational Resource for Eroded Surface Topology <br/> !
 author:  Arthur Francisco
 email:   arthur.francisco@univ-poitiers.fr
 website: https://tribo-pprime.github.io/CREST
-github: https://github.com/TRIBO-Pprime/CREST
+github: https://github.com/Arthur-Francisco
+project_github: https://github.com/TRIBO-Pprime/CREST
 include:    ./inc
 src_dir:    ./src
 exclude_dir: ./src/arch
