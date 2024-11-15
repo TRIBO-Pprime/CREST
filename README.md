@@ -7,6 +7,7 @@ Table of Contents
 - [Third party components](#third-party-components)
 - [Typical use](#typical-use)
 - [Full description](#full-description)
+- [Documentation](#documentation)
 - [License](#license)
 
 Brief description
@@ -14,10 +15,10 @@ Brief description
 
 **CREST** - **C**omputational **R**esource for **E**roded **S**urface **T**opology - is designed to generate numerical rough surfaces that respect:
 
-* size: $n \times m$ regular grid
-* statistical moments: Skewness $Ssk$ and Kurtosis $Sku$
-* principal correlation lengths: $\tau_1$ and $\tau_2$
-* asperity orientation: $\alpha$ angle
+* size: \(n \times m\) regular grid
+* statistical moments: Skewness \(Ssk\) and Kurtosis \(Sku\)
+* principal correlation lengths: \(\tau_1\) and \(\tau_2\)
+* asperity orientation: \(\alpha\) angle
 * periodicity: with/without
 
 The programs are written in recent Fortran (2003+)
@@ -87,16 +88,19 @@ Typical use
 Full description
 ----------------
 
+[top](#table-of-contents)
 
+Documentation
+-------------
+The documentation is automatically generated with [FORD](https://github.com/Fortran-FOSS-Programmers/ford), an automatic documentation generator for modern Fortran programs.
+
+[top](#table-of-contents)
 
 License
 -------
 
-[^1]:
-    CeCILL-C license
-[^2]:
-    GNU GPL
-[^3]:
-    New BSD-3
-[^4]:
-    HSL software is strictly intended for Personal academic use on the download page
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but without any warrenty; without even the implied warranty of merchantability or fitness for a particular purpose. See the GNU General Public License for more details.
+
+You should have received a [copy](https://github.com/TRIBO-Pprime/CREST/LICENSE) of the GNU General Public License along with this program. If not, see the [GNU website](https://www.gnu.org/licenses/gpl.html).
