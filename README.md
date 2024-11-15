@@ -46,13 +46,9 @@ Dependencies
 
 CREST needs some components that are available through the following packages:
 
-* *TOOLIB*
+* *TOOLIB* ... Some general tools like FFT, file handling, minimization, sorting, etc.
 
-  Some general tools like FFT, file handling, minimization, sorting, etc.
-
-* *TPGLIB*
-
-  Some more specific programs like filtering, anisotropy analysis, derivation, etc.
+* *TPGLIB* ... Some more specific programs like filtering, anisotropy analysis, derivation, etc.
 
 As a consequence the three packages have to be downloaded.
 
@@ -63,25 +59,29 @@ Third party components
 
 TOOLIB also uses external codes such as:
 
-+ *FFTW3.3*, [Fastest Fourier Transform in the West](https://www.fftw.org/)
++ *FFTW3.3* ... [Fastest Fourier Transform in the West](https://www.fftw.org/) ... GNU General Public License
 
-  GNU General Public License
++ *Pikaia_oop* ... [Modern Fortran Edition of the Pikaia Genetic Algorithm](http://github.com/jacobwilliams/pikaia) ... BSD like
 
-+ *Pikaia_oop*, [Modern Fortran Edition of the Pikaia Genetic Algorithm](http://github.com/jacobwilliams/pikaia)
++ *GNUFOR* ... [Gnuplot Fortran](https://people.math.sc.edu/Burkardt/f_src/gnufor/gnufor.html) ... GNU General Public License
 
-  BSD like
-
-+ *GNUFOR*, [Gnuplot Fortran](https://people.math.sc.edu/Burkardt/f_src/gnufor/gnufor.html)
-
-  GNU General Public License
-
-+ *Bspline-fortran*, [Multidimensional B-Spline Interpolation of Data on a Regular Grid](https://github.com/jacobwilliams/bspline-fortran)
-
-  BSD like
++ *Bspline-fortran* ... [Multidimensional B-Spline Interpolation of Data on a Regular Grid](https://github.com/jacobwilliams/bspline-fortran) ... BSD like
 
 Typical use
 -----------
 
+The program '''main''' reads a script file '''my_script.md''' where the following parameters are defined:
++ image size (pix)
++ surface size (m)
++ periodicity
++ correlation lengths
++ roughness orientation
++ number of available threads
++ statistical parameters
++ output surface name
++ ...
+
+as well as the algorithm for rough surface generation.
 
 [top](#table-of-contents)
 
