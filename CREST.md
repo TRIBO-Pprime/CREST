@@ -1,6 +1,6 @@
 ---
 project: CREST
-summary: **CREST** -- Computational Resource for Eroded Surface Topology <br/> ![CREST_img](media/CREST_small.jpg)
+summary: **CREST** -- Computational Resource for Eroded Surface Topology <br/> ![CREST_img](./media/CREST_small.jpg)
 author:  Arthur Francisco
 src_dir: ./src
 output_dir: ./docs
