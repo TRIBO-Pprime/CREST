@@ -8,7 +8,6 @@ media_dir: ./img
 exclude_dir: ./src/arch
 include: ./inc
 favicon: ./img/CREST_logo.png
-css: ./css/CREST.css
 project_github: https://github.com/TRIBO-Pprime/CREST
 github: https://github.com/Arthur-Francisco
 website: http://arthur.francisco.free.fr/
