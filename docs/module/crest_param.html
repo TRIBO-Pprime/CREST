@@ -75,8 +75,6 @@
       <div class="col">
         <ul class="list-inline" style="margin-bottom:0px;display:inline">
             <li class="list-inline-item" id="meta-author"><i class="fa fa-pencil"></i> Arthur Francisco</li>
-            <li class="list-inline-item" id="meta-date"><i class="fa fa-calendar-o"></i> october, 23 2024</li>
-            <li class="list-inline-item" id="meta-version"><i class="fa fa-barcode"></i> 1.0.0</li>
 
             <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
               <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
@@ -119,12 +117,12 @@
       </a>
       <div id="vars-0" class="collapse">
         <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/crest_param.html#variable-fct_expo">FCT_EXPO</a>
+            <a class="list-group-item" href="../module/crest_param.html#variable-fct_tang">FCT_TANG</a>
             <a class="list-group-item" href="../module/crest_param.html#variable-job">JOB</a>
+            <a class="list-group-item" href="../module/crest_param.html#variable-param">PARAM</a>
             <a class="list-group-item" href="../module/crest_param.html#variable-spy">SPY</a>
             <a class="list-group-item" href="../module/crest_param.html#variable-ter">TER</a>
-            <a class="list-group-item" href="../module/crest_param.html#variable-param">PARAM</a>
-            <a class="list-group-item" href="../module/crest_param.html#variable-fct_tang">FCT_TANG</a>
-            <a class="list-group-item" href="../module/crest_param.html#variable-fct_expo">FCT_EXPO</a>
         </div>
       </div>
     </div>
@@ -165,18 +163,16 @@
     </div>
 
     <div class="col-md-9" id='text'>
-      <p><span style="color: #337ab7; font-family: cabin; font-size: 1.2em;">
-      <strong>Global variables and types</strong>
-</span></p>
+      
 <br>          <div class="card mb-4">
       <h3 class="card-header card-title bg-light">Uses</h3>
       <div class="card-body">
         <ul class="list-group list-group-flush">
             <li class="list-group-item">
               <ul class="list-inline">
+                  <li class="list-inline-item">data_arch</li>
                   <li class="list-inline-item">stat_mom</li>
                   <li class="list-inline-item">pikaia_oop</li>
-                  <li class="list-inline-item">data_arch</li>
               </ul>
             </li>
             <li class="list-group-item">
@@ -508,6 +504,40 @@ large graphs.</div>
     <tbody>
         <tr>
             <td>
+              <span class="anchor" id="variable-fct_expo"></span>
+              integer(kind=I4),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>FCT_EXPO</strong></td>
+<td> =</td>
+                <td>2</td>
+            <td>
+                <p><em>exponential function for height generation</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-fct_tang"></span>
+              integer(kind=I4),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>FCT_TANG</strong></td>
+<td> =</td>
+                <td>1</td>
+            <td>
+                <p><em>tangent function for height generation</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
               <span class="anchor" id="variable-job"></span>
               integer(kind=I4),
             </td>
@@ -521,6 +551,23 @@ large graphs.</div>
                 <td></td>
             <td>
                 <p><em>JOB file: script</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-param"></span>
+              type(<a href='../type/param_crest.html'>param_crest</a>),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>PARAM</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
             </td>
         </tr>
         <tr>
@@ -555,57 +602,6 @@ parameter
                 <td>6</td>
             <td>
                 <p><em>terminal output</em></p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-param"></span>
-              type(<a href='../type/param_crest.html'>param_crest</a>),
-            </td>
-              <td>public</td>
-            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>PARAM</strong></td>
-                <td></td>
-                <td></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-fct_tang"></span>
-              integer(kind=I4),
-            </td>
-              <td>public,</td>
-            <td>
-parameter               
-            </td>
-            <td>::</td>
-            <td><strong>FCT_TANG</strong></td>
-<td> =</td>
-                <td>1</td>
-            <td>
-                <p><em>tangent function for height generation</em></p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-fct_expo"></span>
-              integer(kind=I4),
-            </td>
-              <td>public,</td>
-            <td>
-parameter               
-            </td>
-            <td>::</td>
-            <td><strong>FCT_EXPO</strong></td>
-<td> =</td>
-                <td>2</td>
-            <td>
-                <p><em>exponential function for height generation</em></p>
             </td>
         </tr>
     </tbody>
@@ -644,70 +640,36 @@ parameter
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-vect_h"></span>
+              <span class="anchor" id="variable-a_acf"></span>
               real(kind=R8),
             </td>
-              <td>public,</td>
+              <td>public</td>
             <td>
-              allocatable, dimension(:)
+              
             </td>
             <td>::</td>
-            <td><strong>vect_h</strong></td>
+            <td><strong>a_acf</strong></td>
                 <td></td>
                 <td></td>
             <td>
-<p><em>vector used to store the heights that meet the stat moments</em></p>
+<p><em>roughness orientation</em></p>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-surf"></span>
+              <span class="anchor" id="variable-acf__z~2"></span>
               real(kind=R8),
             </td>
-              <td>public,</td>
+              <td>public</td>
             <td>
-              allocatable, dimension(:,:)
+              
             </td>
             <td>::</td>
-            <td><strong>surf</strong></td>
+            <td><strong>acf__z</strong></td>
                 <td></td>
                 <td></td>
             <td>
-<p><em>surface array</em></p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-imp_acf~2"></span>
-              real(kind=R8),
-            </td>
-              <td>public,</td>
-            <td>
-              allocatable, dimension(:,:)
-            </td>
-            <td>::</td>
-            <td><strong>imp_acf</strong></td>
-                <td></td>
-                <td></td>
-            <td>
-<p><em>imposed autocorrelation</em></p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-fhi"></span>
-              real(kind=R8),
-            </td>
-              <td>public,</td>
-            <td>
-              allocatable, dimension(:,:)
-            </td>
-            <td>::</td>
-            <td><strong>fhi</strong></td>
-                <td></td>
-                <td></td>
-            <td>
-<p><em>digital filter</em></p>
+<p><em>acf cutting plane z, for correlation lengths determination</em></p>
             </td>
         </tr>
         <tr>
@@ -729,19 +691,155 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-order"></span>
-              integer(kind=I4),
+              <span class="anchor" id="variable-apod~2"></span>
+              logical(kind=I4),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>apod</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+<p><em>apodize imposed acf?</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-crt_acf"></span>
+              real(kind=R8),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>crt_acf</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+<p><em>acf criterion: mean absolute difference between imposed and calculated acf allowed</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-cutoff~2"></span>
+              real(kind=R8),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>cutoff</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+<p><em>Gaussian filter cutoff</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-fhi"></span>
+              real(kind=R8),
             </td>
               <td>public,</td>
             <td>
-              allocatable, dimension(:)
+              allocatable, dimension(:,:)
             </td>
             <td>::</td>
-            <td><strong>order</strong></td>
+            <td><strong>fhi</strong></td>
                 <td></td>
                 <td></td>
             <td>
-<p><em>vector that stores heights order</em></p>
+<p><em>digital filter</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-func_gen"></span>
+              integer(kind=I4),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>func_gen</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+<p><em>mathematical function used to generate the heights</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-height"></span>
+              integer(kind=I4),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>height</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+<p><em>surface nb points along y</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-imp_acf~2"></span>
+              real(kind=R8),
+            </td>
+              <td>public,</td>
+            <td>
+              allocatable, dimension(:,:)
+            </td>
+            <td>::</td>
+            <td><strong>imp_acf</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+<p><em>imposed autocorrelation</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l_acf1"></span>
+              real(kind=R8),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>l_acf1</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+<p><em>correlation principal length at z=acf__z</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l_acf2"></span>
+              real(kind=R8),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>l_acf2</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+<p><em>correlation secondary length at z=acf__z</em></p>
             </td>
         </tr>
         <tr>
@@ -797,57 +895,6 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-pik_class~2"></span>
-              type(pikaia_class),
-            </td>
-              <td>public</td>
-            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>pik_class</strong></td>
-                <td></td>
-                <td></td>
-            <td>
-<p><strong>PIKAIA</strong> <em>class instanciation</em></p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-func_gen"></span>
-              integer(kind=I4),
-            </td>
-              <td>public</td>
-            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>func_gen</strong></td>
-                <td></td>
-                <td></td>
-            <td>
-<p><em>mathematical function used to generate the heights</em></p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-nparam~2"></span>
-              integer(kind=I4),
-            </td>
-              <td>public</td>
-            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>nparam</strong></td>
-                <td></td>
-                <td></td>
-            <td>
-<p><em>number of parameters for the mathematical function</em></p>
-            </td>
-        </tr>
-        <tr>
-            <td>
               <span class="anchor" id="variable-nb_threads"></span>
               integer(kind=I4),
             </td>
@@ -865,7 +912,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-width"></span>
+              <span class="anchor" id="variable-nparam"></span>
               integer(kind=I4),
             </td>
               <td>public</td>
@@ -873,28 +920,11 @@ parameter
               
             </td>
             <td>::</td>
-            <td><strong>width</strong></td>
+            <td><strong>nparam</strong></td>
                 <td></td>
                 <td></td>
             <td>
-<p><em>surface nb points along x</em></p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-height"></span>
-              integer(kind=I4),
-            </td>
-              <td>public</td>
-            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>height</strong></td>
-                <td></td>
-                <td></td>
-            <td>
-<p><em>surface nb points along y</em></p>
+<p><em>number of parameters for the mathematical function</em></p>
             </td>
         </tr>
         <tr>
@@ -916,19 +946,87 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-sub_width"></span>
+              <span class="anchor" id="variable-order"></span>
               integer(kind=I4),
+            </td>
+              <td>public,</td>
+            <td>
+              allocatable, dimension(:)
+            </td>
+            <td>::</td>
+            <td><strong>order</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+<p><em>vector that stores heights order</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-periodic"></span>
+              logical(kind=I4),
             </td>
               <td>public</td>
             <td>
               
             </td>
             <td>::</td>
-            <td><strong>sub_width</strong></td>
+            <td><strong>periodic</strong></td>
                 <td></td>
                 <td></td>
             <td>
-<p><em>subsurface nb points along x</em></p>
+<p><em>is the surface periodic?</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-pik_class"></span>
+              type(pikaia_class),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>pik_class</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+<p><strong>PIKAIA</strong> <em>class instanciation</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-reajust_skku"></span>
+              logical(kind=I4),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>reajust_skku</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+<p><em>if Ssk</em><em>2 +1 &gt; Sku, modify Sku</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-res_acf~2"></span>
+              real(kind=R8),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>res_acf</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+<p><em>store mean absolute difference between imposed and calculated acf</em></p>
             </td>
         </tr>
         <tr>
@@ -967,58 +1065,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-reajust_skku"></span>
-              logical(kind=I4),
-            </td>
-              <td>public</td>
-            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>reajust_skku</strong></td>
-                <td></td>
-                <td></td>
-            <td>
-<p><em>if Ssk</em><em>2 +1 &gt; Sku, modify Sku</em></p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-periodic"></span>
-              logical(kind=I4),
-            </td>
-              <td>public</td>
-            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>periodic</strong></td>
-                <td></td>
-                <td></td>
-            <td>
-<p><em>is the surface periodic?</em></p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-apod~2"></span>
-              logical(kind=I4),
-            </td>
-              <td>public</td>
-            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>apod</strong></td>
-                <td></td>
-                <td></td>
-            <td>
-<p><em>apodize imposed acf?</em></p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-l_acf1"></span>
+              <span class="anchor" id="variable-sub_surf_height"></span>
               real(kind=R8),
             </td>
               <td>public</td>
@@ -1026,113 +1073,11 @@ parameter
               
             </td>
             <td>::</td>
-            <td><strong>l_acf1</strong></td>
+            <td><strong>sub_surf_height</strong></td>
                 <td></td>
                 <td></td>
             <td>
-<p><em>correlation principal length at z=acf__z</em></p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-l_acf2"></span>
-              real(kind=R8),
-            </td>
-              <td>public</td>
-            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>l_acf2</strong></td>
-                <td></td>
-                <td></td>
-            <td>
-<p><em>correlation secondary length at z=acf__z</em></p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-acf__z~2"></span>
-              real(kind=R8),
-            </td>
-              <td>public</td>
-            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>acf__z</strong></td>
-                <td></td>
-                <td></td>
-            <td>
-<p><em>acf cutting plane z, for correlation lengths determination</em></p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-a_acf"></span>
-              real(kind=R8),
-            </td>
-              <td>public</td>
-            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>a_acf</strong></td>
-                <td></td>
-                <td></td>
-            <td>
-<p><em>roughness orientation</em></p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-cutoff~2"></span>
-              real(kind=R8),
-            </td>
-              <td>public</td>
-            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>cutoff</strong></td>
-                <td></td>
-                <td></td>
-            <td>
-<p><em>Gaussian filter cutoff</em></p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-surf_width"></span>
-              real(kind=R8),
-            </td>
-              <td>public</td>
-            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>surf_width</strong></td>
-                <td></td>
-                <td></td>
-            <td>
-<p><em>surface width (m)</em></p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-surf_height"></span>
-              real(kind=R8),
-            </td>
-              <td>public</td>
-            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>surf_height</strong></td>
-                <td></td>
-                <td></td>
-            <td>
-<p><em>surface height (m)</em></p>
+<p><em>subsurface height (m)</em></p>
             </td>
         </tr>
         <tr>
@@ -1154,19 +1099,36 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-sub_surf_height"></span>
-              real(kind=R8),
+              <span class="anchor" id="variable-sub_width"></span>
+              integer(kind=I4),
             </td>
               <td>public</td>
             <td>
               
             </td>
             <td>::</td>
-            <td><strong>sub_surf_height</strong></td>
+            <td><strong>sub_width</strong></td>
                 <td></td>
                 <td></td>
             <td>
-<p><em>subsurface height (m)</em></p>
+<p><em>subsurface nb points along x</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-surf"></span>
+              real(kind=R8),
+            </td>
+              <td>public,</td>
+            <td>
+              allocatable, dimension(:,:)
+            </td>
+            <td>::</td>
+            <td><strong>surf</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+<p><em>surface array</em></p>
             </td>
         </tr>
         <tr>
@@ -1205,7 +1167,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-crt_acf"></span>
+              <span class="anchor" id="variable-surf_height"></span>
               real(kind=R8),
             </td>
               <td>public</td>
@@ -1213,16 +1175,16 @@ parameter
               
             </td>
             <td>::</td>
-            <td><strong>crt_acf</strong></td>
+            <td><strong>surf_height</strong></td>
                 <td></td>
                 <td></td>
             <td>
-<p><em>acf criterion: mean absolute difference between imposed and calculated acf allowed</em></p>
+<p><em>surface height (m)</em></p>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-res_acf~2"></span>
+              <span class="anchor" id="variable-surf_width"></span>
               real(kind=R8),
             </td>
               <td>public</td>
@@ -1230,11 +1192,45 @@ parameter
               
             </td>
             <td>::</td>
-            <td><strong>res_acf</strong></td>
+            <td><strong>surf_width</strong></td>
                 <td></td>
                 <td></td>
             <td>
-<p><em>store mean absolute difference between imposed and calculated acf</em></p>
+<p><em>surface width (m)</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-vect_h"></span>
+              real(kind=R8),
+            </td>
+              <td>public,</td>
+            <td>
+              allocatable, dimension(:)
+            </td>
+            <td>::</td>
+            <td><strong>vect_h</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+<p><em>vector used to store the heights that meet the stat moments</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-width"></span>
+              integer(kind=I4),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>width</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+<p><em>surface nb points along x</em></p>
             </td>
         </tr>
     </tbody>
@@ -1271,7 +1267,7 @@ parameter
             <p class="text-end">
               Documentation generated by
               <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
- on 2024-11-12 13:36              </p>
+ on 2024-11-15 08:58 +0100             </p>
           </div>
         </div>
         <br>

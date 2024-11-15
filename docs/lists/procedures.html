@@ -82,22 +82,13 @@
                  <td><a href='../proc/acf_wiener.html'>acf_wiener</a></td>
                  <td><a href='../module/func_acf.html'>func_acf</a></td>
                  <td>Subroutine</td>
-                 <td><p>Function that returns the <em>acf</em> of an array.
- <script type="math/tex; mode=display">
- \begin{align*}
-    acf(i,j) &= (z \ast z)(i,j) = \sum_{k,l}^{n,n} z(k+1-i,l+1-j)z(k,l)  \\
-    TF(acf)  &= ACF = Z \cdot Z                                          \\
-    acf      &= TF^{-1}(ACF) = TF^{-1}(Z^2)
- \end{align*}
- </script>
-</p><a href="../proc/acf_wiener.html" class="pull-right"><emph>Read more&hellip;</emph></a></td>
+                 <td><p>Function that returns the <em>acf</em> of an array.</p><a href="../proc/acf_wiener.html" class="pull-right"><emph>Read more&hellip;</emph></a></td>
                </tr>
 			   <tr>
                  <td><a href='../proc/add_expo.html'>add_expo</a></td>
                  <td><a href='../module/skku_profiles.html'>skku_profiles</a></td>
                  <td>Function</td>
-                 <td><p>Function that adds to the series mean the border integrals as explained in the modules
- presentation.</p><a href="../proc/add_expo.html" class="pull-right"><emph>Read more&hellip;</emph></a></td>
+                 <td><p>Function that adds to the series mean the border integrals as explained in the modules</p><a href="../proc/add_expo.html" class="pull-right"><emph>Read more&hellip;</emph></a></td>
                </tr>
 			   <tr>
                  <td><a href='../proc/add_tang.html'>add_tang</a></td>
@@ -109,20 +100,13 @@
                  <td><a href='../proc/apod2.html'>apod2</a></td>
                  <td><a href='../module/func_acf.html'>func_acf</a></td>
                  <td>Subroutine</td>
-                 <td><p>Function that returns an apodized array.<br/>
- To prevent gaps from appearing after FFT (because of non periodic waves), the surface must
- be transformed, but not too much. Here a modified Tukey window is determined. The starting
- surface is not modified below the &ldquo;correlation lengths&rdquo;. Above the correlation lengths, a
- smooth decrease is forced with a cosine squared.</p><a href="../proc/apod2.html" class="pull-right"><emph>Read more&hellip;</emph></a></td>
+                 <td><p>Function that returns an apodized array.<br/></p><a href="../proc/apod2.html" class="pull-right"><emph>Read more&hellip;</emph></a></td>
                </tr>
 			   <tr>
                  <td><a href='../proc/autocov_impo.html'>autocov_impo</a></td>
                  <td><a href='../module/func_acf.html'>func_acf</a></td>
                  <td>Function</td>
-                 <td><p>Function that returns <script type="math/tex"> \exp \left(\alpha \sqrt{\left(\frac{x}{\tau_1}\right)^2+
-                                                        \left(\frac{y}{\tau_2}\right)^2}
-                                      \right) </script>
-</p><a href="../proc/autocov_impo.html" class="pull-right"><emph>Read more&hellip;</emph></a></td>
+                 <td><p>Function that returns ( \exp \left(\alpha \sqrt{\left(\frac{x}{\tau_1}\right)^2+</p><a href="../proc/autocov_impo.html" class="pull-right"><emph>Read more&hellip;</emph></a></td>
                </tr>
 			   <tr>
                  <td><a href='../proc/build_heights.html'>build_heights</a></td>
@@ -146,11 +130,7 @@
                  <td><a href='../proc/calc_imp_acf.html'>calc_imp_acf</a></td>
                  <td><a href='../module/func_acf.html'>func_acf</a></td>
                  <td>Subroutine</td>
-                 <td><p>Function that returns the theoretical autocorrelation function in an array.<br/>
- The autocorrelation function is supposed to be obtained from a real surface which must be periodic
- or nearly periodic (because of the use of FFTs).
- In addition, the surface is supposed to be 0 mean and normalized (<script type="math/tex">\sigma = 1 </script>),
- therefore <em>acf</em> is zero-mean and normalized so that its max value is 1.<br/></p><a href="../proc/calc_imp_acf.html" class="pull-right"><emph>Read more&hellip;</emph></a></td>
+                 <td><p>Function that returns the theoretical autocorrelation function in an array.<br/></p><a href="../proc/calc_imp_acf.html" class="pull-right"><emph>Read more&hellip;</emph></a></td>
                </tr>
 			   <tr>
                  <td><a href='../proc/calc_ord.html'>calc_ord</a></td>
@@ -162,15 +142,13 @@
                  <td><a href='../proc/calc_res_acf.html'>calc_res_acf</a></td>
                  <td><a href='../module/script.html'>script</a></td>
                  <td>Subroutine</td>
-                 <td><p>Function that returns <em>crit_acf</em> the mean absolute difference between theoretical
- and calculated acfs</p><a href="../proc/calc_res_acf.html" class="pull-right"><emph>Read more&hellip;</emph></a></td>
+                 <td><p>Function that returns <em>crit_acf</em> the mean absolute difference between theoretical</p><a href="../proc/calc_res_acf.html" class="pull-right"><emph>Read more&hellip;</emph></a></td>
                </tr>
 			   <tr>
                  <td><a href='../proc/calc_z_f.html'>calc_z_f</a></td>
                  <td><a href='../module/script.html'>script</a></td>
                  <td>Subroutine</td>
-                 <td><p>Function that returns PARAM%surf, the surface made of heights with the required statistical
- moments, in the right order.</p><a href="../proc/calc_z_f.html" class="pull-right"><emph>Read more&hellip;</emph></a></td>
+                 <td><p>Function that returns PARAM%surf, the surface made of heights with the required statistical</p><a href="../proc/calc_z_f.html" class="pull-right"><emph>Read more&hellip;</emph></a></td>
                </tr>
 			   <tr>
                  <td><a href='../proc/calc_z_i.html'>calc_z_i</a></td>
@@ -182,9 +160,7 @@
                  <td><a href='../proc/calculs_skku_exp.html'>calculs_skku_exp</a></td>
                  <td><a href='../module/skku_profiles.html'>skku_profiles</a></td>
                  <td>Subroutine</td>
-                 <td><p>Function to calculate the skewness and kurtosis of an <strong>exponential</strong> series.<br/>
- The principle is the same as <a href="../proc/calculs_skku_tan.html">calculs_skku_tan</a>, however it fits better some particular
- series quite binary (roughly two heights).</p><a href="../proc/calculs_skku_exp.html" class="pull-right"><emph>Read more&hellip;</emph></a></td>
+                 <td><p>Function to calculate the skewness and kurtosis of an <strong>exponential</strong> series.<br/></p><a href="../proc/calculs_skku_exp.html" class="pull-right"><emph>Read more&hellip;</emph></a></td>
                </tr>
 			   <tr>
                  <td><a href='../proc/calculs_skku_generique.html'>calculs_skku_generique</a></td>
@@ -238,9 +214,7 @@
                  <td><a href='../proc/fitness_skku_anal.html'>fitness_skku_anal</a></td>
                  <td><a href='../module/skku_profiles.html'>skku_profiles</a></td>
                  <td>Function</td>
-                 <td><p>Generic cost function: difference between the imposed statistical moments and those
- obtained. The optimization problem must be turned into a maximization problem (as often
- in the optimization routines).</p><a href="../proc/fitness_skku_anal.html" class="pull-right"><emph>Read more&hellip;</emph></a></td>
+                 <td><p>Generic cost function: difference between the imposed statistical moments and those</p><a href="../proc/fitness_skku_anal.html" class="pull-right"><emph>Read more&hellip;</emph></a></td>
                </tr>
 			   <tr>
                  <td><a href='../proc/nb_procs.html'>nb_procs</a></td>
@@ -252,17 +226,13 @@
                  <td><a href='../proc/pikaia_skku_solver.html'>pikaia_skku_solver</a></td>
                  <td><a href='../module/skku_profiles.html'>skku_profiles</a></td>
                  <td>Subroutine</td>
-                 <td><p>This is a refactoring of the PIKAIA unconstrained optimization code from the High Altitude Observatory.
- The original code is public domain and was written by Paul Charbonneau &amp; Barry Knapp.</p><a href="../proc/pikaia_skku_solver.html" class="pull-right"><emph>Read more&hellip;</emph></a></td>
+                 <td><p>This is a refactoring of the PIKAIA unconstrained optimization code from the High Altitude Observatory.</p><a href="../proc/pikaia_skku_solver.html" class="pull-right"><emph>Read more&hellip;</emph></a></td>
                </tr>
 			   <tr>
                  <td><a href='../proc/plt__acf.html'>plt__acf</a></td>
                  <td><a href='../module/script.html'>script</a></td>
                  <td>Subroutine</td>
-                 <td><p>Function that calculates the mean absolute difference between the desired Acf and
- the one obtained.
- However, the important zone where both should match is above acf__z - where the correlation
- lengths are determined.</p><a href="../proc/plt__acf.html" class="pull-right"><emph>Read more&hellip;</emph></a></td>
+                 <td><p>Function that calculates the mean absolute difference between the desired Acf and</p><a href="../proc/plt__acf.html" class="pull-right"><emph>Read more&hellip;</emph></a></td>
                </tr>
 			   <tr>
                  <td><a href='../proc/prg_surf.html'>prg_surf</a></td>
@@ -280,8 +250,7 @@
                  <td><a href='../proc/read_job.html'>read_job</a></td>
                  <td><a href='../module/script.html'>script</a></td>
                  <td>Subroutine</td>
-                 <td><p>Function that reads a script file. Keywords are identified and corresponding actions are
- triggered.</p><a href="../proc/read_job.html" class="pull-right"><emph>Read more&hellip;</emph></a></td>
+                 <td><p>Function that reads a script file. Keywords are identified and corresponding actions are</p><a href="../proc/read_job.html" class="pull-right"><emph>Read more&hellip;</emph></a></td>
                </tr>
 			   <tr>
                  <td><a href='../proc/save_img.html'>save_img</a></td>
@@ -1447,7 +1416,7 @@ large graphs.</div>
             <p class="text-end">
               Documentation generated by
               <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
- on 2024-11-12 13:36              </p>
+ on 2024-11-15 08:58 +0100             </p>
           </div>
         </div>
         <br>

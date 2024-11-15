@@ -75,8 +75,6 @@
       <div class="col">
         <ul class="list-inline" style="margin-bottom:0px;display:inline">
             <li class="list-inline-item" id="meta-author"><i class="fa fa-pencil"></i> Arthur Francisco</li>
-            <li class="list-inline-item" id="meta-date"><i class="fa fa-calendar-o"></i> october, 23 2024</li>
-            <li class="list-inline-item" id="meta-version"><i class="fa fa-barcode"></i> 1.0.0</li>
 
             <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
               <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
@@ -119,10 +117,10 @@
       </a>
       <div id="vars-0" class="collapse">
         <div class="list-group list-group-flush">
-            <a class="list-group-item" href="../module/script.html#variable-line_read">LINE_READ</a>
-            <a class="list-group-item" href="../module/script.html#variable-save_line_read">SAVE_LINE_READ</a>
             <a class="list-group-item" href="../module/script.html#variable-i_iter">I_ITER</a>
+            <a class="list-group-item" href="../module/script.html#variable-line_read">LINE_READ</a>
             <a class="list-group-item" href="../module/script.html#variable-nb_iter">NB_ITER</a>
+            <a class="list-group-item" href="../module/script.html#variable-save_line_read">SAVE_LINE_READ</a>
         </div>
       </div>
     </div>
@@ -144,26 +142,26 @@
       </a>
       <div id="subs-0" class="collapse">
         <div class="list-group list-group-flush">
-            <a class="list-group-item" href="../module/script.html#proc-read_job">read_job</a>
-            <a class="list-group-item" href="../module/script.html#proc-plt__acf">plt__acf</a>
+            <a class="list-group-item" href="../module/script.html#proc-acf_theo">acf_theo</a>
             <a class="list-group-item" href="../module/script.html#proc-calc_acf">calc_acf</a>
-            <a class="list-group-item" href="../module/script.html#proc-sta_loop">sta_loop</a>
-            <a class="list-group-item" href="../module/script.html#proc-end_loop">end_loop</a>
-            <a class="list-group-item" href="../module/script.html#proc-sub_surf">sub_surf</a>
+            <a class="list-group-item" href="../module/script.html#proc-calc_ffh">calc_ffh</a>
+            <a class="list-group-item" href="../module/script.html#proc-calc_ord">calc_ord</a>
             <a class="list-group-item" href="../module/script.html#proc-calc_res_acf">calc_res_acf</a>
+            <a class="list-group-item" href="../module/script.html#proc-calc_z_f">calc_z_f</a>
+            <a class="list-group-item" href="../module/script.html#proc-calc_z_i">calc_z_i</a>
+            <a class="list-group-item" href="../module/script.html#proc-def_size">def_size</a>
+            <a class="list-group-item" href="../module/script.html#proc-digi_fil">digi_fil</a>
+            <a class="list-group-item" href="../module/script.html#proc-end_loop">end_loop</a>
+            <a class="list-group-item" href="../module/script.html#proc-end_scri">end_scri</a>
+            <a class="list-group-item" href="../module/script.html#proc-nb_procs">nb_procs</a>
+            <a class="list-group-item" href="../module/script.html#proc-plt__acf">plt__acf</a>
+            <a class="list-group-item" href="../module/script.html#proc-read_job">read_job</a>
             <a class="list-group-item" href="../module/script.html#proc-save_img">save_img</a>
             <a class="list-group-item" href="../module/script.html#proc-smooth__">smooth__</a>
-            <a class="list-group-item" href="../module/script.html#proc-calc_z_f">calc_z_f</a>
-            <a class="list-group-item" href="../module/script.html#proc-calc_ord">calc_ord</a>
-            <a class="list-group-item" href="../module/script.html#proc-digi_fil">digi_fil</a>
-            <a class="list-group-item" href="../module/script.html#proc-calc_z_i">calc_z_i</a>
-            <a class="list-group-item" href="../module/script.html#proc-calc_ffh">calc_ffh</a>
+            <a class="list-group-item" href="../module/script.html#proc-sta_loop">sta_loop</a>
             <a class="list-group-item" href="../module/script.html#proc-sta_scri">sta_scri</a>
-            <a class="list-group-item" href="../module/script.html#proc-def_size">def_size</a>
-            <a class="list-group-item" href="../module/script.html#proc-acf_theo">acf_theo</a>
-            <a class="list-group-item" href="../module/script.html#proc-nb_procs">nb_procs</a>
             <a class="list-group-item" href="../module/script.html#proc-sta_theo">sta_theo</a>
-            <a class="list-group-item" href="../module/script.html#proc-end_scri">end_scri</a>
+            <a class="list-group-item" href="../module/script.html#proc-sub_surf">sub_surf</a>
         </div>
       </div>
     </div>
@@ -182,29 +180,27 @@
     </div>
 
     <div class="col-md-9" id='text'>
-      <p><span style="color: #337ab7; font-family: cabin; font-size: 1.2em;">
-      <strong>Routines to decode the script</strong>
-</span></p>
+      
 <br>          <div class="card mb-4">
       <h3 class="card-header card-title bg-light">Uses</h3>
       <div class="card-body">
         <ul class="list-group list-group-flush">
             <li class="list-group-item">
               <ul class="list-inline">
-                  <li class="list-inline-item">filter</li>
-                  <li class="list-inline-item">pikaia_oop</li>
-                  <li class="list-inline-item">files</li>
-                  <li class="list-inline-item"><a href='skku_profiles.html'>skku_profiles</a></li>
-                  <li class="list-inline-item">surfile</li>
-                  <li class="list-inline-item">stat_mom</li>
-                  <li class="list-inline-item"><a href='func_acf.html'>func_acf</a></li>
-                  <li class="list-inline-item">fftw3</li>
-                  <li class="list-inline-item">gnufor</li>
                   <li class="list-inline-item">data_arch</li>
                   <li class="list-inline-item">sort_arrays</li>
+                  <li class="list-inline-item"><a href='skku_profiles.html'>skku_profiles</a></li>
+                  <li class="list-inline-item">gnufor</li>
+                  <li class="list-inline-item">pikaia_oop</li>
+                  <li class="list-inline-item">stat_mom</li>
+                  <li class="list-inline-item"><a href='func_acf.html'>func_acf</a></li>
                   <li class="list-inline-item">anisotropy</li>
+                  <li class="list-inline-item">fftw3</li>
+                  <li class="list-inline-item">filter</li>
                   <li class="list-inline-item">miscellaneous</li>
+                  <li class="list-inline-item">surfile</li>
                   <li class="list-inline-item"><a href='crest_param.html'>crest_param</a></li>
+                  <li class="list-inline-item">files</li>
               </ul>
             </li>
             <li class="list-group-item">
@@ -697,40 +693,6 @@ large graphs.</div>
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-line_read"></span>
-              integer(kind=I4),
-            </td>
-              <td>public</td>
-            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>LINE_READ</strong></td>
-                <td></td>
-                <td></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-save_line_read"></span>
-              integer(kind=I4),
-            </td>
-              <td>public</td>
-            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>SAVE_LINE_READ</strong></td>
-                <td></td>
-                <td></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
               <span class="anchor" id="variable-i_iter"></span>
               integer(kind=I4),
             </td>
@@ -740,6 +702,23 @@ large graphs.</div>
             </td>
             <td>::</td>
             <td><strong>I_ITER</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-line_read"></span>
+              integer(kind=I4),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>LINE_READ</strong></td>
                 <td></td>
                 <td></td>
             <td>
@@ -763,6 +742,23 @@ large graphs.</div>
                 
             </td>
         </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-save_line_read"></span>
+              integer(kind=I4),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>SAVE_LINE_READ</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
     </tbody>
   </table>
 
@@ -777,55 +773,11 @@ large graphs.</div>
         <section>
           <h2>Subroutines</h2>
               <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-read_job"></span> <h3>public  subroutine <a href='../proc/read_job.html'>read_job</a>(job_file)  
+    <div class="card-header codesum"><span class="anchor" id="proc-acf_theo"></span> <h3>private  subroutine <a href='../proc/acf_theo.html'>acf_theo</a>()  
 </h3></div>
     <div class="card-body">
           
-  <p>Function that reads a script file. Keywords are identified and corresponding actions are
- triggered.</p><a href="../proc/read_job.html" class="pull-right"><emph>Read more&hellip;</emph></a>
-
-  <h4>Arguments</h4>
-      <table class="table table-striped varlist">
-    <thead>
-      <tr>
-        <th scope="col">Type</th>
-<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
-        <th scope="col"></th>
-        <th scope="col">Name</th>
-        <th scope="col"></th>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-job_file~2"></span>
-              character(len=512),
-            </td>
-<td>intent(in)</td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>job_file</strong></td>
-            <td>
-<p>job file with macros to execute</p>
-            </td>
-        </tr>
-    </tbody>
-  </table>
-
-
-    </div>
-  </div>
-
-              <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-plt__acf"></span> <h3>private  subroutine <a href='../proc/plt__acf.html'>plt__acf</a>()  
-</h3></div>
-    <div class="card-body">
-          
-  <p>Function that calculates the mean absolute difference between the desired Acf and
- the one obtained.
- However, the important zone where both should match is above acf__z - where the correlation
- lengths are determined.</p><a href="../proc/plt__acf.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+  <p>Function that returns the theoretical acf PARAM%imp_acf.</p><a href="../proc/acf_theo.html" class="pull-right"><emph>Read more&hellip;</emph></a>
 
   <h4>Arguments</h4>
     <em>None</em>
@@ -847,37 +799,51 @@ large graphs.</div>
   </div>
 
               <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-sta_loop"></span> <h3>private  subroutine <a href='../proc/sta_loop.html'>sta_loop</a>()  
+    <div class="card-header codesum"><span class="anchor" id="proc-calc_ffh"></span> <h3>private  subroutine <a href='../proc/calc_ffh.html'>calc_ffh</a>(calc_m_stt)  
 </h3></div>
     <div class="card-body">
           
-  <p>Starting the loop</p>
+  <p>Function that returns &hellip;</p><a href="../proc/calc_ffh.html" class="pull-right"><emph>Read more&hellip;</emph></a>
 
   <h4>Arguments</h4>
-    <em>None</em>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-calc_m_stt"></span>
+              logical(kind=I4),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>calc_m_stt</strong></td>
+            <td>
+<p><em>compute starting moments ?</em></p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
 
     </div>
   </div>
 
               <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-end_loop"></span> <h3>private  subroutine <a href='../proc/end_loop.html'>end_loop</a>()  
+    <div class="card-header codesum"><span class="anchor" id="proc-calc_ord"></span> <h3>private  subroutine <a href='../proc/calc_ord.html'>calc_ord</a>()  
 </h3></div>
     <div class="card-body">
           
-  <p>The loop ends here</p>
-
-  <h4>Arguments</h4>
-    <em>None</em>
-
-    </div>
-  </div>
-
-              <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-sub_surf"></span> <h3>private  subroutine <a href='../proc/sub_surf.html'>sub_surf</a>()  
-</h3></div>
-    <div class="card-body">
-          
-  <p>Function that returns the best subsurface from the final surface.</p><a href="../proc/sub_surf.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+  <p>Function that returns the vector PARAM%order that contains the heights order.</p><a href="../proc/calc_ord.html" class="pull-right"><emph>Read more&hellip;</emph></a>
 
   <h4>Arguments</h4>
     <em>None</em>
@@ -890,8 +856,7 @@ large graphs.</div>
 </h3></div>
     <div class="card-body">
           
-  <p>Function that returns <em>crit_acf</em> the mean absolute difference between theoretical
- and calculated acfs</p><a href="../proc/calc_res_acf.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+  <p>Function that returns <em>crit_acf</em> the mean absolute difference between theoretical</p><a href="../proc/calc_res_acf.html" class="pull-right"><emph>Read more&hellip;</emph></a>
 
   <h4>Arguments</h4>
       <table class="table table-striped varlist">
@@ -966,7 +931,7 @@ large graphs.</div>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-w~4"></span>
+              <span class="anchor" id="variable-w~5"></span>
               integer(kind=I4),
             </td>
 <td>intent(in)</td>
@@ -981,7 +946,7 @@ large graphs.</div>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-h~6"></span>
+              <span class="anchor" id="variable-h~5"></span>
               integer(kind=I4),
             </td>
 <td>intent(in)</td>
@@ -1002,65 +967,11 @@ large graphs.</div>
   </div>
 
               <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-save_img"></span> <h3>private  subroutine <a href='../proc/save_img.html'>save_img</a>(tab)  
-</h3></div>
-    <div class="card-body">
-          
-  <p>Function that save an array <em>tab</em> as a digital surf file.</p><a href="../proc/save_img.html" class="pull-right"><emph>Read more&hellip;</emph></a>
-
-  <h4>Arguments</h4>
-      <table class="table table-striped varlist">
-    <thead>
-      <tr>
-        <th scope="col">Type</th>
-<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
-        <th scope="col"></th>
-        <th scope="col">Name</th>
-        <th scope="col"></th>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-tab~3"></span>
-              real(kind=R8),
-            </td>
-<td>intent(in),</td>
-              <td></td>            <td>
-              dimension(:,:)
-            </td>
-            <td>::</td>
-            <td><strong>tab</strong></td>
-            <td>
-<p><em>a surface to save as a .sur file</em></p>
-            </td>
-        </tr>
-    </tbody>
-  </table>
-
-
-    </div>
-  </div>
-
-              <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-smooth__"></span> <h3>private  subroutine <a href='../proc/smooth__.html'>smooth__</a>()  
-</h3></div>
-    <div class="card-body">
-          
-  <p>Function that applies a low-pass filter to the surface PARAM%surf</p><a href="../proc/smooth__.html" class="pull-right"><emph>Read more&hellip;</emph></a>
-
-  <h4>Arguments</h4>
-    <em>None</em>
-
-    </div>
-  </div>
-
-              <div class="card">
     <div class="card-header codesum"><span class="anchor" id="proc-calc_z_f"></span> <h3>private  subroutine <a href='../proc/calc_z_f.html'>calc_z_f</a>(to_be_made)  
 </h3></div>
     <div class="card-body">
           
-  <p>Function that returns PARAM%surf, the surface made of heights with the required statistical
- moments, in the right order.</p><a href="../proc/calc_z_f.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+  <p>Function that returns PARAM%surf, the surface made of heights with the required statistical</p><a href="../proc/calc_z_f.html" class="pull-right"><emph>Read more&hellip;</emph></a>
 
   <h4>Arguments</h4>
       <table class="table table-striped varlist">
@@ -1096,90 +1007,11 @@ large graphs.</div>
   </div>
 
               <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-calc_ord"></span> <h3>private  subroutine <a href='../proc/calc_ord.html'>calc_ord</a>()  
-</h3></div>
-    <div class="card-body">
-          
-  <p>Function that returns the vector PARAM%order that contains the heights order.</p><a href="../proc/calc_ord.html" class="pull-right"><emph>Read more&hellip;</emph></a>
-
-  <h4>Arguments</h4>
-    <em>None</em>
-
-    </div>
-  </div>
-
-              <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-digi_fil"></span> <h3>private  subroutine <a href='../proc/digi_fil.html'>digi_fil</a>()  
-</h3></div>
-    <div class="card-body">
-          
-  <p>Function that applies the digital filter to the random heights</p><a href="../proc/digi_fil.html" class="pull-right"><emph>Read more&hellip;</emph></a>
-
-  <h4>Arguments</h4>
-    <em>None</em>
-
-    </div>
-  </div>
-
-              <div class="card">
     <div class="card-header codesum"><span class="anchor" id="proc-calc_z_i"></span> <h3>private  subroutine <a href='../proc/calc_z_i.html'>calc_z_i</a>()  
 </h3></div>
     <div class="card-body">
           
   <p>Function that returns the starting surface of random heights</p><a href="../proc/calc_z_i.html" class="pull-right"><emph>Read more&hellip;</emph></a>
-
-  <h4>Arguments</h4>
-    <em>None</em>
-
-    </div>
-  </div>
-
-              <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-calc_ffh"></span> <h3>private  subroutine <a href='../proc/calc_ffh.html'>calc_ffh</a>(calc_m_stt)  
-</h3></div>
-    <div class="card-body">
-          
-  <p>Function that returns &hellip;</p><a href="../proc/calc_ffh.html" class="pull-right"><emph>Read more&hellip;</emph></a>
-
-  <h4>Arguments</h4>
-      <table class="table table-striped varlist">
-    <thead>
-      <tr>
-        <th scope="col">Type</th>
-<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
-        <th scope="col"></th>
-        <th scope="col">Name</th>
-        <th scope="col"></th>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-calc_m_stt"></span>
-              logical(kind=I4),
-            </td>
-<td>intent(inout)</td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>calc_m_stt</strong></td>
-            <td>
-<p><em>compute starting moments ?</em></p>
-            </td>
-        </tr>
-    </tbody>
-  </table>
-
-
-    </div>
-  </div>
-
-              <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-sta_scri"></span> <h3>private  subroutine <a href='../proc/sta_scri.html'>sta_scri</a>()  
-</h3></div>
-    <div class="card-body">
-          
-  <p>Start the script reading</p>
 
   <h4>Arguments</h4>
     <em>None</em>
@@ -1201,11 +1033,37 @@ large graphs.</div>
   </div>
 
               <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-acf_theo"></span> <h3>private  subroutine <a href='../proc/acf_theo.html'>acf_theo</a>()  
+    <div class="card-header codesum"><span class="anchor" id="proc-digi_fil"></span> <h3>private  subroutine <a href='../proc/digi_fil.html'>digi_fil</a>()  
 </h3></div>
     <div class="card-body">
           
-  <p>Function that returns the theoretical acf PARAM%imp_acf.</p><a href="../proc/acf_theo.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+  <p>Function that applies the digital filter to the random heights</p><a href="../proc/digi_fil.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-end_loop"></span> <h3>private  subroutine <a href='../proc/end_loop.html'>end_loop</a>()  
+</h3></div>
+    <div class="card-body">
+          
+  <p>The loop ends here</p>
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-end_scri"></span> <h3>private  subroutine <a href='../proc/end_scri.html'>end_scri</a>()  
+</h3></div>
+    <div class="card-body">
+          
+  <p>End of script</p>
 
   <h4>Arguments</h4>
     <em>None</em>
@@ -1227,6 +1085,138 @@ large graphs.</div>
   </div>
 
               <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-plt__acf"></span> <h3>private  subroutine <a href='../proc/plt__acf.html'>plt__acf</a>()  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Function that calculates the mean absolute difference between the desired Acf and</p><a href="../proc/plt__acf.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-read_job"></span> <h3>public  subroutine <a href='../proc/read_job.html'>read_job</a>(job_file)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Function that reads a script file. Keywords are identified and corresponding actions are</p><a href="../proc/read_job.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-job_file"></span>
+              character(len=512),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>job_file</strong></td>
+            <td>
+<p>job file with macros to execute</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-save_img"></span> <h3>private  subroutine <a href='../proc/save_img.html'>save_img</a>(tab)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Function that save an array <em>tab</em> as a digital surf file.</p><a href="../proc/save_img.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tab~2"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              dimension(:,:)
+            </td>
+            <td>::</td>
+            <td><strong>tab</strong></td>
+            <td>
+<p><em>a surface to save as a .sur file</em></p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-smooth__"></span> <h3>private  subroutine <a href='../proc/smooth__.html'>smooth__</a>()  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Function that applies a low-pass filter to the surface PARAM%surf</p><a href="../proc/smooth__.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-sta_loop"></span> <h3>private  subroutine <a href='../proc/sta_loop.html'>sta_loop</a>()  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Starting the loop</p>
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-sta_scri"></span> <h3>private  subroutine <a href='../proc/sta_scri.html'>sta_scri</a>()  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Start the script reading</p>
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+    </div>
+  </div>
+
+              <div class="card">
     <div class="card-header codesum"><span class="anchor" id="proc-sta_theo"></span> <h3>private  subroutine <a href='../proc/sta_theo.html'>sta_theo</a>()  
 </h3></div>
     <div class="card-body">
@@ -1240,11 +1230,11 @@ large graphs.</div>
   </div>
 
               <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-end_scri"></span> <h3>private  subroutine <a href='../proc/end_scri.html'>end_scri</a>()  
+    <div class="card-header codesum"><span class="anchor" id="proc-sub_surf"></span> <h3>private  subroutine <a href='../proc/sub_surf.html'>sub_surf</a>()  
 </h3></div>
     <div class="card-body">
           
-  <p>End of script</p>
+  <p>Function that returns the best subsurface from the final surface.</p><a href="../proc/sub_surf.html" class="pull-right"><emph>Read more&hellip;</emph></a>
 
   <h4>Arguments</h4>
     <em>None</em>
@@ -1275,7 +1265,7 @@ large graphs.</div>
             <p class="text-end">
               Documentation generated by
               <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
- on 2024-11-12 13:36              </p>
+ on 2024-11-15 08:58 +0100             </p>
           </div>
         </div>
         <br>
