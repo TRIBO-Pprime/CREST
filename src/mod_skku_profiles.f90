@@ -26,7 +26,7 @@ contains
    subroutine build_heights(vec_out, use_fct_expo, stats_in, lg)
    !================================================================================================
    !<@note Function that returns a set of heights that matches desired statistical moments.
-   !
+   !<
    !<@endnote
    !------------------------------------------------------------------------------------------------
    implicit none
@@ -133,11 +133,11 @@ contains
    real(kind=R8) function fitness_skku_anal(n, x)
    !================================================================================================
    !<@note Generic cost function: difference between the imposed statistical moments and those
-   ! obtained. The optimization problem must be turned into a maximization problem (as often
-   ! in the optimization routines).
-   !
-   ! The closer cost to 100 the better series.
-   !
+   !< obtained. The optimization problem must be turned into a maximization problem (as often
+   !< in the optimization routines).
+   !<
+   !< The closer cost to 100 the better series.
+   !<
    !<@endnote
    !------------------------------------------------------------------------------------------------
    implicit none
@@ -163,12 +163,12 @@ contains
    subroutine pikaia_skku_solver(pik_class, step, xl, xu, nparam, cost, istat, f, xx)
    !================================================================================================
    !<@note This is a refactoring of the PIKAIA unconstrained optimization code from the High Altitude Observatory.
-   ! The original code is public domain and was written by Paul Charbonneau & Barry Knapp.
-   !
-   ! The present code is the awesome modern Fortran version written by Jabob Williams:
-   !
-   ! [OOP Pikaia, Jacob Williams](https://github.com/jacobwilliams/pikaia)
-   !
+   !< The original code is public domain and was written by Paul Charbonneau & Barry Knapp.
+   !<
+   !< The present code is the awesome modern Fortran version written by Jabob Williams:
+   !<
+   !< [OOP Pikaia, Jacob Williams](https://github.com/jacobwilliams/pikaia)
+   !<
    !<@endnote
    !------------------------------------------------------------------------------------------------
    implicit none
@@ -246,7 +246,7 @@ contains
    subroutine calculs_skku_tan(bounds, lg, ssk, sku)
    !================================================================================================
    !<@note Function to calculate the skewness and kurtosis of a **tangent** series
-   !
+   !<
    !<@endnote
    !------------------------------------------------------------------------------------------------
    implicit none
@@ -389,9 +389,9 @@ contains
    subroutine calculs_skku_exp(bounds, lg, ssk, sku)
    !================================================================================================
    !<@note Function to calculate the skewness and kurtosis of an **exponential** series.<br/>
-   ! The principle is the same as [[calculs_skku_tan]], however it fits better some particular
-   ! series quite binary (roughly two heights).
-   !
+   !< The principle is the same as [[calculs_skku_tan]], however it fits better some particular
+   !< series quite binary (roughly two heights).
+   !<
    !<@endnote
    !------------------------------------------------------------------------------------------------
    implicit none
@@ -545,7 +545,7 @@ contains
    subroutine calculs_skku_generique(bounds, lg, ssk, sku)
    !================================================================================================
    !<@note Function that calls the right series generator.
-   !
+   !<
    !<@endnote
    !------------------------------------------------------------------------------------------------
    implicit none
@@ -565,7 +565,7 @@ contains
    real(kind=R8) function add_tang(n, deb, fin, alp, bet, mu, si)
    !================================================================================================
    !<@note Function that adds to the series mean the border integrals as explained in the docs
-   !
+   !<
    !<@endnote
    !------------------------------------------------------------------------------------------------
    implicit none
@@ -591,8 +591,8 @@ contains
    real(kind=R8) function add_expo(n, deb, fin, alp, bet, mu, si)
    !================================================================================================
    !<@note Function that adds to the series mean the border integrals as explained in the modules
-   ! presentation.
-   !
+   !< presentation.
+   !<
    !<@endnote
    !------------------------------------------------------------------------------------------------
    implicit none
@@ -618,8 +618,8 @@ contains
    real(kind=R8) function tang(xi, n, alp, bet, mu, si)
    !================================================================================================
    !<@note Profile function based on the tangent function
-   !
-   !@endnote
+   !<
+   !<@endnote
    !------------------------------------------------------------------------------------------------
    implicit none
    real   (kind=R8), intent(in) :: alp    !! *offset so that points are in [b1,b2]*
@@ -641,7 +641,7 @@ contains
    real(kind=R8) function expo(xi, n, alp, bet, mu, si)
    !================================================================================================
    !<@note Profile function based on the exponential function
-   !
+   !<
    !<@endnote
    !------------------------------------------------------------------------------------------------
    implicit none
@@ -667,7 +667,7 @@ contains
    subroutine profil_theo_trie_1D(tab, lg, x, mx)
    !================================================================================================
    !<@note Function that generates the heights when the function limits have been determined.
-   !
+   !<
    !<@endnote
    !------------------------------------------------------------------------------------------------
    implicit none

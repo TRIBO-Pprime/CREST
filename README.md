@@ -67,10 +67,13 @@ TOOLIB also uses external codes such as:
 
 + *Bspline-fortran* ... [Multidimensional B-Spline Interpolation of Data on a Regular Grid](https://github.com/jacobwilliams/bspline-fortran) ... BSD like
 
+`.sur` surface files can be visualized and analyzed with [Gwyddion software](http://gwyddion.net/download.php), a modular program for SPM (scanning probe microscopy) data visualization and analysis.
+
 Typical use
 -----------
 
-The program '''main''' reads a script file '''my_script.md''' where the following parameters are defined:
+The program `main` reads a script file `my_script.md` where the following parameters are defined:
+
 + image size (pix)
 + surface size (m)
 + periodicity
@@ -83,10 +86,47 @@ The program '''main''' reads a script file '''my_script.md''' where the followin
 
 as well as the algorithm for rough surface generation.
 
+Run:
+
+```bash
+./main cfg/my_script.md
+```
+
+
 [top](#table-of-contents)
 
 Full description
 ----------------
+
+## Test 1
+
+| size *m* | size *n* | width (m) | height (m) | periodic? | \(\tau_1\) | \( \tau_2 \) | Ssk | Sku |
+|:--------:|:--------:|:---------:|:----------:|:---------:|:----------:|:------------:|:---:|:---:|
+| 1024     | 512      | 200.e-6   | 100.e-6    | **True**  | 30.e-6     | 10.e-6       | -3. | 15. |
+
+Run:
+
+```bash
+./main cfg/test01.md
+```
+
+Result:
+[test01_img](./media/test01.jpg)
+
+## Test 2
+
+| size *m* | size *n* | width (m) | height (m) | periodic? | \(\tau_1\) | \( \tau_2 \) | Ssk | Sku |
+|:--------:|:--------:|:---------:|:----------:|:---------:|:----------:|:------------:|:---:|:---:|
+| 1024     | 512      | 200.e-6   | 100.e-6    | **False** | 30.e-6     | 10.e-6       | -3. | 15. |
+
+Run:
+
+```bash
+./main cfg/test02.md
+```
+
+Result:
+[test02_img](./media/test02.jpg)
 
 [top](#table-of-contents)
 

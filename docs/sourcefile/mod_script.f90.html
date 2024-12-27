@@ -414,7 +414,7 @@ large graphs.</div>
 <a id="ln-38" name="ln-38" href="#ln-38"></a><span class="k">   subroutine </span><span class="n">read_job</span><span class="p">(</span><span class="n">job_file</span><span class="p">)</span>
 <a id="ln-39" name="ln-39" href="#ln-39"></a><span class="w">   </span><span class="c">!================================================================================================</span>
 <a id="ln-40" name="ln-40" href="#ln-40"></a><span class="w">   </span><span class="c">!&lt;@note Function that reads a script file. Keywords are identified and corresponding actions are</span>
-<a id="ln-41" name="ln-41" href="#ln-41"></a><span class="w">   </span><span class="c">! triggered.</span>
+<a id="ln-41" name="ln-41" href="#ln-41"></a><span class="w">   </span><span class="c">!&lt; triggered.</span>
 <a id="ln-42" name="ln-42" href="#ln-42"></a><span class="w">   </span><span class="c">!&lt;@endnote</span>
 <a id="ln-43" name="ln-43" href="#ln-43"></a><span class="w">   </span><span class="c">!------------------------------------------------------------------------------------------------</span>
 <a id="ln-44" name="ln-44" href="#ln-44"></a><span class="w">   </span><span class="k">implicit none</span>
@@ -548,15 +548,15 @@ large graphs.</div>
 <a id="ln-172" name="ln-172" href="#ln-172"></a><span class="w">   </span><span class="k">subroutine </span><span class="n">plt__acf</span><span class="p">()</span>
 <a id="ln-173" name="ln-173" href="#ln-173"></a><span class="w">   </span><span class="c">!================================================================================================</span>
 <a id="ln-174" name="ln-174" href="#ln-174"></a><span class="w">   </span><span class="c">!&lt;@note Function that calculates the mean absolute difference between the desired Acf and</span>
-<a id="ln-175" name="ln-175" href="#ln-175"></a><span class="w">   </span><span class="c">! the one obtained.</span>
-<a id="ln-176" name="ln-176" href="#ln-176"></a><span class="w">   </span><span class="c">! However, the important zone where both should match is above acf__z - where the correlation</span>
-<a id="ln-177" name="ln-177" href="#ln-177"></a><span class="w">   </span><span class="c">! lengths are determined.</span>
-<a id="ln-178" name="ln-178" href="#ln-178"></a><span class="w">   </span><span class="c">!</span>
-<a id="ln-179" name="ln-179" href="#ln-179"></a><span class="w">   </span><span class="c">! If the mean absolute difference is below the criterion, the loops to improve the acf are</span>
-<a id="ln-180" name="ln-180" href="#ln-180"></a><span class="w">   </span><span class="c">! stopped.</span>
-<a id="ln-181" name="ln-181" href="#ln-181"></a><span class="w">   </span><span class="c">!</span>
-<a id="ln-182" name="ln-182" href="#ln-182"></a><span class="w">   </span><span class="c">! The function can also plot the acfs.</span>
-<a id="ln-183" name="ln-183" href="#ln-183"></a><span class="w">   </span><span class="c">!</span>
+<a id="ln-175" name="ln-175" href="#ln-175"></a><span class="w">   </span><span class="c">!&lt; the one obtained.</span>
+<a id="ln-176" name="ln-176" href="#ln-176"></a><span class="w">   </span><span class="c">!&lt; However, the important zone where both should match is above acf__z - where the correlation</span>
+<a id="ln-177" name="ln-177" href="#ln-177"></a><span class="w">   </span><span class="c">!&lt; lengths are determined.</span>
+<a id="ln-178" name="ln-178" href="#ln-178"></a><span class="w">   </span><span class="c">!&lt;</span>
+<a id="ln-179" name="ln-179" href="#ln-179"></a><span class="w">   </span><span class="c">!&lt; If the mean absolute difference is below the criterion, the loops to improve the acf are</span>
+<a id="ln-180" name="ln-180" href="#ln-180"></a><span class="w">   </span><span class="c">!&lt; stopped.</span>
+<a id="ln-181" name="ln-181" href="#ln-181"></a><span class="w">   </span><span class="c">!&lt;</span>
+<a id="ln-182" name="ln-182" href="#ln-182"></a><span class="w">   </span><span class="c">!&lt; The function can also plot the acfs.</span>
+<a id="ln-183" name="ln-183" href="#ln-183"></a><span class="w">   </span><span class="c">!&lt;</span>
 <a id="ln-184" name="ln-184" href="#ln-184"></a><span class="w">   </span><span class="c">!&lt;@endnote</span>
 <a id="ln-185" name="ln-185" href="#ln-185"></a><span class="w">   </span><span class="c">!------------------------------------------------------------------------------------------------</span>
 <a id="ln-186" name="ln-186" href="#ln-186"></a><span class="w">   </span><span class="k">implicit none</span>
@@ -801,7 +801,7 @@ large graphs.</div>
 <a id="ln-425" name="ln-425" href="#ln-425"></a><span class="w">   </span><span class="k">subroutine </span><span class="n">calc_acf</span><span class="p">()</span>
 <a id="ln-426" name="ln-426" href="#ln-426"></a><span class="w">   </span><span class="c">!================================================================================================</span>
 <a id="ln-427" name="ln-427" href="#ln-427"></a><span class="w">   </span><span class="c">!&lt;@note Function that returns the autocorrelation function of a surface PARAM%acf_surf</span>
-<a id="ln-428" name="ln-428" href="#ln-428"></a><span class="w">   </span><span class="c">!</span>
+<a id="ln-428" name="ln-428" href="#ln-428"></a><span class="w">   </span><span class="c">!&lt;</span>
 <a id="ln-429" name="ln-429" href="#ln-429"></a><span class="w">   </span><span class="c">!&lt;@endnote</span>
 <a id="ln-430" name="ln-430" href="#ln-430"></a><span class="w">   </span><span class="c">!------------------------------------------------------------------------------------------------</span>
 <a id="ln-431" name="ln-431" href="#ln-431"></a><span class="w">   </span><span class="k">implicit none</span>
@@ -872,17 +872,17 @@ large graphs.</div>
 <a id="ln-496" name="ln-496" href="#ln-496"></a><span class="w">   </span><span class="k">subroutine </span><span class="n">sub_surf</span><span class="p">()</span>
 <a id="ln-497" name="ln-497" href="#ln-497"></a><span class="w">   </span><span class="c">!================================================================================================</span>
 <a id="ln-498" name="ln-498" href="#ln-498"></a><span class="w">   </span><span class="c">!&lt;@note Function that returns the best subsurface from the final surface.</span>
-<a id="ln-499" name="ln-499" href="#ln-499"></a><span class="w">   </span><span class="c">!</span>
-<a id="ln-500" name="ln-500" href="#ln-500"></a><span class="w">   </span><span class="c">! We are here because a non periodic resulting surface is required. To do that, a wider</span>
-<a id="ln-501" name="ln-501" href="#ln-501"></a><span class="w">   </span><span class="c">! periodic surface is created, and it matches the required moments and acf.</span>
-<a id="ln-502" name="ln-502" href="#ln-502"></a><span class="w">   </span><span class="c">!</span>
-<a id="ln-503" name="ln-503" href="#ln-503"></a><span class="w">   </span><span class="c">! However, sub-sampling the surface into a smaller surface that matches the required size</span>
-<a id="ln-504" name="ln-504" href="#ln-504"></a><span class="w">   </span><span class="c">! will result in degraded moments and acf. Hence, several locations are tested to find the</span>
-<a id="ln-505" name="ln-505" href="#ln-505"></a><span class="w">   </span><span class="c">! best subsurface.</span>
-<a id="ln-506" name="ln-506" href="#ln-506"></a><span class="w">   </span><span class="c">!</span>
-<a id="ln-507" name="ln-507" href="#ln-507"></a><span class="w">   </span><span class="c">! Note that the right moments can always be obtained by substitution, respecting the order of heights.</span>
-<a id="ln-508" name="ln-508" href="#ln-508"></a><span class="w">   </span><span class="c">! However, the acf will be slightly impacted.</span>
-<a id="ln-509" name="ln-509" href="#ln-509"></a><span class="w">   </span><span class="c">!</span>
+<a id="ln-499" name="ln-499" href="#ln-499"></a><span class="w">   </span><span class="c">!&lt;</span>
+<a id="ln-500" name="ln-500" href="#ln-500"></a><span class="w">   </span><span class="c">!&lt; We are here because a non periodic resulting surface is required. To do that, a wider</span>
+<a id="ln-501" name="ln-501" href="#ln-501"></a><span class="w">   </span><span class="c">!&lt; periodic surface is created, and it matches the required moments and acf.</span>
+<a id="ln-502" name="ln-502" href="#ln-502"></a><span class="w">   </span><span class="c">!&lt;</span>
+<a id="ln-503" name="ln-503" href="#ln-503"></a><span class="w">   </span><span class="c">!&lt; However, sub-sampling the surface into a smaller surface that matches the required size</span>
+<a id="ln-504" name="ln-504" href="#ln-504"></a><span class="w">   </span><span class="c">!&lt; will result in degraded moments and acf. Hence, several locations are tested to find the</span>
+<a id="ln-505" name="ln-505" href="#ln-505"></a><span class="w">   </span><span class="c">!&lt; best subsurface.</span>
+<a id="ln-506" name="ln-506" href="#ln-506"></a><span class="w">   </span><span class="c">!&lt;</span>
+<a id="ln-507" name="ln-507" href="#ln-507"></a><span class="w">   </span><span class="c">!&lt; Note that the right moments can always be obtained by substitution, respecting the order of heights.</span>
+<a id="ln-508" name="ln-508" href="#ln-508"></a><span class="w">   </span><span class="c">!&lt; However, the acf will be slightly impacted.</span>
+<a id="ln-509" name="ln-509" href="#ln-509"></a><span class="w">   </span><span class="c">!&lt;</span>
 <a id="ln-510" name="ln-510" href="#ln-510"></a><span class="w">   </span><span class="c">!&lt;@endnote</span>
 <a id="ln-511" name="ln-511" href="#ln-511"></a><span class="w">   </span><span class="c">!------------------------------------------------------------------------------------------------</span>
 <a id="ln-512" name="ln-512" href="#ln-512"></a><span class="w">   </span><span class="k">implicit none</span>
@@ -1150,8 +1150,8 @@ large graphs.</div>
 <a id="ln-774" name="ln-774" href="#ln-774"></a><span class="w">   </span><span class="k">subroutine </span><span class="n">calc_res_acf</span><span class="p">(</span><span class="n">acf_surf</span><span class="p">,</span><span class="w"> </span><span class="n">imp_acf</span><span class="p">,</span><span class="w"> </span><span class="n">crit_acf</span><span class="p">,</span><span class="w"> </span><span class="n">acf__z</span><span class="p">,</span><span class="w"> </span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="n">h</span><span class="p">)</span>
 <a id="ln-775" name="ln-775" href="#ln-775"></a><span class="w">   </span><span class="c">!================================================================================================</span>
 <a id="ln-776" name="ln-776" href="#ln-776"></a><span class="w">   </span><span class="c">!&lt;@note Function that returns *crit_acf* the mean absolute difference between theoretical</span>
-<a id="ln-777" name="ln-777" href="#ln-777"></a><span class="w">   </span><span class="c">! and calculated acfs</span>
-<a id="ln-778" name="ln-778" href="#ln-778"></a><span class="w">   </span><span class="c">!</span>
+<a id="ln-777" name="ln-777" href="#ln-777"></a><span class="w">   </span><span class="c">!&lt; and calculated acfs</span>
+<a id="ln-778" name="ln-778" href="#ln-778"></a><span class="w">   </span><span class="c">!&lt;</span>
 <a id="ln-779" name="ln-779" href="#ln-779"></a><span class="w">   </span><span class="c">!&lt;@endnote</span>
 <a id="ln-780" name="ln-780" href="#ln-780"></a><span class="w">   </span><span class="c">!------------------------------------------------------------------------------------------------</span>
 <a id="ln-781" name="ln-781" href="#ln-781"></a><span class="w">   </span><span class="k">implicit none</span>
@@ -1222,7 +1222,7 @@ large graphs.</div>
 <a id="ln-846" name="ln-846" href="#ln-846"></a><span class="w">   </span><span class="k">subroutine </span><span class="n">smooth__</span><span class="p">()</span>
 <a id="ln-847" name="ln-847" href="#ln-847"></a><span class="w">   </span><span class="c">!================================================================================================</span>
 <a id="ln-848" name="ln-848" href="#ln-848"></a><span class="w">   </span><span class="c">!&lt;@note Function that applies a low-pass filter to the surface PARAM%surf</span>
-<a id="ln-849" name="ln-849" href="#ln-849"></a><span class="w">   </span><span class="c">!</span>
+<a id="ln-849" name="ln-849" href="#ln-849"></a><span class="w">   </span><span class="c">!&lt;</span>
 <a id="ln-850" name="ln-850" href="#ln-850"></a><span class="w">   </span><span class="c">!&lt;@endnote</span>
 <a id="ln-851" name="ln-851" href="#ln-851"></a><span class="w">   </span><span class="c">!------------------------------------------------------------------------------------------------</span>
 <a id="ln-852" name="ln-852" href="#ln-852"></a><span class="w">   </span><span class="k">implicit none</span>
@@ -1269,11 +1269,11 @@ large graphs.</div>
 <a id="ln-893" name="ln-893" href="#ln-893"></a><span class="w">   </span><span class="k">subroutine </span><span class="n">calc_z_f</span><span class="p">(</span><span class="n">to_be_made</span><span class="p">)</span>
 <a id="ln-894" name="ln-894" href="#ln-894"></a><span class="w">   </span><span class="c">!================================================================================================</span>
 <a id="ln-895" name="ln-895" href="#ln-895"></a><span class="w">   </span><span class="c">!&lt;@note Function that returns PARAM%surf, the surface made of heights with the required statistical</span>
-<a id="ln-896" name="ln-896" href="#ln-896"></a><span class="w">   </span><span class="c">! moments, in the right order.</span>
-<a id="ln-897" name="ln-897" href="#ln-897"></a><span class="w">   </span><span class="c">!</span>
-<a id="ln-898" name="ln-898" href="#ln-898"></a><span class="w">   </span><span class="c">! - The heights come from the vector PARAM%vect_h</span>
-<a id="ln-899" name="ln-899" href="#ln-899"></a><span class="w">   </span><span class="c">! - the heights order is stored in the vector PARAM%order</span>
-<a id="ln-900" name="ln-900" href="#ln-900"></a><span class="w">   </span><span class="c">!</span>
+<a id="ln-896" name="ln-896" href="#ln-896"></a><span class="w">   </span><span class="c">!&lt; moments, in the right order.</span>
+<a id="ln-897" name="ln-897" href="#ln-897"></a><span class="w">   </span><span class="c">!&lt;</span>
+<a id="ln-898" name="ln-898" href="#ln-898"></a><span class="w">   </span><span class="c">!&lt; - The heights come from the vector PARAM%vect_h</span>
+<a id="ln-899" name="ln-899" href="#ln-899"></a><span class="w">   </span><span class="c">!&lt; - the heights order is stored in the vector PARAM%order</span>
+<a id="ln-900" name="ln-900" href="#ln-900"></a><span class="w">   </span><span class="c">!&lt;</span>
 <a id="ln-901" name="ln-901" href="#ln-901"></a><span class="w">   </span><span class="c">!&lt;@endnote</span>
 <a id="ln-902" name="ln-902" href="#ln-902"></a><span class="w">   </span><span class="c">!------------------------------------------------------------------------------------------------</span>
 <a id="ln-903" name="ln-903" href="#ln-903"></a><span class="w">   </span><span class="k">implicit none</span>
@@ -1332,7 +1332,7 @@ large graphs.</div>
 <a id="ln-956" name="ln-956" href="#ln-956"></a><span class="w">   </span><span class="k">subroutine </span><span class="n">calc_ord</span><span class="p">()</span>
 <a id="ln-957" name="ln-957" href="#ln-957"></a><span class="w">   </span><span class="c">!================================================================================================</span>
 <a id="ln-958" name="ln-958" href="#ln-958"></a><span class="w">   </span><span class="c">!&lt;@note Function that returns the vector PARAM%order that contains the heights order.</span>
-<a id="ln-959" name="ln-959" href="#ln-959"></a><span class="w">   </span><span class="c">!</span>
+<a id="ln-959" name="ln-959" href="#ln-959"></a><span class="w">   </span><span class="c">!&lt;</span>
 <a id="ln-960" name="ln-960" href="#ln-960"></a><span class="w">   </span><span class="c">!&lt;@endnote</span>
 <a id="ln-961" name="ln-961" href="#ln-961"></a><span class="w">   </span><span class="c">!------------------------------------------------------------------------------------------------</span>
 <a id="ln-962" name="ln-962" href="#ln-962"></a><span class="w">   </span><span class="k">implicit none</span>
@@ -1365,7 +1365,7 @@ large graphs.</div>
 <a id="ln-989" name="ln-989" href="#ln-989"></a><span class="w">   </span><span class="k">subroutine </span><span class="n">digi_fil</span><span class="p">()</span>
 <a id="ln-990" name="ln-990" href="#ln-990"></a><span class="w">   </span><span class="c">!================================================================================================</span>
 <a id="ln-991" name="ln-991" href="#ln-991"></a><span class="w">   </span><span class="c">!&lt;@note Function that applies the digital filter to the random heights</span>
-<a id="ln-992" name="ln-992" href="#ln-992"></a><span class="w">   </span><span class="c">!</span>
+<a id="ln-992" name="ln-992" href="#ln-992"></a><span class="w">   </span><span class="c">!&lt;</span>
 <a id="ln-993" name="ln-993" href="#ln-993"></a><span class="w">   </span><span class="c">!&lt;@endnote</span>
 <a id="ln-994" name="ln-994" href="#ln-994"></a><span class="w">   </span><span class="c">!------------------------------------------------------------------------------------------------</span>
 <a id="ln-995" name="ln-995" href="#ln-995"></a><span class="w">   </span><span class="k">implicit none</span>
@@ -1439,7 +1439,7 @@ large graphs.</div>
 <a id="ln-1063" name="ln-1063" href="#ln-1063"></a><span class="w">   </span><span class="k">subroutine </span><span class="n">calc_z_i</span><span class="p">()</span>
 <a id="ln-1064" name="ln-1064" href="#ln-1064"></a><span class="w">   </span><span class="c">!================================================================================================</span>
 <a id="ln-1065" name="ln-1065" href="#ln-1065"></a><span class="w">   </span><span class="c">!&lt;@note Function that returns the starting surface of random heights</span>
-<a id="ln-1066" name="ln-1066" href="#ln-1066"></a><span class="w">   </span><span class="c">!</span>
+<a id="ln-1066" name="ln-1066" href="#ln-1066"></a><span class="w">   </span><span class="c">!&lt;</span>
 <a id="ln-1067" name="ln-1067" href="#ln-1067"></a><span class="w">   </span><span class="c">!&lt;@endnote</span>
 <a id="ln-1068" name="ln-1068" href="#ln-1068"></a><span class="w">   </span><span class="c">!------------------------------------------------------------------------------------------------</span>
 <a id="ln-1069" name="ln-1069" href="#ln-1069"></a><span class="w">   </span><span class="k">implicit none</span>
@@ -1488,11 +1488,11 @@ large graphs.</div>
 <a id="ln-1112" name="ln-1112" href="#ln-1112"></a><span class="w">   </span><span class="k">subroutine </span><span class="n">calc_ffh</span><span class="p">(</span><span class="n">calc_m_stt</span><span class="p">)</span>
 <a id="ln-1113" name="ln-1113" href="#ln-1113"></a><span class="w">   </span><span class="c">!================================================================================================</span>
 <a id="ln-1114" name="ln-1114" href="#ln-1114"></a><span class="w">   </span><span class="c">!&lt;@note Function that returns ...</span>
-<a id="ln-1115" name="ln-1115" href="#ln-1115"></a><span class="w">   </span><span class="c">!</span>
-<a id="ln-1116" name="ln-1116" href="#ln-1116"></a><span class="w">   </span><span class="c">! - the digital filter to apply to the height distribution \( \text{PARAM%fhi} = \sqrt{ \left| FFT(\text{PARAM%imp_acf}) \right| } \)</span>
-<a id="ln-1117" name="ln-1117" href="#ln-1117"></a><span class="w">   </span><span class="c">! - the starting statistical moments PARAM%m_stt%sk, PARAM%m_stt%ku</span>
-<a id="ln-1118" name="ln-1118" href="#ln-1118"></a><span class="w">   </span><span class="c">! - whether the exponential function will be used, PARAM%reajust_skku</span>
-<a id="ln-1119" name="ln-1119" href="#ln-1119"></a><span class="w">   </span><span class="c">!</span>
+<a id="ln-1115" name="ln-1115" href="#ln-1115"></a><span class="w">   </span><span class="c">!&lt;</span>
+<a id="ln-1116" name="ln-1116" href="#ln-1116"></a><span class="w">   </span><span class="c">!&lt; - the digital filter to apply to the height distribution \( \text{PARAM%fhi} = \sqrt{ \left| FFT(\text{PARAM%imp_acf}) \right| } \)</span>
+<a id="ln-1117" name="ln-1117" href="#ln-1117"></a><span class="w">   </span><span class="c">!&lt; - the starting statistical moments PARAM%m_stt%sk, PARAM%m_stt%ku</span>
+<a id="ln-1118" name="ln-1118" href="#ln-1118"></a><span class="w">   </span><span class="c">!&lt; - whether the exponential function will be used, PARAM%reajust_skku</span>
+<a id="ln-1119" name="ln-1119" href="#ln-1119"></a><span class="w">   </span><span class="c">!&lt;</span>
 <a id="ln-1120" name="ln-1120" href="#ln-1120"></a><span class="w">   </span><span class="c">!&lt;@endnote</span>
 <a id="ln-1121" name="ln-1121" href="#ln-1121"></a><span class="w">   </span><span class="c">!------------------------------------------------------------------------------------------------</span>
 <a id="ln-1122" name="ln-1122" href="#ln-1122"></a><span class="w">   </span><span class="k">implicit none</span>
@@ -1619,13 +1619,13 @@ large graphs.</div>
 <a id="ln-1243" name="ln-1243" href="#ln-1243"></a><span class="w">   </span><span class="k">subroutine </span><span class="n">acf_theo</span><span class="p">()</span>
 <a id="ln-1244" name="ln-1244" href="#ln-1244"></a><span class="w">   </span><span class="c">!================================================================================================</span>
 <a id="ln-1245" name="ln-1245" href="#ln-1245"></a><span class="w">   </span><span class="c">!&lt;@note Function that returns the theoretical acf PARAM%imp_acf.</span>
-<a id="ln-1246" name="ln-1246" href="#ln-1246"></a><span class="w">   </span><span class="c">!</span>
-<a id="ln-1247" name="ln-1247" href="#ln-1247"></a><span class="w">   </span><span class="c">! If the surface to generate is non periodic, the starting surface is extended. The final surface</span>
-<a id="ln-1248" name="ln-1248" href="#ln-1248"></a><span class="w">   </span><span class="c">! will be a part of it. Indeed the extended surface will be periodic, because the use of FFTs.</span>
-<a id="ln-1249" name="ln-1249" href="#ln-1249"></a>
-<a id="ln-1250" name="ln-1250" href="#ln-1250"></a><span class="w">   </span><span class="c">! If a roughness orientation is chosen, in addition with long correlation lengths, a windowing</span>
-<a id="ln-1251" name="ln-1251" href="#ln-1251"></a><span class="w">   </span><span class="c">! should be applied to the acf to prevent from artifacts (vertical and horizontal lines)</span>
-<a id="ln-1252" name="ln-1252" href="#ln-1252"></a><span class="w">   </span><span class="c">!</span>
+<a id="ln-1246" name="ln-1246" href="#ln-1246"></a><span class="w">   </span><span class="c">!&lt;</span>
+<a id="ln-1247" name="ln-1247" href="#ln-1247"></a><span class="w">   </span><span class="c">!&lt; If the surface to generate is non periodic, the starting surface is extended. The final surface</span>
+<a id="ln-1248" name="ln-1248" href="#ln-1248"></a><span class="w">   </span><span class="c">!&lt; will be a part of it. Indeed the extended surface will be periodic, because the use of FFTs.</span>
+<a id="ln-1249" name="ln-1249" href="#ln-1249"></a><span class="w">   </span><span class="c">!&lt;</span>
+<a id="ln-1250" name="ln-1250" href="#ln-1250"></a><span class="w">   </span><span class="c">!&lt; If a roughness orientation is chosen, in addition with long correlation lengths, a windowing</span>
+<a id="ln-1251" name="ln-1251" href="#ln-1251"></a><span class="w">   </span><span class="c">!&lt; should be applied to the acf to prevent from artifacts (vertical and horizontal lines)</span>
+<a id="ln-1252" name="ln-1252" href="#ln-1252"></a><span class="w">   </span><span class="c">!&lt;</span>
 <a id="ln-1253" name="ln-1253" href="#ln-1253"></a><span class="w">   </span><span class="c">!&lt;@endnote</span>
 <a id="ln-1254" name="ln-1254" href="#ln-1254"></a><span class="w">   </span><span class="c">!------------------------------------------------------------------------------------------------</span>
 <a id="ln-1255" name="ln-1255" href="#ln-1255"></a><span class="w">   </span><span class="k">implicit none</span>
@@ -1800,7 +1800,7 @@ large graphs.</div>
             <p class="text-end">
               Documentation generated by
               <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
- on 2024-11-15 13:51 +0100             </p>
+ on 2024-12-27 09:26              </p>
           </div>
         </div>
         <br>

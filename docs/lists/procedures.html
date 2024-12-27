@@ -82,13 +82,22 @@
                  <td><a href='../proc/acf_wiener.html'>acf_wiener</a></td>
                  <td><a href='../module/func_acf.html'>func_acf</a></td>
                  <td>Subroutine</td>
-                 <td><p>Function that returns the <em>acf</em> of an array.</p><a href="../proc/acf_wiener.html" class="pull-right"><emph>Read more&hellip;</emph></a></td>
+                 <td><p>Function that returns the <em>acf</em> of an array.
+ <script type="math/tex; mode=display">
+ \begin{align*}
+    acf(i,j) &= (z \ast z)(i,j) = \sum_{k,l}^{n,n} z(k+1-i,l+1-j)z(k,l)  \\
+    TF(acf)  &= ACF = Z \cdot Z                                          \\
+    acf      &= TF^{-1}(ACF) = TF^{-1}(Z^2)
+ \end{align*}
+ </script>
+</p><a href="../proc/acf_wiener.html" class="pull-right"><emph>Read more&hellip;</emph></a></td>
                </tr>
 			   <tr>
                  <td><a href='../proc/add_expo.html'>add_expo</a></td>
                  <td><a href='../module/skku_profiles.html'>skku_profiles</a></td>
                  <td>Function</td>
-                 <td><p>Function that adds to the series mean the border integrals as explained in the modules</p><a href="../proc/add_expo.html" class="pull-right"><emph>Read more&hellip;</emph></a></td>
+                 <td><p>Function that adds to the series mean the border integrals as explained in the modules
+ presentation.</p><a href="../proc/add_expo.html" class="pull-right"><emph>Read more&hellip;</emph></a></td>
                </tr>
 			   <tr>
                  <td><a href='../proc/add_tang.html'>add_tang</a></td>
@@ -100,13 +109,20 @@
                  <td><a href='../proc/apod2.html'>apod2</a></td>
                  <td><a href='../module/func_acf.html'>func_acf</a></td>
                  <td>Subroutine</td>
-                 <td><p>Function that returns an apodized array.<br/></p><a href="../proc/apod2.html" class="pull-right"><emph>Read more&hellip;</emph></a></td>
+                 <td><p>Function that returns an apodized array.<br/>
+ To prevent gaps from appearing after FFT (because of non periodic waves), the surface must
+ be transformed, but not too much. Here a modified Tukey window is determined. The starting
+ surface is not modified below the &ldquo;correlation lengths&rdquo;. Above the correlation lengths, a
+ smooth decrease is forced with a cosine squared.</p><a href="../proc/apod2.html" class="pull-right"><emph>Read more&hellip;</emph></a></td>
                </tr>
 			   <tr>
                  <td><a href='../proc/autocov_impo.html'>autocov_impo</a></td>
                  <td><a href='../module/func_acf.html'>func_acf</a></td>
                  <td>Function</td>
-                 <td><p>Function that returns ( \exp \left(\alpha \sqrt{\left(\frac{x}{\tau_1}\right)^2+</p><a href="../proc/autocov_impo.html" class="pull-right"><emph>Read more&hellip;</emph></a></td>
+                 <td><p>Function that returns <script type="math/tex"> \exp \left(\alpha \sqrt{\left(\frac{x}{\tau_1}\right)^2+
+                                                        \left(\frac{y}{\tau_2}\right)^2}
+                                      \right) </script>
+</p><a href="../proc/autocov_impo.html" class="pull-right"><emph>Read more&hellip;</emph></a></td>
                </tr>
 			   <tr>
                  <td><a href='../proc/build_heights.html'>build_heights</a></td>
@@ -130,7 +146,11 @@
                  <td><a href='../proc/calc_imp_acf.html'>calc_imp_acf</a></td>
                  <td><a href='../module/func_acf.html'>func_acf</a></td>
                  <td>Subroutine</td>
-                 <td><p>Function that returns the theoretical autocorrelation function in an array.<br/></p><a href="../proc/calc_imp_acf.html" class="pull-right"><emph>Read more&hellip;</emph></a></td>
+                 <td><p>Function that returns the theoretical autocorrelation function in an array.<br/>
+ The autocorrelation function is supposed to be obtained from a real surface which must be periodic
+ or nearly periodic (because of the use of FFTs).
+ In addition, the surface is supposed to be 0 mean and normalized (<script type="math/tex">\sigma = 1 </script>),
+ therefore <em>acf</em> is zero-mean and normalized so that its max value is 1.<br/></p><a href="../proc/calc_imp_acf.html" class="pull-right"><emph>Read more&hellip;</emph></a></td>
                </tr>
 			   <tr>
                  <td><a href='../proc/calc_ord.html'>calc_ord</a></td>
@@ -142,13 +162,15 @@
                  <td><a href='../proc/calc_res_acf.html'>calc_res_acf</a></td>
                  <td><a href='../module/script.html'>script</a></td>
                  <td>Subroutine</td>
-                 <td><p>Function that returns <em>crit_acf</em> the mean absolute difference between theoretical</p><a href="../proc/calc_res_acf.html" class="pull-right"><emph>Read more&hellip;</emph></a></td>
+                 <td><p>Function that returns <em>crit_acf</em> the mean absolute difference between theoretical
+ and calculated acfs</p><a href="../proc/calc_res_acf.html" class="pull-right"><emph>Read more&hellip;</emph></a></td>
                </tr>
 			   <tr>
                  <td><a href='../proc/calc_z_f.html'>calc_z_f</a></td>
                  <td><a href='../module/script.html'>script</a></td>
                  <td>Subroutine</td>
-                 <td><p>Function that returns PARAM%surf, the surface made of heights with the required statistical</p><a href="../proc/calc_z_f.html" class="pull-right"><emph>Read more&hellip;</emph></a></td>
+                 <td><p>Function that returns PARAM%surf, the surface made of heights with the required statistical
+ moments, in the right order.</p><a href="../proc/calc_z_f.html" class="pull-right"><emph>Read more&hellip;</emph></a></td>
                </tr>
 			   <tr>
                  <td><a href='../proc/calc_z_i.html'>calc_z_i</a></td>
@@ -160,7 +182,9 @@
                  <td><a href='../proc/calculs_skku_exp.html'>calculs_skku_exp</a></td>
                  <td><a href='../module/skku_profiles.html'>skku_profiles</a></td>
                  <td>Subroutine</td>
-                 <td><p>Function to calculate the skewness and kurtosis of an <strong>exponential</strong> series.<br/></p><a href="../proc/calculs_skku_exp.html" class="pull-right"><emph>Read more&hellip;</emph></a></td>
+                 <td><p>Function to calculate the skewness and kurtosis of an <strong>exponential</strong> series.<br/>
+ The principle is the same as <a href="../proc/calculs_skku_tan.html">calculs_skku_tan</a>, however it fits better some particular
+ series quite binary (roughly two heights).</p><a href="../proc/calculs_skku_exp.html" class="pull-right"><emph>Read more&hellip;</emph></a></td>
                </tr>
 			   <tr>
                  <td><a href='../proc/calculs_skku_generique.html'>calculs_skku_generique</a></td>
@@ -214,7 +238,9 @@
                  <td><a href='../proc/fitness_skku_anal.html'>fitness_skku_anal</a></td>
                  <td><a href='../module/skku_profiles.html'>skku_profiles</a></td>
                  <td>Function</td>
-                 <td><p>Generic cost function: difference between the imposed statistical moments and those</p><a href="../proc/fitness_skku_anal.html" class="pull-right"><emph>Read more&hellip;</emph></a></td>
+                 <td><p>Generic cost function: difference between the imposed statistical moments and those
+ obtained. The optimization problem must be turned into a maximization problem (as often
+ in the optimization routines).</p><a href="../proc/fitness_skku_anal.html" class="pull-right"><emph>Read more&hellip;</emph></a></td>
                </tr>
 			   <tr>
                  <td><a href='../proc/nb_procs.html'>nb_procs</a></td>
@@ -226,13 +252,17 @@
                  <td><a href='../proc/pikaia_skku_solver.html'>pikaia_skku_solver</a></td>
                  <td><a href='../module/skku_profiles.html'>skku_profiles</a></td>
                  <td>Subroutine</td>
-                 <td><p>This is a refactoring of the PIKAIA unconstrained optimization code from the High Altitude Observatory.</p><a href="../proc/pikaia_skku_solver.html" class="pull-right"><emph>Read more&hellip;</emph></a></td>
+                 <td><p>This is a refactoring of the PIKAIA unconstrained optimization code from the High Altitude Observatory.
+ The original code is public domain and was written by Paul Charbonneau &amp; Barry Knapp.</p><a href="../proc/pikaia_skku_solver.html" class="pull-right"><emph>Read more&hellip;</emph></a></td>
                </tr>
 			   <tr>
                  <td><a href='../proc/plt__acf.html'>plt__acf</a></td>
                  <td><a href='../module/script.html'>script</a></td>
                  <td>Subroutine</td>
-                 <td><p>Function that calculates the mean absolute difference between the desired Acf and</p><a href="../proc/plt__acf.html" class="pull-right"><emph>Read more&hellip;</emph></a></td>
+                 <td><p>Function that calculates the mean absolute difference between the desired Acf and
+ the one obtained.
+ However, the important zone where both should match is above acf__z - where the correlation
+ lengths are determined.</p><a href="../proc/plt__acf.html" class="pull-right"><emph>Read more&hellip;</emph></a></td>
                </tr>
 			   <tr>
                  <td><a href='../proc/prg_surf.html'>prg_surf</a></td>
@@ -250,7 +280,8 @@
                  <td><a href='../proc/read_job.html'>read_job</a></td>
                  <td><a href='../module/script.html'>script</a></td>
                  <td>Subroutine</td>
-                 <td><p>Function that reads a script file. Keywords are identified and corresponding actions are</p><a href="../proc/read_job.html" class="pull-right"><emph>Read more&hellip;</emph></a></td>
+                 <td><p>Function that reads a script file. Keywords are identified and corresponding actions are
+ triggered.</p><a href="../proc/read_job.html" class="pull-right"><emph>Read more&hellip;</emph></a></td>
                </tr>
 			   <tr>
                  <td><a href='../proc/save_img.html'>save_img</a></td>
@@ -301,11 +332,11 @@
 <!-- Generated by graphviz version 2.43.0 (0)
  -->
 <!-- Title: call~~graph~~CallGraph Pages: 1 -->
-<svg id="callgraphCallGraph" width="855pt" height="1212pt"
- viewBox="0.00 0.00 855.00 1212.13" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="call~~graph~~CallGraph" class="graph" transform="scale(0.88 0.88) rotate(0) translate(4 1374)">
+<svg id="callgraphCallGraph" width="855pt" height="1185pt"
+ viewBox="0.00 0.00 855.00 1185.30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="call~~graph~~CallGraph" class="graph" transform="scale(0.86 0.86) rotate(0) translate(4 1374)">
 <title>call~~graph~~CallGraph</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-1374 968,-1374 968,4 -4,4"/>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-1374 990,-1374 990,4 -4,4"/>
 <!-- proc~acf_theo -->
 <g id="call~~graph~~CallGraph_node1" class="node">
 <title>proc~acf_theo</title>
@@ -333,8 +364,11 @@
 <!-- ellipse_acf -->
 <g id="call~~graph~~CallGraph_node42" class="node">
 <title>ellipse_acf</title>
-<polygon fill="#777777" stroke="#777777" points="647.5,-358 584.5,-358 584.5,-334 647.5,-334 647.5,-358"/>
+<g id="a_call~~graph~~CallGraph_node42"><a xlink:href="https://tribo-pprime.github.io/TPGLIB/proc/ellipse_acf.html" xlink:title="ellipse_acf">
+<polygon fill="#d9534f" stroke="#d9534f" points="647.5,-358 584.5,-358 584.5,-334 647.5,-334 647.5,-358"/>
 <text text-anchor="middle" x="616" y="-343.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">ellipse_acf</text>
+</a>
+</g>
 </g>
 <!-- proc~acf_theo&#45;&gt;ellipse_acf -->
 <g id="call~~graph~~CallGraph_edge1" class="edge">
@@ -354,8 +388,11 @@
 <!-- calc_fftw3_real_bwd -->
 <g id="call~~graph~~CallGraph_node39" class="node">
 <title>calc_fftw3_real_bwd</title>
-<polygon fill="#777777" stroke="#777777" points="835.5,-1254 726.5,-1254 726.5,-1230 835.5,-1230 835.5,-1254"/>
+<g id="a_call~~graph~~CallGraph_node39"><a xlink:href="https://tribo-pprime.github.io/TOOLIB/proc/calc_fftw3_real_bwd.html" xlink:title="calc_fftw3_real_bwd">
+<polygon fill="#d9534f" stroke="#d9534f" points="835.5,-1254 726.5,-1254 726.5,-1230 835.5,-1230 835.5,-1254"/>
 <text text-anchor="middle" x="781" y="-1239.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">calc_fftw3_real_bwd</text>
+</a>
+</g>
 </g>
 <!-- proc~acf_wiener&#45;&gt;calc_fftw3_real_bwd -->
 <g id="call~~graph~~CallGraph_edge3" class="edge">
@@ -366,8 +403,11 @@
 <!-- calc_fftw3_real_fwd -->
 <g id="call~~graph~~CallGraph_node40" class="node">
 <title>calc_fftw3_real_fwd</title>
-<polygon fill="#777777" stroke="#777777" points="834,-1174 728,-1174 728,-1150 834,-1150 834,-1174"/>
+<g id="a_call~~graph~~CallGraph_node40"><a xlink:href="https://tribo-pprime.github.io/TOOLIB/proc/calc_fftw3_real_fwd.html" xlink:title="calc_fftw3_real_fwd">
+<polygon fill="#d9534f" stroke="#d9534f" points="834,-1174 728,-1174 728,-1150 834,-1150 834,-1174"/>
 <text text-anchor="middle" x="781" y="-1159.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">calc_fftw3_real_fwd</text>
+</a>
+</g>
 </g>
 <!-- proc~acf_wiener&#45;&gt;calc_fftw3_real_fwd -->
 <g id="call~~graph~~CallGraph_edge4" class="edge">
@@ -378,8 +418,11 @@
 <!-- tab_calc_fftw3_real_bwd -->
 <g id="call~~graph~~CallGraph_node59" class="node">
 <title>tab_calc_fftw3_real_bwd</title>
-<polygon fill="#777777" stroke="#777777" points="846,-1014 716,-1014 716,-990 846,-990 846,-1014"/>
+<g id="a_call~~graph~~CallGraph_node59"><a xlink:href="https://tribo-pprime.github.io/TOOLIB/proc/tab_calc_fftw3_real_bwd.html" xlink:title="tab_calc_fftw3_real_bwd">
+<polygon fill="#d9534f" stroke="#d9534f" points="846,-1014 716,-1014 716,-990 846,-990 846,-1014"/>
 <text text-anchor="middle" x="781" y="-999.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">tab_calc_fftw3_real_bwd</text>
+</a>
+</g>
 </g>
 <!-- proc~acf_wiener&#45;&gt;tab_calc_fftw3_real_bwd -->
 <g id="call~~graph~~CallGraph_edge5" class="edge">
@@ -390,8 +433,11 @@
 <!-- tab_calc_fftw3_real_fwd -->
 <g id="call~~graph~~CallGraph_node60" class="node">
 <title>tab_calc_fftw3_real_fwd</title>
-<polygon fill="#777777" stroke="#777777" points="844.5,-972 717.5,-972 717.5,-948 844.5,-948 844.5,-972"/>
+<g id="a_call~~graph~~CallGraph_node60"><a xlink:href="https://tribo-pprime.github.io/TOOLIB/proc/tab_calc_fftw3_real_fwd.html" xlink:title="tab_calc_fftw3_real_fwd">
+<polygon fill="#d9534f" stroke="#d9534f" points="844.5,-972 717.5,-972 717.5,-948 844.5,-948 844.5,-972"/>
 <text text-anchor="middle" x="781" y="-957.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">tab_calc_fftw3_real_fwd</text>
+</a>
+</g>
 </g>
 <!-- proc~acf_wiener&#45;&gt;tab_calc_fftw3_real_fwd -->
 <g id="call~~graph~~CallGraph_edge6" class="edge">
@@ -402,8 +448,11 @@
 <!-- trans_corner2center -->
 <g id="call~~graph~~CallGraph_node63" class="node">
 <title>trans_corner2center</title>
-<polygon fill="#777777" stroke="#777777" points="835.5,-1056 726.5,-1056 726.5,-1032 835.5,-1032 835.5,-1056"/>
+<g id="a_call~~graph~~CallGraph_node63"><a xlink:href="https://tribo-pprime.github.io/TOOLIB/proc/trans_corner2center.html" xlink:title="trans_corner2center">
+<polygon fill="#d9534f" stroke="#d9534f" points="835.5,-1056 726.5,-1056 726.5,-1032 835.5,-1032 835.5,-1056"/>
 <text text-anchor="middle" x="781" y="-1041.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">trans_corner2center</text>
+</a>
+</g>
 </g>
 <!-- proc~acf_wiener&#45;&gt;trans_corner2center -->
 <g id="call~~graph~~CallGraph_edge7" class="edge">
@@ -519,20 +568,26 @@
 <!-- calc_moments -->
 <g id="call~~graph~~CallGraph_node41" class="node">
 <title>calc_moments</title>
-<polygon fill="#777777" stroke="#777777" points="964,-1014 882,-1014 882,-990 964,-990 964,-1014"/>
-<text text-anchor="middle" x="923" y="-999.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">calc_moments</text>
+<g id="a_call~~graph~~CallGraph_node41"><a xlink:href="https://tribo-pprime.github.io/TPGLIB/proc/calc_moments.html" xlink:title="calc_moments">
+<polygon fill="#d9534f" stroke="#d9534f" points="975,-1014 893,-1014 893,-990 975,-990 975,-1014"/>
+<text text-anchor="middle" x="934" y="-999.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">calc_moments</text>
+</a>
+</g>
 </g>
 <!-- proc~build_heights&#45;&gt;calc_moments -->
 <g id="call~~graph~~CallGraph_edge10" class="edge">
 <title>proc~build_heights&#45;&gt;calc_moments</title>
-<path fill="none" stroke="#fff100" d="M654.11,-875.86C701.7,-872.33 785.31,-872.29 846,-906 876.73,-923.07 899.47,-958.15 911.72,-980.84"/>
-<polygon fill="#fff100" stroke="#fff100" points="908.62,-982.46 916.32,-989.72 914.83,-979.24 908.62,-982.46"/>
+<path fill="none" stroke="#fff100" d="M654.18,-876.47C701.48,-873.65 784.4,-874.42 846,-906 879.25,-923.05 905.98,-958.39 920.65,-981.11"/>
+<polygon fill="#fff100" stroke="#fff100" points="917.75,-983.07 926.01,-989.7 923.69,-979.36 917.75,-983.07"/>
 </g>
 <!-- sort_array2 -->
 <g id="call~~graph~~CallGraph_node57" class="node">
 <title>sort_array2</title>
-<polygon fill="#777777" stroke="#777777" points="814.5,-730 747.5,-730 747.5,-706 814.5,-706 814.5,-730"/>
+<g id="a_call~~graph~~CallGraph_node57"><a xlink:href="https://tribo-pprime.github.io/TOOLIB/proc/sort_array2.html" xlink:title="sort_array2">
+<polygon fill="#d9534f" stroke="#d9534f" points="814.5,-730 747.5,-730 747.5,-706 814.5,-706 814.5,-730"/>
 <text text-anchor="middle" x="781" y="-715.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">sort_array2</text>
+</a>
+</g>
 </g>
 <!-- proc~build_heights&#45;&gt;sort_array2 -->
 <g id="call~~graph~~CallGraph_edge13" class="edge">
@@ -579,8 +634,8 @@
 <!-- proc~calc_ffh&#45;&gt;calc_moments -->
 <g id="call~~graph~~CallGraph_edge17" class="edge">
 <title>proc~calc_ffh&#45;&gt;calc_moments</title>
-<path fill="none" stroke="#bbff00" d="M643.1,-1258.02C689.13,-1277.24 785.57,-1308.34 846,-1263 884.93,-1233.79 910.46,-1082.23 918.92,-1024.43"/>
-<polygon fill="#bbff00" stroke="#bbff00" points="922.43,-1024.58 920.38,-1014.18 915.5,-1023.59 922.43,-1024.58"/>
+<path fill="none" stroke="#bbff00" d="M643.29,-1257.94C689.19,-1276.79 784.88,-1307.06 846,-1263 924.33,-1206.54 933.2,-1076.48 933.47,-1024.28"/>
+<polygon fill="#bbff00" stroke="#bbff00" points="936.97,-1024.09 933.41,-1014.11 929.97,-1024.13 936.97,-1024.09"/>
 </g>
 <!-- proc~calc_imp_acf&#45;&gt;proc~apod2 -->
 <g id="call~~graph~~CallGraph_edge18" class="edge">
@@ -606,8 +661,11 @@
 <!-- init_order -->
 <g id="call~~graph~~CallGraph_node48" class="node">
 <title>init_order</title>
-<polygon fill="#777777" stroke="#777777" points="645,-480 587,-480 587,-456 645,-456 645,-480"/>
+<g id="a_call~~graph~~CallGraph_node48"><a xlink:href="https://tribo-pprime.github.io/TOOLIB/proc/init_order.html" xlink:title="init_order">
+<polygon fill="#d9534f" stroke="#d9534f" points="645,-480 587,-480 587,-456 645,-456 645,-480"/>
 <text text-anchor="middle" x="616" y="-465.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">init_order</text>
+</a>
+</g>
 </g>
 <!-- proc~calc_ord&#45;&gt;init_order -->
 <g id="call~~graph~~CallGraph_edge20" class="edge">
@@ -648,8 +706,8 @@
 <!-- proc~calc_z_f&#45;&gt;calc_moments -->
 <g id="call~~graph~~CallGraph_edge22" class="edge">
 <title>proc~calc_z_f&#45;&gt;calc_moments</title>
-<path fill="none" stroke="#1aff00" d="M493.59,-887.31C510.21,-891.76 532.24,-897.28 552,-901 681.48,-925.37 725.18,-886.44 846,-939 868.81,-948.92 890.18,-967.84 904.42,-982.37"/>
-<polygon fill="#1aff00" stroke="#1aff00" points="902.13,-985.05 911.55,-989.9 907.22,-980.23 902.13,-985.05"/>
+<path fill="none" stroke="#1aff00" d="M493.59,-887.31C510.21,-891.76 532.24,-897.28 552,-901 681.48,-925.37 723.53,-890.42 846,-939 871.62,-949.16 896.66,-968.59 913.25,-983.2"/>
+<polygon fill="#1aff00" stroke="#1aff00" points="910.91,-985.81 920.68,-989.92 915.61,-980.62 910.91,-985.81"/>
 </g>
 <!-- proc~calc_z_i -->
 <g id="call~~graph~~CallGraph_node14" class="node">
@@ -669,14 +727,17 @@
 <!-- proc~calc_z_i&#45;&gt;calc_moments -->
 <g id="call~~graph~~CallGraph_edge24" class="edge">
 <title>proc~calc_z_i&#45;&gt;calc_moments</title>
-<path fill="none" stroke="#00ff0d" d="M493.58,-1011.76C538.41,-1026.3 633.25,-1054.83 716,-1065 773.35,-1072.05 791.65,-1084.6 846,-1065 869.67,-1056.47 891.19,-1037 905.23,-1021.95"/>
-<polygon fill="#00ff0d" stroke="#00ff0d" points="908.17,-1023.92 912.24,-1014.14 902.96,-1019.25 908.17,-1023.92"/>
+<path fill="none" stroke="#00ff0d" d="M493.58,-1011.76C538.41,-1026.3 633.25,-1054.83 716,-1065 773.35,-1072.05 791.04,-1082.81 846,-1065 872.53,-1056.4 897.75,-1036.36 914.14,-1021.17"/>
+<polygon fill="#00ff0d" stroke="#00ff0d" points="916.64,-1023.62 921.44,-1014.17 911.8,-1018.56 916.64,-1023.62"/>
 </g>
 <!-- scramble -->
 <g id="call~~graph~~CallGraph_node54" class="node">
 <title>scramble</title>
-<polygon fill="#777777" stroke="#777777" points="644,-1094 588,-1094 588,-1070 644,-1070 644,-1094"/>
+<g id="a_call~~graph~~CallGraph_node54"><a xlink:href="https://tribo-pprime.github.io/TPGLIB/proc/scramble.html" xlink:title="scramble">
+<polygon fill="#d9534f" stroke="#d9534f" points="644,-1094 588,-1094 588,-1070 644,-1070 644,-1094"/>
 <text text-anchor="middle" x="616" y="-1079.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">scramble</text>
+</a>
+</g>
 </g>
 <!-- proc~calc_z_i&#45;&gt;scramble -->
 <g id="call~~graph~~CallGraph_edge26" class="edge">
@@ -798,8 +859,8 @@
 <!-- proc~digi_fil&#45;&gt;calc_moments -->
 <g id="call~~graph~~CallGraph_edge35" class="edge">
 <title>proc~digi_fil&#45;&gt;calc_moments</title>
-<path fill="none" stroke="#00ffff" d="M643.34,-1209.6C689.32,-1217.79 785.13,-1227.6 846,-1183 898.16,-1144.78 914.75,-1063.8 919.84,-1024.43"/>
-<polygon fill="#00ffff" stroke="#00ffff" points="923.34,-1024.62 921.02,-1014.28 916.39,-1023.82 923.34,-1024.62"/>
+<path fill="none" stroke="#00ffff" d="M643.11,-1209.28C688.74,-1216.98 784.03,-1226.05 846,-1183 900.44,-1145.18 922.01,-1063.7 929.5,-1024.28"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="932.96,-1024.8 931.25,-1014.34 926.07,-1023.58 932.96,-1024.8"/>
 </g>
 <!-- proc~end_loop -->
 <g id="call~~graph~~CallGraph_node21" class="node">
@@ -822,8 +883,11 @@
 <!-- end_fftw3 -->
 <g id="call~~graph~~CallGraph_node43" class="node">
 <title>end_fftw3</title>
-<polygon fill="#777777" stroke="#777777" points="645.5,-522 586.5,-522 586.5,-498 645.5,-498 645.5,-522"/>
+<g id="a_call~~graph~~CallGraph_node43"><a xlink:href="https://tribo-pprime.github.io/TOOLIB/proc/end_fftw3.html" xlink:title="end_fftw3">
+<polygon fill="#d9534f" stroke="#d9534f" points="645.5,-522 586.5,-522 586.5,-498 645.5,-498 645.5,-522"/>
 <text text-anchor="middle" x="616" y="-507.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">end_fftw3</text>
+</a>
+</g>
 </g>
 <!-- proc~end_scri&#45;&gt;end_fftw3 -->
 <g id="call~~graph~~CallGraph_edge36" class="edge">
@@ -867,26 +931,32 @@
 <!-- init -->
 <g id="call~~graph~~CallGraph_node47" class="node">
 <title>init</title>
-<polygon fill="#777777" stroke="#777777" points="950,-795 896,-795 896,-771 950,-771 950,-795"/>
-<text text-anchor="middle" x="923" y="-780.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">init</text>
+<g id="a_call~~graph~~CallGraph_node47"><a xlink:href="https://tribo-pprime.github.io/TOOLIB/type/pikaia_class.html#boundprocedure-init" xlink:title="pikaia_class%init">
+<polygon fill="#a7506f" stroke="#a7506f" points="980.5,-795 887.5,-795 887.5,-771 980.5,-771 980.5,-795"/>
+<text text-anchor="middle" x="934" y="-780.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">pikaia_class%init</text>
+</a>
+</g>
 </g>
 <!-- proc~pikaia_skku_solver&#45;&gt;init -->
 <g id="call~~graph~~CallGraph_edge40" class="edge">
 <title>proc~pikaia_skku_solver&#45;&gt;init</title>
-<path fill="none" stroke="#000dff" d="M832.54,-769.58C850.15,-772.22 869.54,-775.13 885.75,-777.56"/>
-<polygon fill="#000dff" stroke="#000dff" points="885.48,-781.06 895.89,-779.08 886.52,-774.14 885.48,-781.06"/>
+<path fill="none" stroke="#000dff" d="M832.7,-769.05C847.04,-771.05 862.72,-773.23 877.34,-775.26"/>
+<polygon fill="#000dff" stroke="#000dff" points="876.87,-778.73 887.26,-776.64 877.84,-771.79 876.87,-778.73"/>
 </g>
 <!-- solve -->
 <g id="call~~graph~~CallGraph_node56" class="node">
 <title>solve</title>
-<polygon fill="#777777" stroke="#777777" points="950,-753 896,-753 896,-729 950,-729 950,-753"/>
-<text text-anchor="middle" x="923" y="-738.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">solve</text>
+<g id="a_call~~graph~~CallGraph_node56"><a xlink:href="https://tribo-pprime.github.io/TOOLIB/type/pikaia_class.html#boundprocedure-solve" xlink:title="pikaia_class%solve">
+<polygon fill="#a7506f" stroke="#a7506f" points="986,-753 882,-753 882,-729 986,-729 986,-753"/>
+<text text-anchor="middle" x="934" y="-738.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">pikaia_class%solve</text>
+</a>
+</g>
 </g>
 <!-- proc~pikaia_skku_solver&#45;&gt;solve -->
 <g id="call~~graph~~CallGraph_edge41" class="edge">
 <title>proc~pikaia_skku_solver&#45;&gt;solve</title>
-<path fill="none" stroke="#000dff" d="M832.54,-754.42C850.15,-751.78 869.54,-748.87 885.75,-746.44"/>
-<polygon fill="#000dff" stroke="#000dff" points="886.52,-749.86 895.89,-744.92 885.48,-742.94 886.52,-749.86"/>
+<path fill="none" stroke="#000dff" d="M832.7,-754.95C845.21,-753.21 858.74,-751.33 871.69,-749.53"/>
+<polygon fill="#000dff" stroke="#000dff" points="872.5,-752.95 881.92,-748.1 871.53,-746.01 872.5,-752.95"/>
 </g>
 <!-- proc~plt__acf -->
 <g id="call~~graph~~CallGraph_node27" class="node">
@@ -906,8 +976,11 @@
 <!-- get_unit -->
 <g id="call~~graph~~CallGraph_node46" class="node">
 <title>get_unit</title>
-<polygon fill="#777777" stroke="#777777" points="643,-316 589,-316 589,-292 643,-292 643,-316"/>
+<g id="a_call~~graph~~CallGraph_node46"><a xlink:href="https://tribo-pprime.github.io/TOOLIB/proc/get_unit~2.html" xlink:title="get_unit">
+<polygon fill="#d9534f" stroke="#d9534f" points="643,-316 589,-316 589,-292 643,-292 643,-316"/>
 <text text-anchor="middle" x="616" y="-301.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">get_unit</text>
+</a>
+</g>
 </g>
 <!-- proc~plt__acf&#45;&gt;get_unit -->
 <g id="call~~graph~~CallGraph_edge43" class="edge">
@@ -942,8 +1015,8 @@
 <!-- proc~profil_theo_trie_1d&#45;&gt;calc_moments -->
 <g id="call~~graph~~CallGraph_edge45" class="edge">
 <title>proc~profil_theo_trie_1d&#45;&gt;calc_moments</title>
-<path fill="none" stroke="#6b00ff" d="M823.27,-854.01C831.39,-857.63 839.42,-862.22 846,-868 881.45,-899.11 904.12,-950.95 914.8,-980.19"/>
-<polygon fill="#6b00ff" stroke="#6b00ff" points="911.58,-981.58 918.19,-989.86 918.19,-979.27 911.58,-981.58"/>
+<path fill="none" stroke="#6b00ff" d="M822.34,-854.02C830.7,-857.67 839.07,-862.27 846,-868 883.88,-899.29 910.99,-951.42 924.1,-980.58"/>
+<polygon fill="#6b00ff" stroke="#6b00ff" points="920.94,-982.1 928.15,-989.87 927.36,-979.3 920.94,-982.1"/>
 </g>
 <!-- proc~read_job&#45;&gt;proc~acf_theo -->
 <g id="call~~graph~~CallGraph_edge47" class="edge">
@@ -1128,8 +1201,11 @@
 <!-- str_remove_chars -->
 <g id="call~~graph~~CallGraph_node58" class="node">
 <title>str_remove_chars</title>
-<polygon fill="#777777" stroke="#777777" points="516,-24 417,-24 417,0 516,0 516,-24"/>
+<g id="a_call~~graph~~CallGraph_node58"><a xlink:href="https://tribo-pprime.github.io/TOOLIB/proc/str_remove_chars.html" xlink:title="str_remove_chars">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="516,-24 417,-24 417,0 516,0 516,-24"/>
 <text text-anchor="middle" x="466.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">str_remove_chars</text>
+</a>
+</g>
 </g>
 <!-- proc~read_job&#45;&gt;str_remove_chars -->
 <g id="call~~graph~~CallGraph_edge66" class="edge">
@@ -1140,8 +1216,11 @@
 <!-- init_scal -->
 <g id="call~~graph~~CallGraph_node49" class="node">
 <title>init_scal</title>
-<polygon fill="#777777" stroke="#777777" points="643,-232 589,-232 589,-208 643,-208 643,-232"/>
+<g id="a_call~~graph~~CallGraph_node49"><a xlink:href="https://tribo-pprime.github.io/TOOLIB/proc/init_scal.html" xlink:title="init_scal">
+<polygon fill="#d9534f" stroke="#d9534f" points="643,-232 589,-232 589,-208 643,-208 643,-232"/>
 <text text-anchor="middle" x="616" y="-217.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">init_scal</text>
+</a>
+</g>
 </g>
 <!-- proc~save_img&#45;&gt;init_scal -->
 <g id="call~~graph~~CallGraph_edge67" class="edge">
@@ -1152,8 +1231,11 @@
 <!-- write_surf -->
 <g id="call~~graph~~CallGraph_node64" class="node">
 <title>write_surf</title>
-<polygon fill="#777777" stroke="#777777" points="645.5,-190 586.5,-190 586.5,-166 645.5,-166 645.5,-190"/>
+<g id="a_call~~graph~~CallGraph_node64"><a xlink:href="https://tribo-pprime.github.io/TOOLIB/proc/write_surf.html" xlink:title="write_surf">
+<polygon fill="#d9534f" stroke="#d9534f" points="645.5,-190 586.5,-190 586.5,-166 645.5,-166 645.5,-190"/>
 <text text-anchor="middle" x="616" y="-175.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">write_surf</text>
+</a>
+</g>
 </g>
 <!-- proc~save_img&#45;&gt;write_surf -->
 <g id="call~~graph~~CallGraph_edge68" class="edge">
@@ -1164,14 +1246,17 @@
 <!-- proc~smooth__&#45;&gt;calc_moments -->
 <g id="call~~graph~~CallGraph_edge69" class="edge">
 <title>proc~smooth__&#45;&gt;calc_moments</title>
-<path fill="none" stroke="#e400ff" d="M496.5,-1125.97C562.62,-1133.63 727.9,-1144.8 846,-1085 873.69,-1070.98 896.28,-1042.4 909.43,-1022.73"/>
-<polygon fill="#e400ff" stroke="#e400ff" points="912.49,-1024.45 914.96,-1014.15 906.6,-1020.66 912.49,-1024.45"/>
+<path fill="none" stroke="#e400ff" d="M496.72,-1125.33C562.57,-1131.54 726.21,-1139.65 846,-1084 876.01,-1070.06 902.38,-1041.69 918.01,-1022.26"/>
+<polygon fill="#e400ff" stroke="#e400ff" points="920.82,-1024.33 924.21,-1014.3 915.3,-1020.03 920.82,-1024.33"/>
 </g>
 <!-- fft_filter -->
 <g id="call~~graph~~CallGraph_node44" class="node">
 <title>fft_filter</title>
-<polygon fill="#777777" stroke="#777777" points="643,-1174 589,-1174 589,-1150 643,-1150 643,-1174"/>
+<g id="a_call~~graph~~CallGraph_node44"><a xlink:href="https://tribo-pprime.github.io/TPGLIB/proc/fft_filter.html" xlink:title="fft_filter">
+<polygon fill="#d9534f" stroke="#d9534f" points="643,-1174 589,-1174 589,-1150 643,-1150 643,-1174"/>
 <text text-anchor="middle" x="616" y="-1159.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">fft_filter</text>
+</a>
+</g>
 </g>
 <!-- proc~smooth__&#45;&gt;fft_filter -->
 <g id="call~~graph~~CallGraph_edge70" class="edge">
@@ -1218,8 +1303,8 @@
 <!-- proc~sub_surf&#45;&gt;calc_moments -->
 <g id="call~~graph~~CallGraph_edge72" class="edge">
 <title>proc~sub_surf&#45;&gt;calc_moments</title>
-<path fill="none" stroke="#ff0078" d="M469.46,-669.39C475.28,-701.39 495.66,-786.65 552,-821 663.57,-889.02 737.18,-748.67 846,-821 900.22,-857.04 915.84,-940.09 920.28,-979.91"/>
-<polygon fill="#ff0078" stroke="#ff0078" points="916.8,-980.31 921.25,-989.92 923.77,-979.63 916.8,-980.31"/>
+<path fill="none" stroke="#ff0078" d="M469.46,-669.39C475.28,-701.39 495.66,-786.65 552,-821 663.57,-889.02 735.39,-751.44 846,-821 902.38,-856.46 923.06,-939.79 929.93,-979.8"/>
+<polygon fill="#ff0078" stroke="#ff0078" points="926.5,-980.53 931.52,-989.86 933.41,-979.44 926.5,-980.53"/>
 </g>
 <!-- proc~sub_surf&#45;&gt;end_fftw3 -->
 <g id="call~~graph~~CallGraph_edge73" class="edge">
@@ -1230,8 +1315,11 @@
 <!-- fftw_plan_with_nthreads -->
 <g id="call~~graph~~CallGraph_node45" class="node">
 <title>fftw_plan_with_nthreads</title>
-<polygon fill="#777777" stroke="#777777" points="680,-606 552,-606 552,-582 680,-582 680,-606"/>
+<g id="a_call~~graph~~CallGraph_node45"><a xlink:href="https://tribo-pprime.github.io/TOOLIB/interface/fftw_plan_with_nthreads.html" xlink:title="fftw_plan_with_nthreads">
+<polygon fill="#a7506f" stroke="#a7506f" points="680,-606 552,-606 552,-582 680,-582 680,-606"/>
 <text text-anchor="middle" x="616" y="-591.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">fftw_plan_with_nthreads</text>
+</a>
+</g>
 </g>
 <!-- proc~sub_surf&#45;&gt;fftw_plan_with_nthreads -->
 <g id="call~~graph~~CallGraph_edge74" class="edge">
@@ -1260,8 +1348,11 @@
 <!-- progress_bar_terminal -->
 <g id="call~~graph~~CallGraph_node52" class="node">
 <title>progress_bar_terminal</title>
-<polygon fill="#777777" stroke="#777777" points="676.5,-812 555.5,-812 555.5,-788 676.5,-788 676.5,-812"/>
+<g id="a_call~~graph~~CallGraph_node52"><a xlink:href="https://tribo-pprime.github.io/TOOLIB/proc/progress_bar_terminal.html" xlink:title="progress_bar_terminal">
+<polygon fill="#d9534f" stroke="#d9534f" points="676.5,-812 555.5,-812 555.5,-788 676.5,-788 676.5,-812"/>
 <text text-anchor="middle" x="616" y="-797.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">progress_bar_terminal</text>
+</a>
+</g>
 </g>
 <!-- proc~sub_surf&#45;&gt;progress_bar_terminal -->
 <g id="call~~graph~~CallGraph_edge81" class="edge">
@@ -1278,8 +1369,11 @@
 <!-- tab_end_fftw3_real -->
 <g id="call~~graph~~CallGraph_node61" class="node">
 <title>tab_end_fftw3_real</title>
-<polygon fill="#777777" stroke="#777777" points="668,-770 564,-770 564,-746 668,-746 668,-770"/>
+<g id="a_call~~graph~~CallGraph_node61"><a xlink:href="https://tribo-pprime.github.io/TOOLIB/proc/tab_end_fftw3_real.html" xlink:title="tab_end_fftw3_real">
+<polygon fill="#d9534f" stroke="#d9534f" points="668,-770 564,-770 564,-746 668,-746 668,-770"/>
 <text text-anchor="middle" x="616" y="-755.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">tab_end_fftw3_real</text>
+</a>
+</g>
 </g>
 <!-- proc~sub_surf&#45;&gt;tab_end_fftw3_real -->
 <g id="call~~graph~~CallGraph_edge83" class="edge">
@@ -1290,8 +1384,11 @@
 <!-- tab_init_fftw3_real -->
 <g id="call~~graph~~CallGraph_node62" class="node">
 <title>tab_init_fftw3_real</title>
-<polygon fill="#777777" stroke="#777777" points="666,-690 566,-690 566,-666 666,-666 666,-690"/>
+<g id="a_call~~graph~~CallGraph_node62"><a xlink:href="https://tribo-pprime.github.io/TOOLIB/proc/tab_init_fftw3_real.html" xlink:title="tab_init_fftw3_real">
+<polygon fill="#d9534f" stroke="#d9534f" points="666,-690 566,-690 566,-666 666,-666 666,-690"/>
 <text text-anchor="middle" x="616" y="-675.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">tab_init_fftw3_real</text>
+</a>
+</g>
 </g>
 <!-- proc~sub_surf&#45;&gt;tab_init_fftw3_real -->
 <g id="call~~graph~~CallGraph_edge84" class="edge">
@@ -1416,7 +1513,7 @@ large graphs.</div>
             <p class="text-end">
               Documentation generated by
               <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
- on 2024-11-15 13:51 +0100             </p>
+ on 2024-12-27 09:26              </p>
           </div>
         </div>
         <br>

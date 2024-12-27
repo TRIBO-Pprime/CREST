@@ -38,7 +38,7 @@ contains
    subroutine read_job(job_file)
    !================================================================================================
    !<@note Function that reads a script file. Keywords are identified and corresponding actions are
-   ! triggered.
+   !< triggered.
    !<@endnote
    !------------------------------------------------------------------------------------------------
    implicit none
@@ -172,15 +172,15 @@ o:    do
    subroutine plt__acf()
    !================================================================================================
    !<@note Function that calculates the mean absolute difference between the desired Acf and
-   ! the one obtained.
-   ! However, the important zone where both should match is above acf__z - where the correlation
-   ! lengths are determined.
-   !
-   ! If the mean absolute difference is below the criterion, the loops to improve the acf are
-   ! stopped.
-   !
-   ! The function can also plot the acfs.
-   !
+   !< the one obtained.
+   !< However, the important zone where both should match is above acf__z - where the correlation
+   !< lengths are determined.
+   !<
+   !< If the mean absolute difference is below the criterion, the loops to improve the acf are
+   !< stopped.
+   !<
+   !< The function can also plot the acfs.
+   !<
    !<@endnote
    !------------------------------------------------------------------------------------------------
    implicit none
@@ -425,7 +425,7 @@ o:    do
    subroutine calc_acf()
    !================================================================================================
    !<@note Function that returns the autocorrelation function of a surface PARAM%acf_surf
-   !
+   !<
    !<@endnote
    !------------------------------------------------------------------------------------------------
    implicit none
@@ -496,17 +496,17 @@ o:    do
    subroutine sub_surf()
    !================================================================================================
    !<@note Function that returns the best subsurface from the final surface.
-   !
-   ! We are here because a non periodic resulting surface is required. To do that, a wider
-   ! periodic surface is created, and it matches the required moments and acf.
-   !
-   ! However, sub-sampling the surface into a smaller surface that matches the required size
-   ! will result in degraded moments and acf. Hence, several locations are tested to find the
-   ! best subsurface.
-   !
-   ! Note that the right moments can always be obtained by substitution, respecting the order of heights.
-   ! However, the acf will be slightly impacted.
-   !
+   !<
+   !< We are here because a non periodic resulting surface is required. To do that, a wider
+   !< periodic surface is created, and it matches the required moments and acf.
+   !<
+   !< However, sub-sampling the surface into a smaller surface that matches the required size
+   !< will result in degraded moments and acf. Hence, several locations are tested to find the
+   !< best subsurface.
+   !<
+   !< Note that the right moments can always be obtained by substitution, respecting the order of heights.
+   !< However, the acf will be slightly impacted.
+   !<
    !<@endnote
    !------------------------------------------------------------------------------------------------
    implicit none
@@ -774,8 +774,8 @@ o:    do
    subroutine calc_res_acf(acf_surf, imp_acf, crit_acf, acf__z, w, h)
    !================================================================================================
    !<@note Function that returns *crit_acf* the mean absolute difference between theoretical
-   ! and calculated acfs
-   !
+   !< and calculated acfs
+   !<
    !<@endnote
    !------------------------------------------------------------------------------------------------
    implicit none
@@ -846,7 +846,7 @@ o:    do
    subroutine smooth__()
    !================================================================================================
    !<@note Function that applies a low-pass filter to the surface PARAM%surf
-   !
+   !<
    !<@endnote
    !------------------------------------------------------------------------------------------------
    implicit none
@@ -893,11 +893,11 @@ o:    do
    subroutine calc_z_f(to_be_made)
    !================================================================================================
    !<@note Function that returns PARAM%surf, the surface made of heights with the required statistical
-   ! moments, in the right order.
-   !
-   ! - The heights come from the vector PARAM%vect_h
-   ! - the heights order is stored in the vector PARAM%order
-   !
+   !< moments, in the right order.
+   !<
+   !< - The heights come from the vector PARAM%vect_h
+   !< - the heights order is stored in the vector PARAM%order
+   !<
    !<@endnote
    !------------------------------------------------------------------------------------------------
    implicit none
@@ -956,7 +956,7 @@ o:    do
    subroutine calc_ord()
    !================================================================================================
    !<@note Function that returns the vector PARAM%order that contains the heights order.
-   !
+   !<
    !<@endnote
    !------------------------------------------------------------------------------------------------
    implicit none
@@ -989,7 +989,7 @@ o:    do
    subroutine digi_fil()
    !================================================================================================
    !<@note Function that applies the digital filter to the random heights
-   !
+   !<
    !<@endnote
    !------------------------------------------------------------------------------------------------
    implicit none
@@ -1063,7 +1063,7 @@ o:    do
    subroutine calc_z_i()
    !================================================================================================
    !<@note Function that returns the starting surface of random heights
-   !
+   !<
    !<@endnote
    !------------------------------------------------------------------------------------------------
    implicit none
@@ -1112,11 +1112,11 @@ o:    do
    subroutine calc_ffh(calc_m_stt)
    !================================================================================================
    !<@note Function that returns ...
-   !
-   ! - the digital filter to apply to the height distribution \( \text{PARAM%fhi} = \sqrt{ \left| FFT(\text{PARAM%imp_acf}) \right| } \)
-   ! - the starting statistical moments PARAM%m_stt%sk, PARAM%m_stt%ku
-   ! - whether the exponential function will be used, PARAM%reajust_skku
-   !
+   !<
+   !< - the digital filter to apply to the height distribution \( \text{PARAM%fhi} = \sqrt{ \left| FFT(\text{PARAM%imp_acf}) \right| } \)
+   !< - the starting statistical moments PARAM%m_stt%sk, PARAM%m_stt%ku
+   !< - whether the exponential function will be used, PARAM%reajust_skku
+   !<
    !<@endnote
    !------------------------------------------------------------------------------------------------
    implicit none
@@ -1243,13 +1243,13 @@ o:    do
    subroutine acf_theo()
    !================================================================================================
    !<@note Function that returns the theoretical acf PARAM%imp_acf.
-   !
-   ! If the surface to generate is non periodic, the starting surface is extended. The final surface
-   ! will be a part of it. Indeed the extended surface will be periodic, because the use of FFTs.
-
-   ! If a roughness orientation is chosen, in addition with long correlation lengths, a windowing
-   ! should be applied to the acf to prevent from artifacts (vertical and horizontal lines)
-   !
+   !<
+   !< If the surface to generate is non periodic, the starting surface is extended. The final surface
+   !< will be a part of it. Indeed the extended surface will be periodic, because the use of FFTs.
+   !<
+   !< If a roughness orientation is chosen, in addition with long correlation lengths, a windowing
+   !< should be applied to the acf to prevent from artifacts (vertical and horizontal lines)
+   !<
    !<@endnote
    !------------------------------------------------------------------------------------------------
    implicit none

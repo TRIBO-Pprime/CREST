@@ -8,6 +8,8 @@ css: ./css/CREST.css
 media_dir: ./img
 exclude_dir: ./src/arch
 include: ./inc
+external: path1=https://tribo-pprime.github.io/TOOLIB
+          path2=https://tribo-pprime.github.io/TPGLIB
 favicon: ./img/CREST_logo.png
 project_github: https://github.com/TRIBO-Pprime/CREST
 github: https://github.com/Arthur-Francisco

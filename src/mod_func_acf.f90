@@ -26,14 +26,14 @@ public :: calc_imp_acf, acf_wiener
    subroutine acf_wiener(tab_in, tab_out, w, h, multi_fft)
    !================================================================================================
    !<@note Function that returns the *acf* of an array.
-   ! \[
-   ! \begin{align*}
-   !    acf(i,j) &= (z \ast z)(i,j) = \sum_{k,l}^{n,n} z(k+1-i,l+1-j)z(k,l)  \\
-   !    TF(acf)  &= ACF = Z \cdot Z                                          \\
-   !    acf      &= TF^{-1}(ACF) = TF^{-1}(Z^2)
-   ! \end{align*}
-   ! \]
-   !
+   !< \[
+   !< \begin{align*}
+   !<    acf(i,j) &= (z \ast z)(i,j) = \sum_{k,l}^{n,n} z(k+1-i,l+1-j)z(k,l)  \\
+   !<    TF(acf)  &= ACF = Z \cdot Z                                          \\
+   !<    acf      &= TF^{-1}(ACF) = TF^{-1}(Z^2)
+   !< \end{align*}
+   !< \]
+   !<
    !<@endnote
    !------------------------------------------------------------------------------------------------
    implicit none
@@ -137,9 +137,9 @@ public :: calc_imp_acf, acf_wiener
    real(kind=R8) function autocov_impo(xi, xj, tau1, tau2, alpha, ang)
    !================================================================================================
    !<@note Function that returns \( \exp \left(\alpha \sqrt{\left(\frac{x}{\tau_1}\right)^2+
-   !                                                        \left(\frac{y}{\tau_2}\right)^2}
-   !                                      \right) \)
-   !
+   !<                                                        \left(\frac{y}{\tau_2}\right)^2}
+   !<                                      \right) \)
+   !<
    !<@endnote
    !------------------------------------------------------------------------------------------------
    implicit none
@@ -164,11 +164,11 @@ public :: calc_imp_acf, acf_wiener
    subroutine calc_imp_acf(long, larg, tau1, tau2, alpha, ang, tab_acf, apod)
    !================================================================================================
    !<@note Function that returns the theoretical autocorrelation function in an array.<br/>
-   ! The autocorrelation function is supposed to be obtained from a real surface which must be periodic
-   ! or nearly periodic (because of the use of FFTs).
-   ! In addition, the surface is supposed to be 0 mean and normalized (\(\sigma = 1 \)),
-   ! therefore *acf* is zero-mean and normalized so that its max value is 1.<br/>
-   !
+   !< The autocorrelation function is supposed to be obtained from a real surface which must be periodic
+   !< or nearly periodic (because of the use of FFTs).
+   !< In addition, the surface is supposed to be 0 mean and normalized (\(\sigma = 1 \)),
+   !< therefore *acf* is zero-mean and normalized so that its max value is 1.<br/>
+   !<
    !<@endnote
    !------------------------------------------------------------------------------------------------
    implicit none
@@ -256,10 +256,10 @@ public :: calc_imp_acf, acf_wiener
    subroutine apod2(tab_in, tab_out, long, larg, tau1, tau2, ang)
    !================================================================================================
    !<@note Function that returns an apodized array.<br/>
-   ! To prevent gaps from appearing after FFT (because of non periodic waves), the surface must
-   ! be transformed, but not too much. Here a modified Tukey window is determined. The starting
-   ! surface is not modified below the "correlation lengths". Above the correlation lengths, a
-   ! smooth decrease is forced with a cosine squared.
+   !< To prevent gaps from appearing after FFT (because of non periodic waves), the surface must
+   !< be transformed, but not too much. Here a modified Tukey window is determined. The starting
+   !< surface is not modified below the "correlation lengths". Above the correlation lengths, a
+   !< smooth decrease is forced with a cosine squared.
    !<@endnote
    !------------------------------------------------------------------------------------------------
    implicit none

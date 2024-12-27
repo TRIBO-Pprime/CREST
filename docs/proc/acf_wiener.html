@@ -148,7 +148,15 @@
 
     <div class="alert alert-info">
 <p class="alert-title h4">Note</p>
-<p>Function that returns the <em>acf</em> of an array.</p>
+<p>Function that returns the <em>acf</em> of an array.
+ <script type="math/tex; mode=display">
+ \begin{align*}
+    acf(i,j) &= (z \ast z)(i,j) = \sum_{k,l}^{n,n} z(k+1-i,l+1-j)z(k,l)  \\
+    TF(acf)  &= ACF = Z \cdot Z                                          \\
+    acf      &= TF^{-1}(ACF) = TF^{-1}(Z^2)
+ \end{align*}
+ </script>
+</p>
 </div>
 
 
@@ -195,7 +203,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-w"></span>
+              <span class="anchor" id="variable-w~14"></span>
               integer(kind=I4),
             </td>
 <td>intent(in)</td>
@@ -210,7 +218,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-h~3"></span>
+              <span class="anchor" id="variable-h~16"></span>
               integer(kind=I4),
             </td>
 <td>intent(in)</td>
@@ -267,8 +275,11 @@
 <!-- calc_fftw3_real_bwd -->
 <g id="proc~~acf_wiener~~CallsGraph_node2" class="node">
 <title>calc_fftw3_real_bwd</title>
-<polygon fill="#777777" stroke="#777777" points="219.5,-192 110.5,-192 110.5,-168 219.5,-168 219.5,-192"/>
+<g id="a_proc~~acf_wiener~~CallsGraph_node2"><a xlink:href="https://tribo-pprime.github.io/TOOLIB/proc/calc_fftw3_real_bwd.html" xlink:title="calc_fftw3_real_bwd">
+<polygon fill="#d9534f" stroke="#d9534f" points="219.5,-192 110.5,-192 110.5,-168 219.5,-168 219.5,-192"/>
 <text text-anchor="middle" x="165" y="-177.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">calc_fftw3_real_bwd</text>
+</a>
+</g>
 </g>
 <!-- proc~acf_wiener&#45;&gt;calc_fftw3_real_bwd -->
 <g id="proc~~acf_wiener~~CallsGraph_edge1" class="edge">
@@ -279,8 +290,11 @@
 <!-- calc_fftw3_real_fwd -->
 <g id="proc~~acf_wiener~~CallsGraph_node3" class="node">
 <title>calc_fftw3_real_fwd</title>
-<polygon fill="#777777" stroke="#777777" points="218,-150 112,-150 112,-126 218,-126 218,-150"/>
+<g id="a_proc~~acf_wiener~~CallsGraph_node3"><a xlink:href="https://tribo-pprime.github.io/TOOLIB/proc/calc_fftw3_real_fwd.html" xlink:title="calc_fftw3_real_fwd">
+<polygon fill="#d9534f" stroke="#d9534f" points="218,-150 112,-150 112,-126 218,-126 218,-150"/>
 <text text-anchor="middle" x="165" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">calc_fftw3_real_fwd</text>
+</a>
+</g>
 </g>
 <!-- proc~acf_wiener&#45;&gt;calc_fftw3_real_fwd -->
 <g id="proc~~acf_wiener~~CallsGraph_edge2" class="edge">
@@ -291,8 +305,11 @@
 <!-- tab_calc_fftw3_real_bwd -->
 <g id="proc~~acf_wiener~~CallsGraph_node4" class="node">
 <title>tab_calc_fftw3_real_bwd</title>
-<polygon fill="#777777" stroke="#777777" points="230,-108 100,-108 100,-84 230,-84 230,-108"/>
+<g id="a_proc~~acf_wiener~~CallsGraph_node4"><a xlink:href="https://tribo-pprime.github.io/TOOLIB/proc/tab_calc_fftw3_real_bwd.html" xlink:title="tab_calc_fftw3_real_bwd">
+<polygon fill="#d9534f" stroke="#d9534f" points="230,-108 100,-108 100,-84 230,-84 230,-108"/>
 <text text-anchor="middle" x="165" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">tab_calc_fftw3_real_bwd</text>
+</a>
+</g>
 </g>
 <!-- proc~acf_wiener&#45;&gt;tab_calc_fftw3_real_bwd -->
 <g id="proc~~acf_wiener~~CallsGraph_edge3" class="edge">
@@ -303,8 +320,11 @@
 <!-- tab_calc_fftw3_real_fwd -->
 <g id="proc~~acf_wiener~~CallsGraph_node5" class="node">
 <title>tab_calc_fftw3_real_fwd</title>
-<polygon fill="#777777" stroke="#777777" points="228.5,-66 101.5,-66 101.5,-42 228.5,-42 228.5,-66"/>
+<g id="a_proc~~acf_wiener~~CallsGraph_node5"><a xlink:href="https://tribo-pprime.github.io/TOOLIB/proc/tab_calc_fftw3_real_fwd.html" xlink:title="tab_calc_fftw3_real_fwd">
+<polygon fill="#d9534f" stroke="#d9534f" points="228.5,-66 101.5,-66 101.5,-42 228.5,-42 228.5,-66"/>
 <text text-anchor="middle" x="165" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">tab_calc_fftw3_real_fwd</text>
+</a>
+</g>
 </g>
 <!-- proc~acf_wiener&#45;&gt;tab_calc_fftw3_real_fwd -->
 <g id="proc~~acf_wiener~~CallsGraph_edge4" class="edge">
@@ -315,8 +335,11 @@
 <!-- trans_corner2center -->
 <g id="proc~~acf_wiener~~CallsGraph_node6" class="node">
 <title>trans_corner2center</title>
-<polygon fill="#777777" stroke="#777777" points="219.5,-24 110.5,-24 110.5,0 219.5,0 219.5,-24"/>
+<g id="a_proc~~acf_wiener~~CallsGraph_node6"><a xlink:href="https://tribo-pprime.github.io/TOOLIB/proc/trans_corner2center.html" xlink:title="trans_corner2center">
+<polygon fill="#d9534f" stroke="#d9534f" points="219.5,-24 110.5,-24 110.5,0 219.5,0 219.5,-24"/>
 <text text-anchor="middle" x="165" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">trans_corner2center</text>
+</a>
+</g>
 </g>
 <!-- proc~acf_wiener&#45;&gt;trans_corner2center -->
 <g id="proc~~acf_wiener~~CallsGraph_edge5" class="edge">
@@ -610,14 +633,14 @@ large graphs.</div>
     <div class="hl codehilite"><pre><span></span><span class="w">   </span><span class="k">subroutine </span><span class="n">acf_wiener</span><span class="p">(</span><span class="n">tab_in</span><span class="p">,</span><span class="w"> </span><span class="n">tab_out</span><span class="p">,</span><span class="w"> </span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="n">h</span><span class="p">,</span><span class="w"> </span><span class="n">multi_fft</span><span class="p">)</span>
 <span class="w">   </span><span class="c">!================================================================================================</span>
 <span class="w">   </span><span class="c">!&lt;@note Function that returns the *acf* of an array.</span>
-<span class="w">   </span><span class="c">! \[</span>
-<span class="w">   </span><span class="c">! \begin{align*}</span>
-<span class="w">   </span><span class="c">!    acf(i,j) &amp;= (z \ast z)(i,j) = \sum_{k,l}^{n,n} z(k+1-i,l+1-j)z(k,l)  \\</span>
-<span class="w">   </span><span class="c">!    TF(acf)  &amp;= ACF = Z \cdot Z                                          \\</span>
-<span class="w">   </span><span class="c">!    acf      &amp;= TF^{-1}(ACF) = TF^{-1}(Z^2)</span>
-<span class="w">   </span><span class="c">! \end{align*}</span>
-<span class="w">   </span><span class="c">! \]</span>
-<span class="w">   </span><span class="c">!</span>
+<span class="w">   </span><span class="c">!&lt; \[</span>
+<span class="w">   </span><span class="c">!&lt; \begin{align*}</span>
+<span class="w">   </span><span class="c">!&lt;    acf(i,j) &amp;= (z \ast z)(i,j) = \sum_{k,l}^{n,n} z(k+1-i,l+1-j)z(k,l)  \\</span>
+<span class="w">   </span><span class="c">!&lt;    TF(acf)  &amp;= ACF = Z \cdot Z                                          \\</span>
+<span class="w">   </span><span class="c">!&lt;    acf      &amp;= TF^{-1}(ACF) = TF^{-1}(Z^2)</span>
+<span class="w">   </span><span class="c">!&lt; \end{align*}</span>
+<span class="w">   </span><span class="c">!&lt; \]</span>
+<span class="w">   </span><span class="c">!&lt;</span>
 <span class="w">   </span><span class="c">!&lt;@endnote</span>
 <span class="w">   </span><span class="c">!------------------------------------------------------------------------------------------------</span>
 <span class="w">   </span><span class="k">implicit none</span>
@@ -739,7 +762,7 @@ large graphs.</div>
             <p class="text-end">
               Documentation generated by
               <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
- on 2024-11-15 13:51 +0100             </p>
+ on 2024-12-27 09:26              </p>
           </div>
         </div>
         <br>
