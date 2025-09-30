@@ -19,7 +19,7 @@ implicit none
 
 private
 
-public :: calc_imp_acf, acf_wiener
+public :: calc_imp_acf, acf_wiener, apod2
 
    contains
 
@@ -150,12 +150,14 @@ public :: calc_imp_acf, acf_wiener
    real(kind=R8), intent(in) :: xj     !! *\(y\) coordinate*
    real(kind=R8), intent(in) :: ang    !! *angle* (rad)
 
-      real(kind=R8) :: x, y
+      real(kind=R8) :: x, y, r
 
       x = +cos(ang) * xi + sin(ang) * xj
       y = -sin(ang) * xi + cos(ang) * xj
 
-      autocov_impo = exp( alpha * sqrt( (x / tau1)**2 + (y / tau2)**2 ) )
+      r = sqrt( (x / tau1)**2 + (y / tau2)**2 )
+
+      autocov_impo = exp( alpha * r )
 
    return
    endfunction autocov_impo
@@ -190,11 +192,8 @@ public :: calc_imp_acf, acf_wiener
       !.........................................
       c = cos(ang) ; s = sin(ang)
 
-      long2 = long / 2
-      larg2 = larg / 2
-
-      if ( long == 2 * (long/2) ) long2 = long/2 + 1
-      if ( larg == 2 * (larg/2) ) larg2 = larg/2 + 1
+      long2 = long / 2 +1
+      larg2 = larg / 2 +1
 
       do j = 1, larg
       do i = 1, long
@@ -212,7 +211,6 @@ public :: calc_imp_acf, acf_wiener
       enddo
       enddo
       !.........................................
-
 
       ! For long correlation lengths and roughness orientation, the acf is far from periodic
       ! Furthermore, far from the center, respecting the acf becomes less important. A windowing

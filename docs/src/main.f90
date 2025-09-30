@@ -14,6 +14,10 @@ use data_arch, only : I4, R8
 
 implicit none
 
+!~ call test_logistic()
+
+!~ stop
+
    call prg_surf
 
    contains
@@ -32,8 +36,6 @@ implicit none
 
       character(len=128) :: arg_prg
       character(len=512) :: job_file
-      character(len=008) :: chara_d
-      character(len=010) :: chara_t
       integer(kind=I4)   :: var_i
 
       ! String initialisation

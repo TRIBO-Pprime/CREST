@@ -28,12 +28,16 @@ ALL_OBJS += $(addprefix $(files_dir)/$(OBJDIR)/, *.o)
 ALL_OBJS += $(addprefix $(gplot_dir)/$(OBJDIR)/, *.o)
 #~ ALL_OBJS += $(addprefix $(intpl_dir)/$(OBJDIR)/, *.o)
 ALL_OBJS += $(addprefix $(least_dir)/$(OBJDIR)/, *.o)
-#~ ALL_OBJS += $(addprefix $(minim_dir)/$(OBJDIR)/, *.o)
+ALL_OBJS += $(addprefix $(minim_dir)/$(OBJDIR)/, *.o)
 ALL_OBJS += $(addprefix $(qsort_dir)/$(OBJDIR)/, *.o)
 #~ ALL_OBJS += $(addprefix $(splin_dir)/$(OBJDIR)/, *.o)
 ALL_OBJS += $(addprefix $(tchev_dir)/$(OBJDIR)/, *.o)
 ALL_OBJS += $(addprefix $(utils_dir)/$(OBJDIR)/, *.o)
 
+ALL_OBJS += $(addprefix $(asfc2_dir)/$(OBJDIR)/, *.o)
+ALL_OBJS += $(addprefix $(deriv_dir)/$(OBJDIR)/, *.o)
+ALL_OBJS += $(addprefix $(morph_dir)/$(OBJDIR)/, *.o)
+ALL_OBJS += $(addprefix $(abbot_dir)/$(OBJDIR)/, *.o)
 ALL_OBJS += $(addprefix $(filtr_dir)/$(OBJDIR)/, *.o)
 ALL_OBJS += $(addprefix $(stats_dir)/$(OBJDIR)/, *.o)
 ALL_OBJS += $(addprefix $(aniso_dir)/$(OBJDIR)/, *.o)
@@ -47,12 +51,16 @@ ALL_MODS += -I$(files_dir)/$(MODDIR)
 ALL_MODS += -I$(gplot_dir)/$(MODDIR)
 #~ ALL_MODS += -I$(intpl_dir)/$(MODDIR)
 ALL_MODS += -I$(least_dir)/$(MODDIR)
-#~ ALL_MODS += -I$(minim_dir)/$(MODDIR)
+ALL_MODS += -I$(minim_dir)/$(MODDIR)
 ALL_MODS += -I$(qsort_dir)/$(MODDIR)
 #~ ALL_MODS += -I$(splin_dir)/$(MODDIR)
 ALL_MODS += -I$(tchev_dir)/$(MODDIR)
 ALL_MODS += -I$(utils_dir)/$(MODDIR)
 
+ALL_MODS += -I$(asfc2_dir)/$(MODDIR)
+ALL_MODS += -I$(deriv_dir)/$(MODDIR)
+ALL_MODS += -I$(morph_dir)/$(MODDIR)
+ALL_MODS += -I$(abbot_dir)/$(MODDIR)
 ALL_MODS += -I$(filtr_dir)/$(MODDIR)
 ALL_MODS += -I$(stats_dir)/$(MODDIR)
 ALL_MODS += -I$(aniso_dir)/$(MODDIR)
@@ -84,7 +92,8 @@ $(EXE):	$(OBJ)
 mod_crest_param.o :
 mod_func_acf.o : mod_crest_param.o
 mod_skku_profiles.o : mod_crest_param.o
-mod_script.o : mod_skku_profiles.o mod_func_acf.o
+mod_analyses.o : mod_crest_param.o
+mod_script.o : mod_skku_profiles.o mod_func_acf.o mod_analyses.o
 
 main.o : mod_script.o
 

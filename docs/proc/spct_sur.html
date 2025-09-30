@@ -1,0 +1,706 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="CREST – Computational Resource for Eroded Surface Topology">
+    <meta name="author" content="Arthur Francisco" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>spct_sur &ndash; CREST</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+      <link href="../css/user.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">CREST </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../program/main.html">Program</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>spct_sur
+      <small>Subroutine</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title=" 2.8% of total for procedures.">52 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/mod_script.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mod_script.f90.html'>mod_script.f90</a></li>
+                <li class="breadcrumb-item"><a href='../module/script.html'>script</a></li>
+            <li class="breadcrumb-item active" aria-current="page">spct_sur</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="card card-primary">
+      <div class="card-header text-left"><h3 class="card-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../proc/spct_sur.html#src">spct_sur</a>
+      </div>
+    </div>
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    <h2>private  subroutine spct_sur(file_spct, apod)  
+</h2>
+    
+
+    <div class="alert alert-info">
+<p class="alert-title h4">Note</p>
+<p>Returns the default surface spectrum</p>
+</div>
+
+
+    <h3>Arguments</h3>
+        <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-file_spct"></span>
+              character(len=*),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>file_spct</strong></td>
+            <td>
+                <p><em>txt file containing the surface FFT module</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-apod~3"></span>
+              logical(kind=I4),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>apod</strong></td>
+            <td>
+                <p><em>window applied to surface?</em></p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <br>
+    <div class="card">
+      <div class="card-header">
+  <h3 class="card-title">Calls</h3>
+      </div>
+      <div class="card-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: proc~~spct_sur~~CallsGraph Pages: 1 -->
+<svg id="procspct_surCallsGraph" width="301pt" height="158pt"
+ viewBox="0.00 0.00 301.00 158.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~spct_sur~~CallsGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 154)">
+<title>proc~~spct_sur~~CallsGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-154 297,-154 297,4 -4,4"/>
+<!-- proc~spct_sur -->
+<g id="proc~~spct_sur~~CallsGraph_node1" class="node">
+<title>proc~spct_sur</title>
+<polygon fill="none" stroke="black" points="54,-87 0,-87 0,-63 54,-63 54,-87"/>
+<text text-anchor="middle" x="27" y="-72.6" font-family="Helvetica,sans-Serif" font-size="10.50">spct_sur</text>
+</g>
+<!-- calc_fftw3 -->
+<g id="proc~~spct_sur~~CallsGraph_node2" class="node">
+<title>calc_fftw3</title>
+<g id="a_proc~~spct_sur~~CallsGraph_node2"><a xlink:href="https://tribo-pprime.github.io/TOOLIB/proc/calc_fftw3.html" xlink:title="calc_fftw3">
+<polygon fill="#d9534f" stroke="#d9534f" points="174.5,-150 114.5,-150 114.5,-126 174.5,-126 174.5,-150"/>
+<text text-anchor="middle" x="144.5" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">calc_fftw3</text>
+</a>
+</g>
+</g>
+<!-- proc~spct_sur&#45;&gt;calc_fftw3 -->
+<g id="proc~~spct_sur~~CallsGraph_edge1" class="edge">
+<title>proc~spct_sur&#45;&gt;calc_fftw3</title>
+<path fill="none" stroke="#ff0000" d="M43.71,-87.07C55.89,-96.08 73.44,-108.28 90,-117 94.68,-119.46 99.72,-121.81 104.76,-123.98"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="103.8,-127.37 114.38,-127.92 106.45,-120.89 103.8,-127.37"/>
+</g>
+<!-- get_unit -->
+<g id="proc~~spct_sur~~CallsGraph_node3" class="node">
+<title>get_unit</title>
+<g id="a_proc~~spct_sur~~CallsGraph_node3"><a xlink:href="https://tribo-pprime.github.io/TOOLIB/proc/get_unit~2.html" xlink:title="get_unit">
+<polygon fill="#d9534f" stroke="#d9534f" points="171.5,-108 117.5,-108 117.5,-84 171.5,-84 171.5,-108"/>
+<text text-anchor="middle" x="144.5" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">get_unit</text>
+</a>
+</g>
+</g>
+<!-- proc~spct_sur&#45;&gt;get_unit -->
+<g id="proc~~spct_sur~~CallsGraph_edge2" class="edge">
+<title>proc~spct_sur&#45;&gt;get_unit</title>
+<path fill="none" stroke="#ff0000" d="M54.21,-79.77C69.86,-82.61 89.98,-86.27 107.15,-89.39"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="106.93,-92.91 117.39,-91.25 108.18,-86.02 106.93,-92.91"/>
+</g>
+<!-- proc~apod_sur -->
+<g id="proc~~spct_sur~~CallsGraph_node4" class="node">
+<title>proc~apod_sur</title>
+<g id="a_proc~~spct_sur~~CallsGraph_node4"><a xlink:href="../proc/apod_sur.html" xlink:title="apod_sur">
+<polygon fill="#d9534f" stroke="#d9534f" points="173.5,-66 115.5,-66 115.5,-42 173.5,-42 173.5,-66"/>
+<text text-anchor="middle" x="144.5" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">apod_sur</text>
+</a>
+</g>
+</g>
+<!-- proc~spct_sur&#45;&gt;proc~apod_sur -->
+<g id="proc~~spct_sur~~CallsGraph_edge3" class="edge">
+<title>proc~spct_sur&#45;&gt;proc~apod_sur</title>
+<path fill="none" stroke="#ff0000" d="M54.21,-70.23C69.31,-67.49 88.56,-63.99 105.32,-60.94"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="106.16,-64.35 115.38,-59.11 104.91,-57.46 106.16,-64.35"/>
+</g>
+<!-- trans_corner2center -->
+<g id="proc~~spct_sur~~CallsGraph_node5" class="node">
+<title>trans_corner2center</title>
+<g id="a_proc~~spct_sur~~CallsGraph_node5"><a xlink:href="https://tribo-pprime.github.io/TOOLIB/proc/trans_corner2center.html" xlink:title="trans_corner2center">
+<polygon fill="#d9534f" stroke="#d9534f" points="199,-24 90,-24 90,0 199,0 199,-24"/>
+<text text-anchor="middle" x="144.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">trans_corner2center</text>
+</a>
+</g>
+</g>
+<!-- proc~spct_sur&#45;&gt;trans_corner2center -->
+<g id="proc~~spct_sur~~CallsGraph_edge4" class="edge">
+<title>proc~spct_sur&#45;&gt;trans_corner2center</title>
+<path fill="none" stroke="#ff0000" d="M43.71,-62.93C55.89,-53.92 73.44,-41.72 90,-33 93.24,-31.3 96.64,-29.65 100.1,-28.08"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="101.52,-31.28 109.32,-24.11 98.75,-24.85 101.52,-31.28"/>
+</g>
+<!-- apod -->
+<g id="proc~~spct_sur~~CallsGraph_node6" class="node">
+<title>apod</title>
+<g id="a_proc~~spct_sur~~CallsGraph_node6"><a xlink:href="https://tribo-pprime.github.io/TOOLIB/proc/apod.html" xlink:title="apod">
+<polygon fill="#d9534f" stroke="#d9534f" points="291,-87 237,-87 237,-63 291,-63 291,-87"/>
+<text text-anchor="middle" x="264" y="-72.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">apod</text>
+</a>
+</g>
+</g>
+<!-- proc~apod_sur&#45;&gt;apod -->
+<g id="proc~~spct_sur~~CallsGraph_edge5" class="edge">
+<title>proc~apod_sur&#45;&gt;apod</title>
+<path fill="none" stroke="#00ffff" d="M173.64,-59.03C189.5,-61.86 209.48,-65.43 226.53,-68.48"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="226.24,-71.98 236.7,-70.3 227.47,-65.09 226.24,-71.98"/>
+</g>
+<!-- std_array -->
+<g id="proc~~spct_sur~~CallsGraph_node7" class="node">
+<title>std_array</title>
+<polygon fill="#777777" stroke="#777777" points="293,-45 235,-45 235,-21 293,-21 293,-45"/>
+<text text-anchor="middle" x="264" y="-30.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">std_array</text>
+</g>
+<!-- proc~apod_sur&#45;&gt;std_array -->
+<g id="proc~~spct_sur~~CallsGraph_edge6" class="edge">
+<title>proc~apod_sur&#45;&gt;std_array</title>
+<path fill="none" stroke="#00ffff" d="M173.64,-48.97C188.94,-46.24 208.07,-42.82 224.7,-39.84"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="225.45,-43.27 234.68,-38.06 224.22,-36.38 225.45,-43.27"/>
+</g>
+</g>
+</svg>
+</div>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#CallsGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="CallsGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="641pt" height="29pt"
+ viewBox="0.00 0.00 641.00 29.32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(0.92 0.92) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 695.5,-28 695.5,4 -4,4"/>
+<!-- Subroutine -->
+<g id="node1" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="64,-24 0,-24 0,0 64,0 64,-24"/>
+<text text-anchor="middle" x="32" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node2" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="136,-24 82,-24 82,0 136,0 136,-24"/>
+<text text-anchor="middle" x="109" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Interface -->
+<g id="node3" class="node">
+<title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="209.5,-24 154.5,-24 154.5,0 209.5,0 209.5,-24"/>
+<text text-anchor="middle" x="182" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+</g>
+<!-- Type Bound Procedure -->
+<g id="node4" class="node">
+<title>Type Bound Procedure</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="350,-24 228,-24 228,0 350,0 350,-24"/>
+<text text-anchor="middle" x="289" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type Bound Procedure</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node5" class="node">
+<title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="504,-24 368,-24 368,0 504,0 504,-24"/>
+<text text-anchor="middle" x="436" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node6" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="576,-24 522,-24 522,0 576,0 576,-24"/>
+<text text-anchor="middle" x="549" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node7" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="691.5,-24 594.5,-24 594.5,0 691.5,0 691.5,-24"/>
+<text text-anchor="middle" x="643" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a procedure to one which it calls. Dashed 
+arrows point from an interface to procedures which implement that interface.
+This could include the module procedures in a generic interface or the
+implementation in a submodule of an interface in a parent module.
+</p>
+ Where possible, edges connecting nodes are
+given different colours to make them easier to distinguish in
+large graphs.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+  <h3 class="card-title">Called by</h3>
+      </div>
+      <div class="card-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: proc~~spct_sur~~CalledByGraph Pages: 1 -->
+<svg id="procspct_surCalledByGraph" width="333pt" height="32pt"
+ viewBox="0.00 0.00 333.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~spct_sur~~CalledByGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>proc~~spct_sur~~CalledByGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 329,-28 329,4 -4,4"/>
+<!-- proc~spct_sur -->
+<g id="proc~~spct_sur~~CalledByGraph_node1" class="node">
+<title>proc~spct_sur</title>
+<polygon fill="none" stroke="black" points="325,-24 271,-24 271,0 325,0 325,-24"/>
+<text text-anchor="middle" x="298" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">spct_sur</text>
+</g>
+<!-- proc~read_job -->
+<g id="proc~~spct_sur~~CalledByGraph_node2" class="node">
+<title>proc~read_job</title>
+<g id="a_proc~~spct_sur~~CalledByGraph_node2"><a xlink:href="../proc/read_job.html" xlink:title="read_job">
+<polygon fill="#d9534f" stroke="#d9534f" points="235,-24 180,-24 180,0 235,0 235,-24"/>
+<text text-anchor="middle" x="207.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">read_job</text>
+</a>
+</g>
+</g>
+<!-- proc~read_job&#45;&gt;proc~spct_sur -->
+<g id="proc~~spct_sur~~CalledByGraph_edge1" class="edge">
+<title>proc~read_job&#45;&gt;proc~spct_sur</title>
+<path fill="none" stroke="#ff0000" d="M235.05,-12C243.09,-12 252.06,-12 260.62,-12"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="260.77,-15.5 270.77,-12 260.77,-8.5 260.77,-15.5"/>
+</g>
+<!-- proc~prg_surf -->
+<g id="proc~~spct_sur~~CalledByGraph_node3" class="node">
+<title>proc~prg_surf</title>
+<g id="a_proc~~spct_sur~~CalledByGraph_node3"><a xlink:href="../proc/prg_surf.html" xlink:title="prg_surf">
+<polygon fill="#d9534f" stroke="#d9534f" points="144,-24 90,-24 90,0 144,0 144,-24"/>
+<text text-anchor="middle" x="117" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">prg_surf</text>
+</a>
+</g>
+</g>
+<!-- proc~prg_surf&#45;&gt;proc~read_job -->
+<g id="proc~~spct_sur~~CalledByGraph_edge2" class="edge">
+<title>proc~prg_surf&#45;&gt;proc~read_job</title>
+<path fill="none" stroke="#ff0000" d="M144.07,-12C152.12,-12 161.14,-12 169.76,-12"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="170,-15.5 180,-12 170,-8.5 170,-15.5"/>
+</g>
+<!-- program~main -->
+<g id="proc~~spct_sur~~CalledByGraph_node4" class="node">
+<title>program~main</title>
+<g id="a_proc~~spct_sur~~CalledByGraph_node4"><a xlink:href="../program/main.html" xlink:title="main">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">main</text>
+</a>
+</g>
+</g>
+<!-- program~main&#45;&gt;proc~prg_surf -->
+<g id="proc~~spct_sur~~CalledByGraph_edge3" class="edge">
+<title>program~main&#45;&gt;proc~prg_surf</title>
+<path fill="none" stroke="#ff0000" d="M54.4,-12C62.39,-12 71.31,-12 79.82,-12"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="79.92,-15.5 89.92,-12 79.92,-8.5 79.92,-15.5"/>
+</g>
+</g>
+</svg>
+</div>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#CalledByGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="CalledByGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="641pt" height="29pt"
+ viewBox="0.00 0.00 641.00 29.32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(0.92 0.92) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 695.5,-28 695.5,4 -4,4"/>
+<!-- Subroutine -->
+<g id="node1" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="64,-24 0,-24 0,0 64,0 64,-24"/>
+<text text-anchor="middle" x="32" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node2" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="136,-24 82,-24 82,0 136,0 136,-24"/>
+<text text-anchor="middle" x="109" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Interface -->
+<g id="node3" class="node">
+<title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="209.5,-24 154.5,-24 154.5,0 209.5,0 209.5,-24"/>
+<text text-anchor="middle" x="182" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+</g>
+<!-- Type Bound Procedure -->
+<g id="node4" class="node">
+<title>Type Bound Procedure</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="350,-24 228,-24 228,0 350,0 350,-24"/>
+<text text-anchor="middle" x="289" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type Bound Procedure</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node5" class="node">
+<title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="504,-24 368,-24 368,0 504,0 504,-24"/>
+<text text-anchor="middle" x="436" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node6" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="576,-24 522,-24 522,0 576,0 576,-24"/>
+<text text-anchor="middle" x="549" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node7" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="691.5,-24 594.5,-24 594.5,0 691.5,0 691.5,-24"/>
+<text text-anchor="middle" x="643" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a procedure to one which it calls. Dashed 
+arrows point from an interface to procedures which implement that interface.
+This could include the module procedures in a generic interface or the
+implementation in a submodule of an interface in a parent module.
+</p>
+ Where possible, edges connecting nodes are
+given different colours to make them easier to distinguish in
+large graphs.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    <section>
+    <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <div class="hl codehilite"><pre><span></span><span class="w">   </span><span class="k">subroutine </span><span class="n">spct_sur</span><span class="p">(</span><span class="n">file_spct</span><span class="p">,</span><span class="w"> </span><span class="n">apod</span><span class="p">)</span>
+<span class="w">   </span><span class="c">!================================================================================================</span>
+<span class="w">   </span><span class="c">!&lt;@note Returns the default surface spectrum</span>
+<span class="w">   </span><span class="c">!&lt;</span>
+<span class="w">   </span><span class="c">!&lt;@endnote</span>
+<span class="w">   </span><span class="c">!------------------------------------------------------------------------------------------------</span>
+<span class="w">   </span><span class="k">implicit none</span>
+<span class="k">   </span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">),</span><span class="w"> </span><span class="k">optional</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">file_spct</span><span class="w">   </span><span class="c">!! *txt file containing the surface FFT module*</span>
+<span class="w">   </span><span class="kt">logical</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">I4</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">),</span><span class="w"> </span><span class="k">optional</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">apod</span><span class="w">        </span><span class="c">!! *window applied to surface?*</span>
+
+<span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">I4</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="n">h</span><span class="p">,</span><span class="w"> </span><span class="n">ww</span><span class="p">,</span><span class="w"> </span><span class="n">hh</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="n">np</span><span class="p">,</span><span class="w"> </span><span class="n">txt_file</span>
+<span class="w">      </span><span class="kt">logical</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">I4</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">apod_surf</span>
+
+<span class="w">      </span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">512</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">str</span>
+
+<span class="w">      </span><span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">),</span><span class="w">    </span><span class="k">dimension</span><span class="p">(:,:),</span><span class="w"> </span><span class="k">allocatable</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">tab_tmp</span><span class="p">,</span><span class="w"> </span><span class="n">tab_freq1</span><span class="p">,</span><span class="w"> </span><span class="n">tab_freq2</span><span class="p">,</span><span class="w"> </span><span class="n">tab_spc</span>
+<span class="w">      </span><span class="kt">complex</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">),</span><span class="w"> </span><span class="k">dimension</span><span class="p">(:,:),</span><span class="w"> </span><span class="k">allocatable</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">tab_cmpl</span><span class="p">,</span><span class="w"> </span><span class="n">cmpl1</span>
+
+<span class="w">      </span><span class="n">w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PARAM</span><span class="p">%</span><span class="n">width</span>
+<span class="w">      </span><span class="n">h</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PARAM</span><span class="p">%</span><span class="n">height</span>
+
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">present</span><span class="p">(</span><span class="n">file_spct</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+
+<span class="w">         </span><span class="c">! use in the program -&gt; arguments passed to subroutine</span>
+<span class="w">         </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file_spct</span>
+<span class="w">         </span><span class="n">apod_surf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">apod</span>
+
+<span class="w">      </span><span class="k">else</span>
+
+<span class="w">         </span><span class="c">! use in script -&gt; arguments passed to batch file</span>
+<span class="w">         </span><span class="k">read</span><span class="p">(</span><span class="n">JOB</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="n">str</span><span class="w">       </span><span class="p">;</span><span class="w"> </span><span class="n">LINE_READ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LINE_READ</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="k">write</span><span class="p">(</span><span class="n">SPY</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="s2">&quot;line: &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">LINE_READ</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;file_spct: &#39;</span><span class="p">,</span><span class="w"> </span><span class="nb">trim</span><span class="p">(</span><span class="n">str</span><span class="p">)</span>
+<span class="w">         </span><span class="k">read</span><span class="p">(</span><span class="n">JOB</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="n">apod_surf</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">LINE_READ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LINE_READ</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="k">write</span><span class="p">(</span><span class="n">SPY</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="s2">&quot;line: &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">LINE_READ</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;apod surf: &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">apod_surf</span>
+
+<span class="w">      </span><span class="k">endif</span>
+
+<span class="k">      allocate</span><span class="p">(</span><span class="w"> </span><span class="n">tab_tmp</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">h</span><span class="p">)</span><span class="w"> </span><span class="p">)</span>
+<span class="w">      </span><span class="k">allocate</span><span class="p">(</span><span class="w"> </span><span class="n">tab_freq1</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">h</span><span class="p">),</span><span class="w"> </span><span class="n">tab_freq2</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">h</span><span class="p">)</span><span class="w"> </span><span class="p">)</span>
+<span class="w">      </span><span class="k">allocate</span><span class="p">(</span><span class="w"> </span><span class="n">tab_cmpl</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">h</span><span class="p">),</span><span class="w"> </span><span class="n">cmpl1</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">h</span><span class="p">)</span><span class="w"> </span><span class="p">)</span>
+
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">apod_surf</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+
+<span class="k">         </span><span class="n">tab_tmp</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">h</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PARAM</span><span class="p">%</span><span class="n">surf</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">h</span><span class="p">)</span>
+
+<span class="w">         </span><span class="k">call </span><span class="n">apod_sur</span><span class="p">()</span>
+
+<span class="w">      </span><span class="k">endif</span>
+
+<span class="k">      </span><span class="n">cmpl1</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">h</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">cmplx</span><span class="p">(</span><span class="w"> </span><span class="n">PARAM</span><span class="p">%</span><span class="n">surf</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">h</span><span class="p">),</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">R8</span><span class="w"> </span><span class="p">)</span>
+
+<span class="w">      </span><span class="k">call </span><span class="n">calc_fftw3</span><span class="p">(</span><span class="w">   </span><span class="n">sens</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FORWARD</span><span class="p">,</span><span class="w">                    </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                       </span><span class="n">tab_in</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cmpl1</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">h</span><span class="p">),</span><span class="w">            </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                       </span><span class="n">tab_ou</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tab_cmpl</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">h</span><span class="p">),</span><span class="w">         </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! OUT</span>
+<span class="w">                         </span><span class="nb">long</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">w</span><span class="p">,</span><span class="w">                          </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                         </span><span class="n">larg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">h</span><span class="p">)</span><span class="w">                             </span><span class="c">! IN</span>
+
+
+<span class="w">      </span><span class="n">tab_freq1</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">h</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">log10</span><span class="p">(</span><span class="w"> </span><span class="nb">abs</span><span class="p">(</span><span class="w"> </span><span class="n">tab_cmpl</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">h</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">UN</span><span class="w"> </span><span class="p">)</span>
+
+<span class="w">      </span><span class="k">call </span><span class="n">trans_corner2center</span><span class="p">(</span><span class="w">  </span><span class="n">tab_in</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">tab_freq1</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">h</span><span class="p">),</span><span class="w">  </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                                 </span><span class="n">tab_out</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tab_freq2</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">h</span><span class="p">),</span><span class="w">  </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! OUT</span>
+<span class="w">                                 </span><span class="nb">long</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">w</span><span class="p">,</span><span class="w">                    </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                                 </span><span class="n">larg</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">h</span><span class="w">  </span><span class="p">)</span><span class="w">                     </span><span class="c">! IN</span>
+
+<span class="w">      </span><span class="n">np</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">50</span><span class="w">     </span><span class="c">! reduce image size</span>
+<span class="w">      </span><span class="n">ww</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">w</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">np</span>
+<span class="w">      </span><span class="n">hh</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">h</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">np</span>
+
+<span class="w">      </span><span class="k">allocate</span><span class="p">(</span><span class="w"> </span><span class="n">tab_spc</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">ww</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">hh</span><span class="p">)</span><span class="w"> </span><span class="p">)</span>
+
+<span class="w">      </span><span class="k">do </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">ww</span>
+<span class="w">      </span><span class="k">do </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">hh</span>
+
+<span class="w">         </span><span class="n">tab_spc</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">sum</span><span class="p">(</span><span class="w"> </span><span class="n">tab_freq2</span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">np</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">np</span><span class="p">,</span><span class="w">  </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                                         </span><span class="p">(</span><span class="n">j</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">np</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">np</span><span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="c">!</span>
+
+<span class="w">      </span><span class="k">enddo</span>
+<span class="k">      enddo</span>
+
+<span class="k">      call </span><span class="n">get_unit</span><span class="p">(</span><span class="w"> </span><span class="n">txt_file</span><span class="w"> </span><span class="p">)</span>
+
+<span class="w">      </span><span class="c">! Ouvrir un fichier binaire</span>
+<span class="w">      </span><span class="k">open</span><span class="p">(</span><span class="w"> </span><span class="n">newunit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">txt_file</span><span class="p">,</span><span class="w"> </span><span class="k">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">trim</span><span class="p">(</span><span class="n">str</span><span class="p">),</span><span class="w"> </span><span class="n">action</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;write&quot;</span><span class="w"> </span><span class="p">)</span>
+
+<span class="w">         </span><span class="c">! Écrire les dimensions (pour Python)</span>
+<span class="w">         </span><span class="k">write</span><span class="p">(</span><span class="n">txt_file</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="n">ww</span><span class="p">,</span><span class="w"> </span><span class="n">hh</span>
+
+<span class="w">         </span><span class="c">! Écrire les données en mémoire contiguë</span>
+<span class="w">         </span><span class="k">write</span><span class="p">(</span><span class="n">txt_file</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="n">tab_spc</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">ww</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">hh</span><span class="p">)</span>
+
+<span class="w">      </span><span class="k">close</span><span class="p">(</span><span class="n">txt_file</span><span class="p">)</span>
+
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">apod_surf</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">PARAM</span><span class="p">%</span><span class="n">surf</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">h</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tab_tmp</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">h</span><span class="p">)</span>
+
+<span class="w">      </span><span class="k">deallocate</span><span class="p">(</span><span class="w"> </span><span class="n">tab_tmp</span><span class="p">,</span><span class="w"> </span><span class="n">tab_freq1</span><span class="p">,</span><span class="w"> </span><span class="n">tab_freq2</span><span class="p">,</span><span class="w"> </span><span class="n">tab_spc</span><span class="w"> </span><span class="p">)</span>
+<span class="w">      </span><span class="k">deallocate</span><span class="p">(</span><span class="w"> </span><span class="n">tab_cmpl</span><span class="p">,</span><span class="w"> </span><span class="n">cmpl1</span><span class="w"> </span><span class="p">)</span>
+
+<span class="w">   </span><span class="k">return</span>
+<span class="k">   endsubroutine </span><span class="n">spct_sur</span>
+</pre></div>
+
+    </section>
+    <br>
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              CREST
+ was developed by Arthur Francisco<br>              &copy; 2025 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+ on 2025-09-30 15:20 +0200             </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

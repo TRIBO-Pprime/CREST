@@ -77,7 +77,7 @@
 
             <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
               <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
-                 title=" 2.6% of total for procedures.">31 statements</a>
+                 title=" 1.6% of total for procedures.">30 statements</a>
             </li>
 
             <li class="list-inline-item" id="source-file">
@@ -208,20 +208,17 @@
 <path fill="none" stroke="#ff0000" d="M54.21,-54C62.41,-54 71.83,-54 81.42,-54"/>
 <polygon fill="#ff0000" stroke="#ff0000" points="81.42,-57.5 91.42,-54 81.42,-50.5 81.42,-57.5"/>
 </g>
-<!-- calc_moments -->
+<!-- std_array -->
 <g id="proc~~digi_fil~~CallsGraph_node4" class="node">
-<title>calc_moments</title>
-<g id="a_proc~~digi_fil~~CallsGraph_node4"><a xlink:href="https://tribo-pprime.github.io/TPGLIB/proc/calc_moments.html" xlink:title="calc_moments">
-<polygon fill="#d9534f" stroke="#d9534f" points="185.5,-24 103.5,-24 103.5,0 185.5,0 185.5,-24"/>
-<text text-anchor="middle" x="144.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">calc_moments</text>
-</a>
+<title>std_array</title>
+<polygon fill="#777777" stroke="#777777" points="173.5,-24 115.5,-24 115.5,0 173.5,0 173.5,-24"/>
+<text text-anchor="middle" x="144.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">std_array</text>
 </g>
-</g>
-<!-- proc~digi_fil&#45;&gt;calc_moments -->
+<!-- proc~digi_fil&#45;&gt;std_array -->
 <g id="proc~~digi_fil~~CallsGraph_edge3" class="edge">
-<title>proc~digi_fil&#45;&gt;calc_moments</title>
-<path fill="none" stroke="#ff0000" d="M54.21,-44.47C67.99,-39.46 85.22,-33.19 100.87,-27.5"/>
-<polygon fill="#ff0000" stroke="#ff0000" points="102.15,-30.76 110.36,-24.05 99.76,-24.18 102.15,-30.76"/>
+<title>proc~digi_fil&#45;&gt;std_array</title>
+<path fill="none" stroke="#ff0000" d="M54.21,-44.47C69.45,-38.93 88.93,-31.84 105.8,-25.71"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="107.18,-28.93 115.38,-22.23 104.78,-22.35 107.18,-28.93"/>
 </g>
 </g>
 </svg>
@@ -528,12 +525,7 @@ large graphs.</div>
 <span class="w">                                  </span><span class="nb">long</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">w</span><span class="p">,</span><span class="w">                      </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
 <span class="w">                                  </span><span class="n">larg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">h</span><span class="w">  </span><span class="p">)</span><span class="w">                       </span><span class="c">! IN</span>
 
-<span class="w">      </span><span class="c">! signal centré et normé</span>
-<span class="w">      </span><span class="k">call </span><span class="n">calc_moments</span><span class="p">(</span><span class="w">    </span><span class="n">tab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PARAM</span><span class="p">%</span><span class="n">surf</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">h</span><span class="p">),</span><span class="w">   </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
-<span class="w">                             </span><span class="n">mx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m_res</span><span class="p">,</span><span class="w">                  </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! OUT</span>
-<span class="w">                         </span><span class="n">nb_mom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">)</span><span class="w">                        </span><span class="c">! IN</span>
-
-<span class="w">      </span><span class="n">PARAM</span><span class="p">%</span><span class="n">surf</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">h</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">PARAM</span><span class="p">%</span><span class="n">surf</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">h</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">m_res</span><span class="p">%</span><span class="n">mu</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">m_res</span><span class="p">%</span><span class="n">si</span>
+<span class="w">      </span><span class="k">call </span><span class="n">std_array</span><span class="p">(</span><span class="w"> </span><span class="n">tab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PARAM</span><span class="p">%</span><span class="n">surf</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">h</span><span class="p">),</span><span class="w"> </span><span class="n">mx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m_res</span><span class="w"> </span><span class="p">)</span>
 
 <span class="w">      </span><span class="k">write</span><span class="p">(</span><span class="n">SPY</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;sk ku fin &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">m_res</span><span class="p">%</span><span class="n">sk</span><span class="p">,</span><span class="w"> </span><span class="n">m_res</span><span class="p">%</span><span class="n">ku</span>
 
@@ -558,14 +550,14 @@ large graphs.</div>
           <div class="col">
             <p>
               CREST
- was developed by Arthur Francisco<br>              &copy; 2024 
+ was developed by Arthur Francisco<br>              &copy; 2025 
 </p>
           </div>
           <div class="col">
             <p class="text-end">
               Documentation generated by
               <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
- on 2024-12-27 09:26              </p>
+ on 2025-09-30 15:20 +0200             </p>
           </div>
         </div>
         <br>

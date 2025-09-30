@@ -92,7 +92,6 @@ Run:
 ./main cfg/my_script.md
 ```
 
-
 [top](#table-of-contents)
 
 Full description

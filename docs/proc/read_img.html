@@ -10,7 +10,7 @@
     <meta name="author" content="Arthur Francisco" >
     <link rel="icon" href="../favicon.png">
 
-    <title>add_expo &ndash; CREST</title>
+    <title>read_img &ndash; CREST</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -66,8 +66,8 @@
 
     <div class="container">
   <div class="row">
-    <h1>add_expo
-      <small>Function</small>
+    <h1>read_img
+      <small>Subroutine</small>
       
     </h1>
       <div class="container p-2 mb-4 bg-light border rounded-3">
@@ -77,21 +77,21 @@
 
             <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
               <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
-                 title=" 1.3% of total for procedures.">15 statements</a>
+                 title=" 1.1% of total for procedures.">20 statements</a>
             </li>
 
             <li class="list-inline-item" id="source-file">
               <i class="fa fa-code"></i>
-              <a href="../src/mod_skku_profiles.f90"> Source File</a>
+              <a href="../src/mod_script.f90"> Source File</a>
             </li>
         </ul>
       </div>
       <div class="col">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb justify-content-end mb-0">
-                <li class="breadcrumb-item"><a href='../sourcefile/mod_skku_profiles.f90.html'>mod_skku_profiles.f90</a></li>
-                <li class="breadcrumb-item"><a href='../module/skku_profiles.html'>skku_profiles</a></li>
-            <li class="breadcrumb-item active" aria-current="page">add_expo</li>
+                <li class="breadcrumb-item"><a href='../sourcefile/mod_script.f90.html'>mod_script.f90</a></li>
+                <li class="breadcrumb-item"><a href='../module/script.html'>script</a></li>
+            <li class="breadcrumb-item active" aria-current="page">read_img</li>
           </ol>
         </nav>
       </div>
@@ -129,6 +129,12 @@
   
   
   
+    <div class="card card-primary">
+      <div class="card-header text-left"><h3 class="card-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../proc/read_img.html#src">read_img</a>
+      </div>
+    </div>
 
 
   </div>
@@ -136,143 +142,19 @@
     </div>
     
     <div class="col-md-9" id='text'>
-    <h2>private  function add_expo(n, deb, fin, alp, bet, mu, si)  
+    <h2>private  subroutine read_img()  
 </h2>
     
 
     <div class="alert alert-info">
 <p class="alert-title h4">Note</p>
-<p>Function that adds to the series mean the border integrals as explained in the modules
- presentation.</p>
+<p>Function that reads a digital surf file and returns the surface in PARAM%surf</p>
 </div>
 
 
     <h3>Arguments</h3>
-        <table class="table table-striped varlist">
-    <thead>
-      <tr>
-        <th scope="col">Type</th>
-<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
-        <th scope="col"></th>
-        <th scope="col">Name</th>
-        <th scope="col"></th>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-n~3"></span>
-              integer(kind=I4),
-            </td>
-<td>intent(in)</td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>n</strong></td>
-            <td>
-                <p><em>statistical moment degree, n=3 for sk and n=4 for ku</em></p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-deb~4"></span>
-              integer(kind=I4),
-            </td>
-<td>intent(in)</td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>deb</strong></td>
-            <td>
-                <p><em>first integration point</em></p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-fin~4"></span>
-              integer(kind=I4),
-            </td>
-<td>intent(in)</td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>fin</strong></td>
-            <td>
-                <p><em>last integration point</em></p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-alp~4"></span>
-              real(kind=R8),
-            </td>
-<td>intent(in)</td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>alp</strong></td>
-            <td>
-                <p><em>offset so that points are in [b1,b2]</em></p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-bet~4"></span>
-              real(kind=R8),
-            </td>
-<td>intent(in)</td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>bet</strong></td>
-            <td>
-                <p><em>reduction so that points are in [b1,b2]</em></p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-mu~4"></span>
-              real(kind=R8),
-            </td>
-<td>intent(in)</td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>mu</strong></td>
-            <td>
-                <p><em>numerical mean</em></p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-si~4"></span>
-              real(kind=R8),
-            </td>
-<td>intent(in)</td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>si</strong></td>
-            <td>
-                <p><em>numerical standard deviation</em></p>
-            </td>
-        </tr>
-    </tbody>
-  </table>
-
-      <h3>Return Value
-        <small>
-          <span class="anchor" id="variable-add_expo"></span>
-          real(kind=r8)
-        </small>
-      </h3>
-      
+    <em>None</em>
+    <br>
     <br>
     <div class="card">
       <div class="card-header">
@@ -284,32 +166,32 @@
  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <!-- Generated by graphviz version 2.43.0 (0)
  -->
-<!-- Title: proc~~add_expo~~CallsGraph Pages: 1 -->
-<svg id="procadd_expoCallsGraph" width="158pt" height="32pt"
- viewBox="0.00 0.00 158.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="proc~~add_expo~~CallsGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
-<title>proc~~add_expo~~CallsGraph</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 154,-28 154,4 -4,4"/>
-<!-- proc~add_expo -->
-<g id="proc~~add_expo~~CallsGraph_node1" class="node">
-<title>proc~add_expo</title>
-<polygon fill="none" stroke="black" points="60,-24 0,-24 0,0 60,0 60,-24"/>
-<text text-anchor="middle" x="30" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">add_expo</text>
+<!-- Title: proc~~read_img~~CallsGraph Pages: 1 -->
+<svg id="procread_imgCallsGraph" width="160pt" height="32pt"
+ viewBox="0.00 0.00 160.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~read_img~~CallsGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>proc~~read_img~~CallsGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 156,-28 156,4 -4,4"/>
+<!-- proc~read_img -->
+<g id="proc~~read_img~~CallsGraph_node1" class="node">
+<title>proc~read_img</title>
+<polygon fill="none" stroke="black" points="58,-24 0,-24 0,0 58,0 58,-24"/>
+<text text-anchor="middle" x="29" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">read_img</text>
 </g>
-<!-- proc~expo -->
-<g id="proc~~add_expo~~CallsGraph_node2" class="node">
-<title>proc~expo</title>
-<g id="a_proc~~add_expo~~CallsGraph_node2"><a xlink:href="../proc/expo.html" xlink:title="expo">
-<polygon fill="#d94e8f" stroke="#d94e8f" points="150,-24 96,-24 96,0 150,0 150,-24"/>
-<text text-anchor="middle" x="123" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">expo</text>
+<!-- read_surf -->
+<g id="proc~~read_img~~CallsGraph_node2" class="node">
+<title>read_surf</title>
+<g id="a_proc~~read_img~~CallsGraph_node2"><a xlink:href="https://tribo-pprime.github.io/TOOLIB/proc/read_surf~2.html" xlink:title="read_surf">
+<polygon fill="#d9534f" stroke="#d9534f" points="152,-24 94,-24 94,0 152,0 152,-24"/>
+<text text-anchor="middle" x="123" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">read_surf</text>
 </a>
 </g>
 </g>
-<!-- proc~add_expo&#45;&gt;proc~expo -->
-<g id="proc~~add_expo~~CallsGraph_edge1" class="edge">
-<title>proc~add_expo&#45;&gt;proc~expo</title>
-<path fill="none" stroke="#ff0000" d="M60.04,-12C68.18,-12 77.13,-12 85.63,-12"/>
-<polygon fill="#ff0000" stroke="#ff0000" points="85.7,-15.5 95.7,-12 85.7,-8.5 85.7,-15.5"/>
+<!-- proc~read_img&#45;&gt;read_surf -->
+<g id="proc~~read_img~~CallsGraph_edge1" class="edge">
+<title>proc~read_img&#45;&gt;read_surf</title>
+<path fill="none" stroke="#ff0000" d="M58.1,-12C66.14,-12 75.05,-12 83.59,-12"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="83.75,-15.5 93.75,-12 83.75,-8.5 83.75,-15.5"/>
 </g>
 </g>
 </svg>
@@ -404,77 +286,62 @@ large graphs.</div>
  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <!-- Generated by graphviz version 2.43.0 (0)
  -->
-<!-- Title: proc~~add_expo~~CalledByGraph Pages: 1 -->
-<svg id="procadd_expoCalledByGraph" width="485pt" height="74pt"
- viewBox="0.00 0.00 485.00 74.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="proc~~add_expo~~CalledByGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 70)">
-<title>proc~~add_expo~~CalledByGraph</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-70 481,-70 481,4 -4,4"/>
-<!-- proc~add_expo -->
-<g id="proc~~add_expo~~CalledByGraph_node1" class="node">
-<title>proc~add_expo</title>
-<polygon fill="none" stroke="black" points="477,-45 417,-45 417,-21 477,-21 477,-45"/>
-<text text-anchor="middle" x="447" y="-30.6" font-family="Helvetica,sans-Serif" font-size="10.50">add_expo</text>
+<!-- Title: proc~~read_img~~CalledByGraph Pages: 1 -->
+<svg id="procread_imgCalledByGraph" width="337pt" height="32pt"
+ viewBox="0.00 0.00 337.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~read_img~~CalledByGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>proc~~read_img~~CalledByGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 333,-28 333,4 -4,4"/>
+<!-- proc~read_img -->
+<g id="proc~~read_img~~CalledByGraph_node1" class="node">
+<title>proc~read_img</title>
+<polygon fill="none" stroke="black" points="329,-24 271,-24 271,0 329,0 329,-24"/>
+<text text-anchor="middle" x="300" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">read_img</text>
 </g>
-<!-- proc~calculs_skku_exp -->
-<g id="proc~~add_expo~~CalledByGraph_node2" class="node">
-<title>proc~calculs_skku_exp</title>
-<g id="a_proc~~add_expo~~CalledByGraph_node2"><a xlink:href="../proc/calculs_skku_exp.html" xlink:title="calculs_skku_exp">
-<polygon fill="#d9534f" stroke="#d9534f" points="381,-45 285,-45 285,-21 381,-21 381,-45"/>
-<text text-anchor="middle" x="333" y="-30.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">calculs_skku_exp</text>
+<!-- proc~read_job -->
+<g id="proc~~read_img~~CalledByGraph_node2" class="node">
+<title>proc~read_job</title>
+<g id="a_proc~~read_img~~CalledByGraph_node2"><a xlink:href="../proc/read_job.html" xlink:title="read_job">
+<polygon fill="#d9534f" stroke="#d9534f" points="235,-24 180,-24 180,0 235,0 235,-24"/>
+<text text-anchor="middle" x="207.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">read_job</text>
 </a>
 </g>
 </g>
-<!-- proc~calculs_skku_exp&#45;&gt;proc~add_expo -->
-<g id="proc~~add_expo~~CalledByGraph_edge1" class="edge">
-<title>proc~calculs_skku_exp&#45;&gt;proc~add_expo</title>
-<path fill="none" stroke="#ff0000" d="M381.17,-33C389.66,-33 398.43,-33 406.67,-33"/>
-<polygon fill="#ff0000" stroke="#ff0000" points="406.76,-36.5 416.76,-33 406.76,-29.5 406.76,-36.5"/>
+<!-- proc~read_job&#45;&gt;proc~read_img -->
+<g id="proc~~read_img~~CalledByGraph_edge1" class="edge">
+<title>proc~read_job&#45;&gt;proc~read_img</title>
+<path fill="none" stroke="#ff0000" d="M235.16,-12C243.17,-12 252.12,-12 260.72,-12"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="260.95,-15.5 270.95,-12 260.95,-8.5 260.95,-15.5"/>
 </g>
-<!-- proc~calculs_skku_generique -->
-<g id="proc~~add_expo~~CalledByGraph_node3" class="node">
-<title>proc~calculs_skku_generique</title>
-<g id="a_proc~~add_expo~~CalledByGraph_node3"><a xlink:href="../proc/calculs_skku_generique.html" xlink:title="calculs_skku_generique">
-<polygon fill="#d9534f" stroke="#d9534f" points="249,-66 122,-66 122,-42 249,-42 249,-66"/>
-<text text-anchor="middle" x="185.5" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">calculs_skku_generique</text>
+<!-- proc~prg_surf -->
+<g id="proc~~read_img~~CalledByGraph_node3" class="node">
+<title>proc~prg_surf</title>
+<g id="a_proc~~read_img~~CalledByGraph_node3"><a xlink:href="../proc/prg_surf.html" xlink:title="prg_surf">
+<polygon fill="#d9534f" stroke="#d9534f" points="144,-24 90,-24 90,0 144,0 144,-24"/>
+<text text-anchor="middle" x="117" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">prg_surf</text>
 </a>
 </g>
 </g>
-<!-- proc~calculs_skku_generique&#45;&gt;proc~calculs_skku_exp -->
-<g id="proc~~add_expo~~CalledByGraph_edge2" class="edge">
-<title>proc~calculs_skku_generique&#45;&gt;proc~calculs_skku_exp</title>
-<path fill="none" stroke="#ff0000" d="M249.05,-44.97C257.59,-43.74 266.33,-42.48 274.77,-41.26"/>
-<polygon fill="#ff0000" stroke="#ff0000" points="275.49,-44.69 284.89,-39.8 274.49,-37.76 275.49,-44.69"/>
+<!-- proc~prg_surf&#45;&gt;proc~read_job -->
+<g id="proc~~read_img~~CalledByGraph_edge2" class="edge">
+<title>proc~prg_surf&#45;&gt;proc~read_job</title>
+<path fill="none" stroke="#ff0000" d="M144.07,-12C152.12,-12 161.14,-12 169.76,-12"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="170,-15.5 180,-12 170,-8.5 170,-15.5"/>
 </g>
-<!-- proc~fitness_skku_anal -->
-<g id="proc~~add_expo~~CalledByGraph_node4" class="node">
-<title>proc~fitness_skku_anal</title>
-<g id="a_proc~~add_expo~~CalledByGraph_node4"><a xlink:href="../proc/fitness_skku_anal.html" xlink:title="fitness_skku_anal">
-<polygon fill="#d94e8f" stroke="#d94e8f" points="234,-24 137,-24 137,0 234,0 234,-24"/>
-<text text-anchor="middle" x="185.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">fitness_skku_anal</text>
+<!-- program~main -->
+<g id="proc~~read_img~~CalledByGraph_node4" class="node">
+<title>program~main</title>
+<g id="a_proc~~read_img~~CalledByGraph_node4"><a xlink:href="../program/main.html" xlink:title="main">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">main</text>
 </a>
 </g>
 </g>
-<!-- proc~fitness_skku_anal&#45;&gt;proc~calculs_skku_exp -->
-<g id="proc~~add_expo~~CalledByGraph_edge3" class="edge">
-<title>proc~fitness_skku_anal&#45;&gt;proc~calculs_skku_exp</title>
-<path fill="none" stroke="#ff0000" d="M234.14,-18.88C247.09,-20.74 261.24,-22.79 274.66,-24.72"/>
-<polygon fill="#ff0000" stroke="#ff0000" points="274.35,-28.22 284.75,-26.18 275.35,-21.29 274.35,-28.22"/>
-</g>
-<!-- proc~cost_func_skku -->
-<g id="proc~~add_expo~~CalledByGraph_node5" class="node">
-<title>proc~cost_func_skku</title>
-<g id="a_proc~~add_expo~~CalledByGraph_node5"><a xlink:href="../proc/cost_func_skku.html" xlink:title="cost_func_skku">
-<polygon fill="#d9534f" stroke="#d9534f" points="86,-24 0,-24 0,0 86,0 86,-24"/>
-<text text-anchor="middle" x="43" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">cost_func_skku</text>
-</a>
-</g>
-</g>
-<!-- proc~cost_func_skku&#45;&gt;proc~fitness_skku_anal -->
-<g id="proc~~add_expo~~CalledByGraph_edge4" class="edge">
-<title>proc~cost_func_skku&#45;&gt;proc~fitness_skku_anal</title>
-<path fill="none" stroke="#00ffff" d="M86.15,-12C98.91,-12 113.14,-12 126.73,-12"/>
-<polygon fill="#00ffff" stroke="#00ffff" points="126.96,-15.5 136.96,-12 126.96,-8.5 126.96,-15.5"/>
+<!-- program~main&#45;&gt;proc~prg_surf -->
+<g id="proc~~read_img~~CalledByGraph_edge3" class="edge">
+<title>program~main&#45;&gt;proc~prg_surf</title>
+<path fill="none" stroke="#ff0000" d="M54.4,-12C62.39,-12 71.31,-12 79.82,-12"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="79.92,-15.5 89.92,-12 79.92,-8.5 79.92,-15.5"/>
 </g>
 </g>
 </svg>
@@ -571,6 +438,45 @@ large graphs.</div>
 
 
     
+    <section>
+    <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <div class="hl codehilite"><pre><span></span><span class="w">   </span><span class="k">subroutine </span><span class="n">read_img</span><span class="p">()</span>
+<span class="w">   </span><span class="c">!================================================================================================</span>
+<span class="w">   </span><span class="c">!&lt;@note Function that reads a digital surf file and returns the surface in PARAM%surf</span>
+<span class="w">   </span><span class="c">!&lt;</span>
+<span class="w">   </span><span class="c">!&lt;@endnote</span>
+<span class="w">   </span><span class="c">!------------------------------------------------------------------------------------------------</span>
+<span class="w">   </span><span class="k">implicit none</span>
+
+<span class="k">      </span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">512</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">nom_surf</span>
+
+<span class="w">      </span><span class="n">nom_surf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">repeat</span><span class="w"> </span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="n">nom_surf</span><span class="p">)</span><span class="w"> </span><span class="p">)</span>
+
+<span class="w">      </span><span class="k">read</span><span class="p">(</span><span class="n">JOB</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="n">nom_surf</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">LINE_READ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LINE_READ</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="k">write</span><span class="p">(</span><span class="n">SPY</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="s2">&quot;line: &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">LINE_READ</span><span class="p">,</span><span class="w"> </span><span class="nb">trim</span><span class="p">(</span><span class="n">nom_surf</span><span class="p">)</span>
+
+<span class="w">      </span><span class="c">! read the surface, no scaling, no centering</span>
+<span class="w">      </span><span class="k">call </span><span class="n">read_surf</span><span class="p">(</span><span class="w"> </span><span class="n">nom_fic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">trim</span><span class="p">(</span><span class="n">nom_surf</span><span class="p">),</span><span class="w"> </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                        </span><span class="n">tab_s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PARAM</span><span class="p">%</span><span class="n">surf</span><span class="p">,</span><span class="w">     </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! OUT</span>
+<span class="w">                         </span><span class="n">scal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SCALE_IMG</span><span class="w"> </span><span class="p">)</span><span class="w">        </span><span class="c">! OUT</span>
+
+<span class="w">      </span><span class="n">PARAM</span><span class="p">%</span><span class="n">width</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="n">SCALE_IMG</span><span class="p">%</span><span class="n">xres</span>
+<span class="w">      </span><span class="n">PARAM</span><span class="p">%</span><span class="n">height</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="n">SCALE_IMG</span><span class="p">%</span><span class="n">yres</span>
+<span class="w">      </span><span class="n">PARAM</span><span class="p">%</span><span class="n">npts</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="n">SCALE_IMG</span><span class="p">%</span><span class="n">xres</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">SCALE_IMG</span><span class="p">%</span><span class="n">yres</span>
+<span class="w">      </span><span class="n">PARAM</span><span class="p">%</span><span class="n">surf_dx</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">SCALE_IMG</span><span class="p">%</span><span class="n">lx</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">SCALE_IMG</span><span class="p">%</span><span class="n">xres</span>
+<span class="w">      </span><span class="n">PARAM</span><span class="p">%</span><span class="n">surf_dy</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">SCALE_IMG</span><span class="p">%</span><span class="n">ly</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">SCALE_IMG</span><span class="p">%</span><span class="n">yres</span>
+<span class="w">      </span><span class="n">PARAM</span><span class="p">%</span><span class="n">surf_width</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">SCALE_IMG</span><span class="p">%</span><span class="n">lx</span>
+<span class="w">      </span><span class="n">PARAM</span><span class="p">%</span><span class="n">surf_height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SCALE_IMG</span><span class="p">%</span><span class="n">ly</span>
+
+<span class="w">      </span><span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="s2">&quot;width &quot;</span><span class="p">,</span><span class="w">   </span><span class="n">PARAM</span><span class="p">%</span><span class="n">width</span><span class="p">,</span><span class="w">      </span><span class="s2">&quot; height &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">PARAM</span><span class="p">%</span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot; npts &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">PARAM</span><span class="p">%</span><span class="n">npts</span>
+<span class="w">      </span><span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="s2">&quot;surf dx &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">PARAM</span><span class="p">%</span><span class="n">surf_dx</span><span class="p">,</span><span class="w">    </span><span class="s2">&quot; dy &quot;</span><span class="p">,</span><span class="w">     </span><span class="n">PARAM</span><span class="p">%</span><span class="n">surf_dy</span>
+<span class="w">      </span><span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="s2">&quot;width &quot;</span><span class="p">,</span><span class="w">   </span><span class="n">PARAM</span><span class="p">%</span><span class="n">surf_width</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot; height &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">PARAM</span><span class="p">%</span><span class="n">surf_height</span>
+
+<span class="w">   </span><span class="k">return</span>
+<span class="k">   endsubroutine </span><span class="n">read_img</span>
+</pre></div>
+
+    </section>
+    <br>
     
     </div>
   </div>
@@ -583,14 +489,14 @@ large graphs.</div>
           <div class="col">
             <p>
               CREST
- was developed by Arthur Francisco<br>              &copy; 2024 
+ was developed by Arthur Francisco<br>              &copy; 2025 
 </p>
           </div>
           <div class="col">
             <p class="text-end">
               Documentation generated by
               <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
- on 2024-12-27 09:26              </p>
+ on 2025-09-30 15:20 +0200             </p>
           </div>
         </div>
         <br>

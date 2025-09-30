@@ -77,7 +77,7 @@
 
             <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
               <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
-                 title=" 3.4% of total for procedures.">40 statements</a>
+                 title=" 2.3% of total for procedures.">42 statements</a>
             </li>
 
             <li class="list-inline-item" id="source-file">
@@ -142,7 +142,7 @@
     </div>
     
     <div class="col-md-9" id='text'>
-    <h2>private  subroutine calc_ffh(calc_m_stt)  
+    <h2>private  subroutine calc_ffh()  
 </h2>
     
 
@@ -159,34 +159,8 @@
 
 
     <h3>Arguments</h3>
-        <table class="table table-striped varlist">
-    <thead>
-      <tr>
-        <th scope="col">Type</th>
-<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
-        <th scope="col"></th>
-        <th scope="col">Name</th>
-        <th scope="col"></th>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-calc_m_stt"></span>
-              logical(kind=I4),
-            </td>
-<td>intent(inout)</td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>calc_m_stt</strong></td>
-            <td>
-                <p><em>compute starting moments ?</em></p>
-            </td>
-        </tr>
-    </tbody>
-  </table>
-
+    <em>None</em>
+    <br>
     <br>
     <div class="card">
       <div class="card-header">
@@ -502,7 +476,7 @@ large graphs.</div>
     
     <section>
     <h2><span class="anchor" id="src"></span>Source Code</h2>
-    <div class="hl codehilite"><pre><span></span><span class="w">   </span><span class="k">subroutine </span><span class="n">calc_ffh</span><span class="p">(</span><span class="n">calc_m_stt</span><span class="p">)</span>
+    <div class="hl codehilite"><pre><span></span><span class="w">   </span><span class="k">subroutine </span><span class="n">calc_ffh</span><span class="p">()</span>
 <span class="w">   </span><span class="c">!================================================================================================</span>
 <span class="w">   </span><span class="c">!&lt;@note Function that returns ...</span>
 <span class="w">   </span><span class="c">!&lt;</span>
@@ -513,14 +487,15 @@ large graphs.</div>
 <span class="w">   </span><span class="c">!&lt;@endnote</span>
 <span class="w">   </span><span class="c">!------------------------------------------------------------------------------------------------</span>
 <span class="w">   </span><span class="k">implicit none</span>
-<span class="k">   </span><span class="kt">logical</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">I4</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">calc_m_stt</span><span class="w">  </span><span class="c">!! *compute starting moments ?*</span>
 
-<span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">I4</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="n">h</span><span class="p">,</span><span class="w"> </span><span class="n">l</span>
+<span class="k">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">I4</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="n">h</span><span class="p">,</span><span class="w"> </span><span class="n">l</span>
 
 <span class="w">      </span><span class="kt">complex</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">),</span><span class="w"> </span><span class="k">dimension</span><span class="p">(:,:),</span><span class="w"> </span><span class="k">allocatable</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">cmple</span>
 <span class="w">      </span><span class="kt">real</span><span class="w">   </span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">),</span><span class="w"> </span><span class="k">dimension</span><span class="p">(:,:),</span><span class="w"> </span><span class="k">allocatable</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">tab_tmp</span>
 
 <span class="w">      </span><span class="k">type</span><span class="p">(</span><span class="n">MOMENT_STAT</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">m_h</span>
+
+<span class="w">      </span><span class="k">read</span><span class="p">(</span><span class="n">JOB</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="n">PARAM</span><span class="p">%</span><span class="n">calc_mstt</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">LINE_READ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LINE_READ</span><span class="w"> </span><span class="o">+</span><span class="mi">1</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="k">write</span><span class="p">(</span><span class="n">SPY</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="s2">&quot;line: &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">LINE_READ</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;PARAM%calc_mstt &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">PARAM</span><span class="p">%</span><span class="n">calc_mstt</span>
 
 <span class="w">      </span><span class="n">w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PARAM</span><span class="p">%</span><span class="n">width</span>
 <span class="w">      </span><span class="n">h</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PARAM</span><span class="p">%</span><span class="n">height</span>
@@ -537,7 +512,7 @@ large graphs.</div>
 
 <span class="w">      </span><span class="n">PARAM</span><span class="p">%</span><span class="n">fhi</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">h</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">sqrt</span><span class="p">(</span><span class="w"> </span><span class="nb">abs</span><span class="p">(</span><span class="w"> </span><span class="n">cmple</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">h</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">)</span>
 
-<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">calc_m_stt</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">PARAM</span><span class="p">%</span><span class="n">calc_mstt</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
 
 <span class="w">         </span><span class="c">! determine starting statistical moments, if not already done</span>
 <span class="w">         </span><span class="c">!.......................................................................</span>
@@ -606,14 +581,14 @@ large graphs.</div>
           <div class="col">
             <p>
               CREST
- was developed by Arthur Francisco<br>              &copy; 2024 
+ was developed by Arthur Francisco<br>              &copy; 2025 
 </p>
           </div>
           <div class="col">
             <p class="text-end">
               Documentation generated by
               <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
- on 2024-12-27 09:26              </p>
+ on 2025-09-30 15:20 +0200             </p>
           </div>
         </div>
         <br>

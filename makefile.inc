@@ -1,4 +1,4 @@
-FORT = gfortran
+FORT = gfortran-12
 
 OPTC = O2
 
@@ -20,6 +20,10 @@ splin_dir = ../TOOLIB/SPLIN
 tchev_dir = ../TOOLIB/TCHEV
 utils_dir = ../TOOLIB/UTILS
 
+asfc2_dir = ../TPGLIB/ASFC2
+deriv_dir = ../TPGLIB/DERIV
+abbot_dir = ../TPGLIB/ABBOT
+morph_dir = ../TPGLIB/MORPH
 filtr_dir = ../TPGLIB/FILTR
 stats_dir = ../TPGLIB/STATS
 aniso_dir = ../TPGLIB/ANISO

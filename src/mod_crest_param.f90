@@ -10,6 +10,8 @@ module crest_param
 use data_arch,   only : I4, R8
 use stat_mom,    only : moment_stat
 use pikaia_oop,  only : pikaia_class
+use surfile,     only : SCALE_SURF
+
 
 implicit none
 
@@ -17,13 +19,34 @@ public
 
    integer(kind=I4) :: JOB                                     !! *JOB file: script*
    integer(kind=I4) :: SPY                                     !! *SPY file*
+   integer(kind=I4) :: STA                                     !! *result file*
+
    integer(kind=I4), parameter :: TER =  6                     !! *terminal output*
+
+   integer(kind=I4) :: line_read, save_line_read               !! *line number in the script"
+
+   integer(kind=I4) :: i_iter, nb_iter                         !! *current and number of iterations*
+
+   type(SCALE_SURF) :: scale_img                               !! *.SUR surface properties*
+
+   type acf_param
+
+      real(kind=R8) :: cl1                                     !! *correlation principal length at z=acf__z*
+      real(kind=R8) :: cl2                                     !! *correlation secondary length at z=acf__z*
+      real(kind=R8) :: cut                                     !! *acf cutting plane z, for correlation lengths determination*
+      real(kind=R8) :: ang                                     !! *roughness orientation*
+
+   endtype acf_param
+
 
    type param_crest
 
       real(kind=R8), allocatable, dimension(:)   :: vect_h     !! *vector used to store the heights that meet the stat moments*
 
       real(kind=R8), allocatable, dimension(:,:) :: surf       !! *surface array*
+      real(kind=R8), allocatable, dimension(:,:) :: surf_copy  !! *surface array copy*
+      real(kind=R8), allocatable, dimension(:,:) :: surf_LF    !! *surface low frequencies*
+      real(kind=R8), allocatable, dimension(:,:) :: surf_HF    !! *surface high frequencies*
 
       real(kind=R8), allocatable, dimension(:,:) :: imp_acf    !! *imposed autocorrelation*
       real(kind=R8), allocatable, dimension(:,:) :: fhi        !! *digital filter*
@@ -32,11 +55,19 @@ public
 
       integer(kind=I4), allocatable, dimension(:) :: order     !! *vector that stores heights order*
 
+      logical(kind=I4), allocatable, dimension(:,:) :: surf_msk!! *surface high frequencies*
+
+      type(MOMENT_STAT) :: m_ini                               !! *surface to be reproduced stat moments*
+      type(MOMENT_STAT) :: m__LF                               !! *surface to be reproduced stat moments, low  frequencies*
+      type(MOMENT_STAT) :: m__HF                               !! *surface to be reproduced stat moments, high frequencies*
       type(MOMENT_STAT) :: m_end                               !! *final stat moments*
       type(MOMENT_STAT) :: m_inp                               !! *input stat moments for genetic algo optimizer*
       type(MOMENT_STAT) :: m_stt                               !! *starting stat moments*
 
       type(pikaia_class) :: pik_class                          !! **PIKAIA** *class instanciation*
+
+      type(ACF_PARAM)  :: orig_surf                            !! *original surface ACF properties*
+      type(ACF_PARAM)  :: curr_surf                            !! *current  surface ACF properties*
 
       integer(kind=I4) :: func_gen                             !! *mathematical function used to generate the heights*
       integer(kind=I4) :: nparam                               !! *number of parameters for the mathematical function*
@@ -56,10 +87,9 @@ public
 
       logical(kind=I4) :: apod                                 !! *apodize imposed acf?*
 
-      real(kind=R8) :: l_acf1                                  !! *correlation principal length at z=acf__z*
-      real(kind=R8) :: l_acf2                                  !! *correlation secondary length at z=acf__z*
-      real(kind=R8) :: acf__z                                  !! *acf cutting plane z, for correlation lengths determination*
-      real(kind=R8) :: a_acf                                   !! *roughness orientation*
+      logical(kind=I4) :: calc_mstt                            !! *calculate starting moments?*
+
+      logical(kind=I4) :: calc_zf                              !! *calculate final heights?*
 
       real(kind=R8) :: cutoff                                  !! *Gaussian filter cutoff*
 

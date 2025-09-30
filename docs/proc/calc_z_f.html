@@ -77,7 +77,7 @@
 
             <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
               <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
-                 title=" 2.1% of total for procedures.">25 statements</a>
+                 title=" 1.4% of total for procedures.">25 statements</a>
             </li>
 
             <li class="list-inline-item" id="source-file">
@@ -142,7 +142,7 @@
     </div>
     
     <div class="col-md-9" id='text'>
-    <h2>private  subroutine calc_z_f(to_be_made)  
+    <h2>private  subroutine calc_z_f()  
 </h2>
     
 
@@ -158,34 +158,8 @@
 
 
     <h3>Arguments</h3>
-        <table class="table table-striped varlist">
-    <thead>
-      <tr>
-        <th scope="col">Type</th>
-<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
-        <th scope="col"></th>
-        <th scope="col">Name</th>
-        <th scope="col"></th>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-to_be_made"></span>
-              logical(kind=I4),
-            </td>
-<td>intent(in)</td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>to_be_made</strong></td>
-            <td>
-                <p><em>whether to determine the heights, or reuse them</em></p>
-            </td>
-        </tr>
-    </tbody>
-  </table>
-
+    <em>None</em>
+    <br>
     <br>
     <div class="card">
       <div class="card-header">
@@ -209,41 +183,38 @@
 <polygon fill="none" stroke="black" points="54,-147 0,-147 0,-123 54,-123 54,-147"/>
 <text text-anchor="middle" x="27" y="-132.6" font-family="Helvetica,sans-Serif" font-size="10.50">calc_z_f</text>
 </g>
-<!-- calc_moments -->
-<g id="proc~~calc_z_f~~CallsGraph_node2" class="node">
-<title>calc_moments</title>
-<g id="a_proc~~calc_z_f~~CallsGraph_node2"><a xlink:href="https://tribo-pprime.github.io/TPGLIB/proc/calc_moments.html" xlink:title="calc_moments">
-<polygon fill="#d9534f" stroke="#d9534f" points="434,-148 352,-148 352,-124 434,-124 434,-148"/>
-<text text-anchor="middle" x="393" y="-133.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">calc_moments</text>
-</a>
-</g>
-</g>
-<!-- proc~calc_z_f&#45;&gt;calc_moments -->
-<g id="proc~~calc_z_f~~CallsGraph_edge1" class="edge">
-<title>proc~calc_z_f&#45;&gt;calc_moments</title>
-<path fill="none" stroke="#ff0000" d="M54.23,-135.4C88.3,-135.89 149.59,-136.7 202,-137 247.78,-137.26 259.22,-137.26 305,-137 316.8,-136.93 329.5,-136.81 341.45,-136.68"/>
-<polygon fill="#ff0000" stroke="#ff0000" points="341.76,-140.18 351.72,-136.56 341.68,-133.18 341.76,-140.18"/>
-</g>
 <!-- proc~build_heights -->
-<g id="proc~~calc_z_f~~CallsGraph_node3" class="node">
+<g id="proc~~calc_z_f~~CallsGraph_node2" class="node">
 <title>proc~build_heights</title>
-<g id="a_proc~~calc_z_f~~CallsGraph_node3"><a xlink:href="../proc/build_heights.html" xlink:title="build_heights">
+<g id="a_proc~~calc_z_f~~CallsGraph_node2"><a xlink:href="../proc/build_heights.html" xlink:title="build_heights">
 <polygon fill="#d9534f" stroke="#d9534f" points="166,-108 90,-108 90,-84 166,-84 166,-108"/>
 <text text-anchor="middle" x="128" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">build_heights</text>
 </a>
 </g>
 </g>
 <!-- proc~calc_z_f&#45;&gt;proc~build_heights -->
-<g id="proc~~calc_z_f~~CallsGraph_edge2" class="edge">
+<g id="proc~~calc_z_f~~CallsGraph_edge1" class="edge">
 <title>proc~calc_z_f&#45;&gt;proc~build_heights</title>
 <path fill="none" stroke="#ff0000" d="M54.01,-124.75C64.03,-120.81 75.71,-116.21 86.75,-111.85"/>
 <polygon fill="#ff0000" stroke="#ff0000" points="88.22,-115.04 96.24,-108.12 85.65,-108.53 88.22,-115.04"/>
 </g>
-<!-- proc~build_heights&#45;&gt;calc_moments -->
-<g id="proc~~calc_z_f~~CallsGraph_edge3" class="edge">
-<title>proc~build_heights&#45;&gt;calc_moments</title>
-<path fill="none" stroke="#00ffff" d="M166.2,-108.1C177.58,-111.43 190.22,-114.73 202,-117 248.72,-125.98 302.77,-130.86 341.24,-133.42"/>
-<polygon fill="#00ffff" stroke="#00ffff" points="341.46,-136.94 351.66,-134.08 341.91,-129.95 341.46,-136.94"/>
+<!-- std_array -->
+<g id="proc~~calc_z_f~~CallsGraph_node3" class="node">
+<title>std_array</title>
+<polygon fill="#777777" stroke="#777777" points="422,-148 364,-148 364,-124 422,-124 422,-148"/>
+<text text-anchor="middle" x="393" y="-133.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">std_array</text>
+</g>
+<!-- proc~calc_z_f&#45;&gt;std_array -->
+<g id="proc~~calc_z_f~~CallsGraph_edge2" class="edge">
+<title>proc~calc_z_f&#45;&gt;std_array</title>
+<path fill="none" stroke="#ff0000" d="M54.23,-135.4C88.3,-135.89 149.59,-136.7 202,-137 247.78,-137.26 259.22,-137.26 305,-137 320.95,-136.91 338.55,-136.72 353.73,-136.53"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="353.84,-140.03 363.79,-136.41 353.75,-133.03 353.84,-140.03"/>
+</g>
+<!-- proc~build_heights&#45;&gt;std_array -->
+<g id="proc~~calc_z_f~~CallsGraph_edge6" class="edge">
+<title>proc~build_heights&#45;&gt;std_array</title>
+<path fill="none" stroke="#ff0000" d="M166.2,-108.1C177.58,-111.43 190.22,-114.73 202,-117 253.93,-126.98 314.91,-131.9 353.5,-134.19"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="353.58,-137.7 363.76,-134.77 353.98,-130.71 353.58,-137.7"/>
 </g>
 <!-- proc~pikaia_skku_solver -->
 <g id="proc~~calc_z_f~~CallsGraph_node4" class="node">
@@ -255,10 +226,10 @@
 </g>
 </g>
 <!-- proc~build_heights&#45;&gt;proc~pikaia_skku_solver -->
-<g id="proc~~calc_z_f~~CallsGraph_edge4" class="edge">
+<g id="proc~~calc_z_f~~CallsGraph_edge3" class="edge">
 <title>proc~build_heights&#45;&gt;proc~pikaia_skku_solver</title>
-<path fill="none" stroke="#00ffff" d="M164.39,-83.96C177.83,-79.4 193.31,-74.13 207.52,-69.3"/>
-<polygon fill="#00ffff" stroke="#00ffff" points="208.76,-72.57 217.1,-66.04 206.51,-65.94 208.76,-72.57"/>
+<path fill="none" stroke="#ff0000" d="M164.39,-83.96C177.83,-79.4 193.31,-74.13 207.52,-69.3"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="208.76,-72.57 217.1,-66.04 206.51,-65.94 208.76,-72.57"/>
 </g>
 <!-- proc~profil_theo_trie_1d -->
 <g id="proc~~calc_z_f~~CallsGraph_node5" class="node">
@@ -270,10 +241,10 @@
 </g>
 </g>
 <!-- proc~build_heights&#45;&gt;proc~profil_theo_trie_1d -->
-<g id="proc~~calc_z_f~~CallsGraph_edge5" class="edge">
+<g id="proc~~calc_z_f~~CallsGraph_edge4" class="edge">
 <title>proc~build_heights&#45;&gt;proc~profil_theo_trie_1d</title>
-<path fill="none" stroke="#00ffff" d="M166.05,-96C174.12,-96 182.86,-96 191.58,-96"/>
-<polygon fill="#00ffff" stroke="#00ffff" points="191.77,-99.5 201.77,-96 191.77,-92.5 191.77,-99.5"/>
+<path fill="none" stroke="#ff0000" d="M166.05,-96C174.12,-96 182.86,-96 191.58,-96"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="191.77,-99.5 201.77,-96 191.77,-92.5 191.77,-99.5"/>
 </g>
 <!-- sort_array2 -->
 <g id="proc~~calc_z_f~~CallsGraph_node6" class="node">
@@ -285,10 +256,10 @@
 </g>
 </g>
 <!-- proc~build_heights&#45;&gt;sort_array2 -->
-<g id="proc~~calc_z_f~~CallsGraph_edge6" class="edge">
+<g id="proc~~calc_z_f~~CallsGraph_edge5" class="edge">
 <title>proc~build_heights&#45;&gt;sort_array2</title>
-<path fill="none" stroke="#00ffff" d="M140.71,-83.78C154.39,-70.02 178.21,-47.69 202,-33 204.79,-31.28 207.74,-29.64 210.76,-28.09"/>
-<polygon fill="#00ffff" stroke="#00ffff" points="212.42,-31.18 219.95,-23.74 209.42,-24.86 212.42,-31.18"/>
+<path fill="none" stroke="#ff0000" d="M140.71,-83.78C154.39,-70.02 178.21,-47.69 202,-33 204.79,-31.28 207.74,-29.64 210.76,-28.09"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="212.42,-31.18 219.95,-23.74 209.42,-24.86 212.42,-31.18"/>
 </g>
 <!-- init -->
 <g id="proc~~calc_z_f~~CallsGraph_node7" class="node">
@@ -320,11 +291,11 @@
 <path fill="none" stroke="#ff0000" d="M305.31,-45.87C313.67,-44.53 322.41,-43.14 330.98,-41.76"/>
 <polygon fill="#ff0000" stroke="#ff0000" points="331.62,-45.21 340.94,-40.17 330.51,-38.29 331.62,-45.21"/>
 </g>
-<!-- proc~profil_theo_trie_1d&#45;&gt;calc_moments -->
+<!-- proc~profil_theo_trie_1d&#45;&gt;std_array -->
 <g id="proc~~calc_z_f~~CallsGraph_edge9" class="edge">
-<title>proc~profil_theo_trie_1d&#45;&gt;calc_moments</title>
-<path fill="none" stroke="#00ff00" d="M295.75,-108C310.29,-112.23 326.79,-117.03 341.97,-121.45"/>
-<polygon fill="#00ff00" stroke="#00ff00" points="341.14,-124.85 351.72,-124.28 343.1,-118.13 341.14,-124.85"/>
+<title>proc~profil_theo_trie_1d&#45;&gt;std_array</title>
+<path fill="none" stroke="#00ff00" d="M295.75,-108C314.31,-113.4 336.06,-119.73 354.19,-125"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="353.27,-128.38 363.85,-127.81 355.22,-121.66 353.27,-128.38"/>
 </g>
 </g>
 </svg>
@@ -573,7 +544,7 @@ large graphs.</div>
     
     <section>
     <h2><span class="anchor" id="src"></span>Source Code</h2>
-    <div class="hl codehilite"><pre><span></span><span class="w">   </span><span class="k">subroutine </span><span class="n">calc_z_f</span><span class="p">(</span><span class="n">to_be_made</span><span class="p">)</span>
+    <div class="hl codehilite"><pre><span></span><span class="w">   </span><span class="k">subroutine </span><span class="n">calc_z_f</span><span class="p">()</span>
 <span class="w">   </span><span class="c">!================================================================================================</span>
 <span class="w">   </span><span class="c">!&lt;@note Function that returns PARAM%surf, the surface made of heights with the required statistical</span>
 <span class="w">   </span><span class="c">!&lt; moments, in the right order.</span>
@@ -584,14 +555,13 @@ large graphs.</div>
 <span class="w">   </span><span class="c">!&lt;@endnote</span>
 <span class="w">   </span><span class="c">!------------------------------------------------------------------------------------------------</span>
 <span class="w">   </span><span class="k">implicit none</span>
-<span class="k">   </span><span class="kt">logical</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">I4</span><span class="p">),</span><span class="w">  </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">to_be_made</span><span class="w"> </span><span class="c">!! *whether to determine the heights, or reuse them*</span>
 
-<span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">I4</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">i</span>
+<span class="k">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">I4</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">i</span>
 <span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">I4</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="n">h</span><span class="p">,</span><span class="w"> </span><span class="n">l</span>
 
 <span class="w">      </span><span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">),</span><span class="w"> </span><span class="k">allocatable</span><span class="p">,</span><span class="w"> </span><span class="k">dimension</span><span class="p">(:)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">tab_tmp</span>
 
-<span class="w">      </span><span class="k">type</span><span class="p">(</span><span class="n">MOMENT_STAT</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">m_res</span>
+<span class="w">      </span><span class="k">read</span><span class="p">(</span><span class="n">JOB</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="n">PARAM</span><span class="p">%</span><span class="n">calc_zf</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">LINE_READ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LINE_READ</span><span class="w"> </span><span class="o">+</span><span class="mi">1</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="k">write</span><span class="p">(</span><span class="n">SPY</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="s2">&quot;line: &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">LINE_READ</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;PARAM%calc_zf &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">PARAM</span><span class="p">%</span><span class="n">calc_zf</span>
 
 <span class="w">      </span><span class="n">w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PARAM</span><span class="p">%</span><span class="n">width</span>
 <span class="w">      </span><span class="n">h</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PARAM</span><span class="p">%</span><span class="n">height</span>
@@ -599,12 +569,12 @@ large graphs.</div>
 
 <span class="w">      </span><span class="c">! final set of heights are generated to meet the desired statistical moments</span>
 <span class="w">      </span><span class="c">! It is done once.</span>
-<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">to_be_made</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">PARAM</span><span class="p">%</span><span class="n">calc_zf</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
 
 <span class="k">         write</span><span class="p">(</span><span class="n">SPY</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;calc_z_f -&gt; final set of heights are generated to meet the desired statistical moments&#39;</span>
 
 <span class="w">         </span><span class="k">call </span><span class="n">build_heights</span><span class="p">(</span><span class="w">     </span><span class="n">vec_out</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PARAM</span><span class="p">%</span><span class="n">vect_h</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">l</span><span class="p">),</span><span class="w">                                     </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! OUT</span>
-<span class="w">                            </span><span class="n">use_fct_expo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">PARAM</span><span class="p">%</span><span class="n">m_end</span><span class="p">%</span><span class="n">ku</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">1.10</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">PARAM</span><span class="p">%</span><span class="n">m_end</span><span class="p">%</span><span class="n">sk</span><span class="o">**</span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1.</span><span class="w"> </span><span class="p">),</span><span class="w">    </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                            </span><span class="n">use_fct_expo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">PARAM</span><span class="p">%</span><span class="n">m_end</span><span class="p">%</span><span class="n">ku</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">1.34</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">PARAM</span><span class="p">%</span><span class="n">m_end</span><span class="p">%</span><span class="n">sk</span><span class="o">**</span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1.8</span><span class="p">),</span><span class="w">    </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
 <span class="w">                                </span><span class="n">stats_in</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PARAM</span><span class="p">%</span><span class="n">m_end</span><span class="p">,</span><span class="w">                                           </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
 <span class="w">                                      </span><span class="n">lg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">l</span><span class="w"> </span><span class="p">)</span><span class="w">                                                       </span><span class="c">! IN</span>
 
@@ -624,11 +594,7 @@ large graphs.</div>
 
 <span class="k">      </span><span class="n">PARAM</span><span class="p">%</span><span class="n">surf</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">h</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">reshape</span><span class="p">(</span><span class="w"> </span><span class="n">tab_tmp</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">l</span><span class="p">),</span><span class="w"> </span><span class="p">[</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="n">h</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
 
-<span class="w">      </span><span class="k">call </span><span class="n">calc_moments</span><span class="p">(</span><span class="w">   </span><span class="n">tab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tab_tmp</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">l</span><span class="p">),</span><span class="w">    </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
-<span class="w">                            </span><span class="n">mx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m_res</span><span class="p">,</span><span class="w">           </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! OUT</span>
-<span class="w">                        </span><span class="n">nb_mom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">)</span><span class="w">                 </span><span class="c">! IN</span>
-
-<span class="w">      </span><span class="n">PARAM</span><span class="p">%</span><span class="n">surf</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">h</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">PARAM</span><span class="p">%</span><span class="n">surf</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">h</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">m_res</span><span class="p">%</span><span class="n">mu</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">m_res</span><span class="p">%</span><span class="n">si</span>
+<span class="w">      </span><span class="k">call </span><span class="n">std_array</span><span class="p">(</span><span class="w"> </span><span class="n">tab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tab_tmp</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">l</span><span class="p">)</span><span class="w"> </span><span class="p">)</span>
 
 <span class="w">      </span><span class="k">deallocate</span><span class="p">(</span><span class="w"> </span><span class="n">tab_tmp</span><span class="w"> </span><span class="p">)</span>
 
@@ -650,14 +616,14 @@ large graphs.</div>
           <div class="col">
             <p>
               CREST
- was developed by Arthur Francisco<br>              &copy; 2024 
+ was developed by Arthur Francisco<br>              &copy; 2025 
 </p>
           </div>
           <div class="col">
             <p class="text-end">
               Documentation generated by
               <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
- on 2024-12-27 09:26              </p>
+ on 2025-09-30 15:20 +0200             </p>
           </div>
         </div>
         <br>
